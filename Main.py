@@ -2,6 +2,7 @@
 
 import pandas as pd
 import os
+import time
 from Task.Extraction.data_extraction import extract_data
 from Task.Transformation.data_transformation import transform_data
 from Task.Extraction.data_extraction_host import extract_host_data
@@ -12,6 +13,14 @@ from Task.Extraction.data_extraction_logs import extract_logs
 from Task.Transformation.data_transformation_logs import transform_logs
 from Task.Transformation.spark_LOGS_LO_HOST import process_logs_with_spark
 from Task.Load.data_load import load_to_excel  # Importa la función de carga
+
+
+
+start_time = time.time()
+print("Iniciando el proceso ETL...")
+
+
+#---------------------------------------------------------------------------------PATHS----------------------------------------------------------------------------------------------
 
 # Rutas LO
 folder_path = r'C:\Users\paula\UNIR\MasterBigDatayVisualAnalytics\cuatrimestre2\TFM-TFE\Entrega3\TESIS_Maestria_ETL\ETLProyect\ArchivosEntrada\LOCardReports'
@@ -109,3 +118,14 @@ with pd.ExcelWriter(output_path3, engine='openpyxl') as writer:
     result_df2.to_excel(writer, sheet_name='LOGSvsHOST', index=False)  # Guardar df2 en 'Hoja2'
 
 print(f"Archivo exportado exitosamente a {output_path3}")
+
+#------------------------------------------------------------------------------------------------------------------------------------------------------
+
+print("Proceso ETL completado.")
+# Capturar el tiempo final
+end_time = time.time()
+# Calcular y mostrar el tiempo transcurrido
+elapsed_time = end_time - start_time
+print(f"Tiempo total de ejecución: {elapsed_time:.2f} segundos")
+
+#------------------------------------------------------------------------------------------------------------------------------------------------------
