@@ -14,6 +14,7 @@ from Task.Transformation.spark_LO_HOST import process_with_spark
 from Task.Extraction.data_extraction_logs import extract_logs
 from Task.Transformation.data_transformation_logs import transform_logs
 from Task.Transformation.spark_LOGS_LO_HOST import process_logs_with_spark
+from Task.Transformation.spark_LOGS_LO_TR_BB import process_logs_with_spark_tr_bb
 from Task.Load.data_load import load_to_excel  # Importa la función de carga
 from Task.Load.data_load import load_to_excel_tr_bb 
 
@@ -119,22 +120,30 @@ load_to_excel_tr_bb(transformed_data_tr_bb, output_path3)
 #-----------------------------------------------------------------------------TR and BB Logs Extraction-------------------------------------------------------------------------------
 
 # Extraer datos
-#df_Logscompleto = extract_logs(Logs_path)
+logs_data = extract_logs(Logs_path)
 
 # Crear un DataFrame unificado
 #df_LogsUnified = pd.DataFrame()
 
 # Transformar datos de ATM
-#dfLogsATM = transform_logs(df_Logscompleto, 'ATM')
+#dfLogsATM = transform_logs(logs_data, 'ATM')
 #df_LogsUnified = pd.concat([df_LogsUnified, dfLogsATM], ignore_index=True)
 
 # Transformar datos de Cash Advance
-#dfLogsCA = transform_logs(df_Logscompleto, 'CashAdvance')
+#dfLogsCA = transform_logs(logs_data, 'CashAdvance')
 #df_LogsUnified = pd.concat([df_LogsUnified, dfLogsCA], ignore_index=True)
+
+# Transformar datos de Ticket Redemption
+dfLogsTR = transform_logs(logs_data, 'TicketRedemption')
+
+# Transformar datos de Bill Breaking
+dfLogsBB = transform_logs(logs_data, 'BillBreaking')
 
 # Mostrar y exportar el DataFrame unificado usando la función load_to_excel
 #print(df_LogsUnified)
-#load_to_excel(df_LogsUnified, output_path)
+load_to_excel(dfLogsTR, output_path)
+
+load_to_excel(dfLogsBB, output_path3)
 
 #------------------------------------------------------------------SPARK Consolidado logs------------------------------------------------------------------------------
 
@@ -145,6 +154,18 @@ load_to_excel_tr_bb(transformed_data_tr_bb, output_path3)
 #with pd.ExcelWriter(output_path3, engine='openpyxl') as writer:
 #    result_df1.to_excel(writer, sheet_name='LOGSvsLO-HOST', index=False)  # Guardar df1 en 'Hoja1'
 #    result_df2.to_excel(writer, sheet_name='LOGSvsHOST', index=False)  # Guardar df2 en 'Hoja2'
+
+#print(f"Archivo exportado exitosamente a {output_path3}")
+
+#------------------------------------------------------------------SPARK Consolidado logs vs LO (TR-BB)------------------------------------------------------------------------------
+
+# Procesar los logs con Spark y obtener los DataFrames finales
+result_df1, result_df2 = process_logs_with_spark_tr_bb(dfLogsTR, dfLogsBB, transformed_data_tr_bb)
+
+# Guardar los resultados en un archivo Excel usando la función load_to_excel
+with pd.ExcelWriter(output_path3, engine='openpyxl') as writer:
+    result_df1.to_excel(writer, sheet_name='LOGSvsLO-TR', index=False)  # Guardar df1 en 'Hoja1'
+    result_df2.to_excel(writer, sheet_name='LOGSvsLO-BB', index=False)  # Guardar df2 en 'Hoja2'
 
 #print(f"Archivo exportado exitosamente a {output_path3}")
 
