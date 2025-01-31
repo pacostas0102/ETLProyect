@@ -57,5 +57,3 @@ def transform_pos_ticket_purchase(df):
         
     df = df.rename(columns={"nanSTATUS": "STATUS"})
     return df
-
-# Repetir para `transform_debit_dispense` y `transform_pos_ticket_purchase`
