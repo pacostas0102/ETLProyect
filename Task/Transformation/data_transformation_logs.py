@@ -40,8 +40,8 @@ def transform_logs(df_Logscompleto, log_type):
         print ("Entre a Ticket Y Bill")
         dfLogs['TicketData'] = dfLogs["FilteredData"].str.extract(r'"TicketData":"([^"]+)"').astype(str)
         dfLogs['Type'] = dfLogs["FilteredData"].str.extract(r'"type"\s*:\s*"([^"]+)"', expand=False)
-        for i, denom in enumerate([1, 5, 10, 20, 50, 100], start=1):
-            dfLogs[f'BillDenom_{i}_{denom}'] = dfLogs["FilteredData"].str.extract(rf'"BillCount_{i}":([0-9]+(?:\.[0-9]+)?)')
+        for i, denom in enumerate([1, 2, 3, 4, 5, 6], start=1):
+            dfLogs[f'BillDenom_0{i}_{denom}'] = dfLogs["FilteredData"].str.extract(rf'"BillCount_0{i}":([0-9]+(?:\.[0-9]+)?)')
         dfLogs['JournalName'] = log_type  # Nombre del tipo de log como identificador
         
     print (dfLogs)
