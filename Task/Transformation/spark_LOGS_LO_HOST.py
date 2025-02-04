@@ -16,22 +16,23 @@ def process_logs_with_spark(df_LogsUnified, result_df, result_dfHOST):
         dfLogs["seqNumber"] == dfLOHOST["SEQUENCENUMBER"],
         "left"
     )
+    sorted_df1 = joined_df.orderBy("seqNumber")
 
     # Agregar columna de indicador
-    result_df2 = joined_df.withColumn(
+    result_df2 = sorted_df1.withColumn(
         "found_in_Systems",
         F.when(F.col("seqNumber").isNotNull(), True).otherwise(False)
     )
 
     # Realizar el join con Logs y HOST
-    joined_df = dfLogs.join(
+    sorted_df1 = dfLogs.join(
         dfHOST,
         dfLogs["AuthNumber"] == dfHOST["seq"],
         "left"
     )
 
     # Agregar columna de indicador
-    result_df3 = joined_df.withColumn(
+    result_df3 = sorted_df1.withColumn(
         "found_in_datastream",
         F.when(F.col("seq").isNotNull(), True).otherwise(False)
     )

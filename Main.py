@@ -39,145 +39,131 @@ Logs_path = r'C:\Users\paula\UNIR\MasterBigDatayVisualAnalytics\cuatrimestre2\TF
 
 #-------------------------------------------------------------------------LiveOffice Card Reports----------------------------------------------------------------------------------------------
 
-# Extracción
-raw_data = extract_data(folder_path)
-# Transformación
-transformed_data = transform_data(raw_data)
-
-# Guardar resultado usando la función load_to_excel
-load_to_excel(transformed_data, output_path)
-
+def process_live_office(folder_path, output_path):
+    raw_data = extract_data(folder_path)
+    transformed_data = transform_data(raw_data)
+    load_to_excel(transformed_data, output_path)
+    return transformed_data
 
 
 #-------------------------------------------------------------------------LiveOffice TR && BB Reports----------------------------------------------------------------------------------------------
 
 
-raw_data_tr_bb = extract_data_tr_bb(folder_path_tr_bb)  
-transformed_data_tr_bb = transform_data_tr_bb(raw_data_tr_bb)  
-load_to_excel_tr_bb(transformed_data_tr_bb, output_path3)  
+def process_live_office_tr_bb(folder_path_tr_bb, output_path3):
+    raw_data_tr_bb = extract_data_tr_bb(folder_path_tr_bb)
+    transformed_data_tr_bb = transform_data_tr_bb(raw_data_tr_bb)
+    load_to_excel_tr_bb(transformed_data_tr_bb, output_path3)
+    return transformed_data_tr_bb
 
 #--------------------------------------------------------------------------Host Card Reports----------------------------------------------------------------------------------------------
-# Extracción de datos
-file_list = get_excel_files(host_folder_path)
-dataframes = []
 
-for file_path in file_list:
-    df_host, file_type = extract_host_data(file_path)
-    if df_host is not None:
-        # Transformación según el tipo de archivo
-        if file_type == "TransactionLookup":
-            df_host = transform_transaction_lookup(df_host)
-        elif file_type == "rpttransactiondetailbytid":
-            df_host = transform_rpttransactiondetailbytid(df_host)
-        
-        dataframes.append(df_host)
 
-# Combinación de datos y exportación
-if dataframes:
-    combined_df = pd.concat(dataframes, ignore_index=True)
-    load_to_excel(combined_df, output_path3)
-else:
-    print("No se generaron datos para exportar.")
+def process_host_reports(host_folder_path, output_path3):
+    file_list = get_excel_files(host_folder_path)
+    dataframes = []
 
+    for file_path in file_list:
+        df_host, file_type = extract_host_data(file_path)
+        if df_host is not None:
+            df_host = (
+                transform_transaction_lookup(df_host) if file_type == "TransactionLookup" 
+                else transform_rpttransactiondetailbytid(df_host) if file_type == "rpttransactiondetailbytid"
+                else df_host
+            )
+            dataframes.append(df_host)
+
+    if dataframes:
+        combined_df = pd.concat(dataframes, ignore_index=True)
+        load_to_excel(combined_df, output_path3)
+        return combined_df
+    else:
+        print("No se generaron datos para exportar.")
+        return None
 
 #--------------------------------------------------------------------------SPARK LO-HOST CONSOLIDATION ----------------------------------------------------------------------------------------------
 
-if dataframes:
-    # Procesar con Spark
-    print("Iniciando el procesamiento con Spark...")
-    result_df, result_dfHOST = process_with_spark(transformed_data, combined_df, output_path3)  
+def process_spark_lo_host(transformed_data, combined_df, output_path, output_path3):
+    if combined_df is not None:
+        print("Iniciando el procesamiento con Spark...")
+        result_df, result_dfHOST = process_with_spark(transformed_data, combined_df, output_path3)
 
-    # Exportar a Excel usando la función load_to_excel
-    load_to_excel(result_df, output_path)
+        load_to_excel(result_df, output_path)
 
-    # Verificación: Chequear si el archivo se exportó exitosamente
-    if os.path.exists(output_path3):
-        print(f"Archivo exportado exitosamente a {output_path3}")
+        if os.path.exists(output_path3):
+            print(f"Archivo exportado exitosamente a {output_path3}")
+        else:
+            print("No se pudo exportar el archivo.")
     else:
-        print("No se pudo exportar el archivo.")
-else:
-    print("No se generaron datos para exportar.")
+        print("No se generaron datos para exportar.")
 
 
-#-----------------------------------------------------------------------------Card Logs Extraction-------------------------------------------------------------------------------
+#----------------------------------------------------------------------------- Logs Extraction-------------------------------------------------------------------------------
 
-# Extraer datos
-#df_Logscompleto = extract_logs(Logs_path)
+def process_logs(Logs_path, output_path, output_path3):
+    logs_data = extract_logs(Logs_path)
+    df_LogsUnified = pd.DataFrame()
 
-# Crear un DataFrame unificado
-#df_LogsUnified = pd.DataFrame()
+    for log_type in ['ATM', 'CashAdvance']:
+        df_logs = transform_logs(logs_data, log_type)
+        df_LogsUnified = pd.concat([df_LogsUnified, df_logs], ignore_index=True)
 
-# Transformar datos de ATM
-#dfLogsATM = transform_logs(df_Logscompleto, 'ATM')
-#df_LogsUnified = pd.concat([df_LogsUnified, dfLogsATM], ignore_index=True)
+    dfLogsTR = transform_logs(logs_data, 'TicketRedemption')
+    dfLogsBB = transform_logs(logs_data, 'BillBreaking')
 
-# Transformar datos de Cash Advance
-#dfLogsCA = transform_logs(df_Logscompleto, 'CashAdvance')
-#df_LogsUnified = pd.concat([df_LogsUnified, dfLogsCA], ignore_index=True)
+    load_to_excel(dfLogsTR, output_path)
+    load_to_excel(dfLogsBB, output_path3)
 
-# Mostrar y exportar el DataFrame unificado usando la función load_to_excel
-#print(df_LogsUnified)
-#load_to_excel(df_LogsUnified, output_path)
-
-#-----------------------------------------------------------------------------TR and BB Logs Extraction-------------------------------------------------------------------------------
-
-# Extraer datos
-logs_data = extract_logs(Logs_path)
-
-# Crear un DataFrame unificado
-df_LogsUnified = pd.DataFrame()
-
-# Transformar datos de ATM
-dfLogsATM = transform_logs(logs_data, 'ATM')
-df_LogsUnified = pd.concat([df_LogsUnified, dfLogsATM], ignore_index=True)
-
-# Transformar datos de Cash Advance
-dfLogsCA = transform_logs(logs_data, 'CashAdvance')
-df_LogsUnified = pd.concat([df_LogsUnified, dfLogsCA], ignore_index=True)
-
-# Transformar datos de Ticket Redemption
-dfLogsTR = transform_logs(logs_data, 'TicketRedemption')
-
-# Transformar datos de Bill Breaking
-dfLogsBB = transform_logs(logs_data, 'BillBreaking')
-
-# Mostrar y exportar el DataFrame unificado usando la función load_to_excel
-#print(df_LogsUnified)
-#load_to_excel(dfLogsTR, output_path)
-
-#load_to_excel(dfLogsBB, output_path3)
+    return df_LogsUnified, dfLogsTR, dfLogsBB
 
 #------------------------------------------------------------------SPARK Consolidado logs------------------------------------------------------------------------------
 
-# Procesar los logs con Spark y obtener los DataFrames finales
-result_df1, result_df2 = process_logs_with_spark(df_LogsUnified, result_df, result_dfHOST)
+def process_spark_logs(df_LogsUnified, result_df, result_dfHOST, output_path3):
+    result_df1, result_df2 = process_logs_with_spark(df_LogsUnified, result_df, result_dfHOST)
 
-# Guardar los resultados en un archivo Excel usando la función load_to_excel
-with pd.ExcelWriter(output_path3, engine='openpyxl') as writer:
-    result_df1.to_excel(writer, sheet_name='LOGSvsLO-HOST', index=False)  # Guardar df1 en 'Hoja1'
-    result_df2.to_excel(writer, sheet_name='LOGSvsHOST', index=False)  # Guardar df2 en 'Hoja2'
+    with pd.ExcelWriter(output_path3, engine='openpyxl') as writer:
+        result_df1.to_excel(writer, sheet_name='LOGSvsLO-HOST', index=False)
+        result_df2.to_excel(writer, sheet_name='LOGSvsHOST', index=False)
 
-print(f"Archivo exportado exitosamente card transactions a {output_path3}")
+    print(f"Archivo exportado exitosamente card transactions a {output_path3}")
 
 #------------------------------------------------------------------SPARK Consolidado logs vs LO (TR-BB)------------------------------------------------------------------------------
 
-# Procesar los logs con Spark y obtener los DataFrames finales
-result_df1, result_df2 = process_logs_with_spark_tr_bb(dfLogsTR, dfLogsBB, transformed_data_tr_bb)
+def process_spark_logs_tr_bb(dfLogsTR, dfLogsBB, transformed_data_tr_bb, output_path3):
+    result_df1, result_df2 = process_logs_with_spark_tr_bb(dfLogsTR, dfLogsBB, transformed_data_tr_bb)
 
-# Guardar los resultados en un archivo Excel usando la función load_to_excel
-with pd.ExcelWriter(output_path3, engine='openpyxl') as writer:
-    result_df1.to_excel(writer, sheet_name='LOGSvsLO-TR', index=False)  # Guardar df1 en 'Hoja1'
-    result_df2.to_excel(writer, sheet_name='LOGSvsLO-BB', index=False)  # Guardar df2 en 'Hoja2'
-
-#print(f"Archivo exportado exitosamente a {output_path3}")
+    with pd.ExcelWriter(output_path3, engine='openpyxl') as writer:
+        result_df1.to_excel(writer, sheet_name='LOGSvsLO-TR', index=False)
+        result_df2.to_excel(writer, sheet_name='LOGSvsLO-BB', index=False)
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------
 
-print("Proceso ETL completado.")
-# Capturar el tiempo final
-end_time = time.time()
-# Calcular y mostrar el tiempo transcurrido
-elapsed_time = end_time - start_time
-print(f"Tiempo total de ejecución: {elapsed_time:.2f} segundos")
+def main():
+    start_time = time.time()
+    print("Iniciando el proceso ETL...")
+
+    # Definir rutas
+    folder_path = r'C:\Users\paula\UNIR\MasterBigDatayVisualAnalytics\cuatrimestre2\TFM-TFE\Entrega3\TESIS_Maestria_ETL\ETLProyect\ArchivosEntrada\LOCardReports'
+    output_path = r'C:\Users\paula\UNIR\MasterBigDatayVisualAnalytics\cuatrimestre2\TFM-TFE\Entrega3\TESIS_Maestria_ETL\ETLProyect\Concatenado2.xlsx'
+    folder_path_tr_bb = r'C:\Users\paula\UNIR\MasterBigDatayVisualAnalytics\cuatrimestre2\TFM-TFE\Entrega3\TESIS_Maestria_ETL\ETLProyect\ArchivosEntrada\LO_TR_BBReports'
+    host_folder_path = r'C:\Users\paula\UNIR\MasterBigDatayVisualAnalytics\cuatrimestre2\TFM-TFE\Entrega3\TESIS_Maestria_ETL\ETLProyect\ArchivosEntrada\HostReports'
+    output_path3 = r'C:\Users\paula\UNIR\MasterBigDatayVisualAnalytics\cuatrimestre2\TFM-TFE\Entrega3\TESIS_Maestria_ETL\ETLProyect\ArchivosSalida\Concatenado3.xlsx'
+    Logs_path = r'C:\Users\paula\UNIR\MasterBigDatayVisualAnalytics\cuatrimestre2\TFM-TFE\Entrega3\TESIS_Maestria_ETL\ETLProyect\ArchivosEntrada\Logs'
+
+    #  Procesos
+    transformed_data = process_live_office(folder_path, output_path)
+    transformed_data_tr_bb = process_live_office_tr_bb(folder_path_tr_bb, output_path3)
+    combined_df = process_host_reports(host_folder_path, output_path3)
+
+    process_spark_lo_host(transformed_data, combined_df, output_path, output_path3)
+    df_LogsUnified, dfLogsTR, dfLogsBB = process_logs(Logs_path, output_path, output_path3)
+    process_spark_logs(df_LogsUnified, transformed_data, combined_df, output_path3)
+    process_spark_logs_tr_bb(dfLogsTR, dfLogsBB, transformed_data_tr_bb, output_path3)
+
+    print("Proceso ETL completado.")
+    print(f"Tiempo total de ejecución: {time.time() - start_time:.2f} segundos")
+
+
+if __name__ == "__main__":
+    main()
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------
