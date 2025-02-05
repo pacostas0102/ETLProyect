@@ -120,7 +120,7 @@ def process_logs(Logs_path, output_path, output_path3):
 def process_spark_logs(df_LogsUnified, result_df, result_dfHOST, output_path3):
     result_df1, result_df2 = process_logs_with_spark(df_LogsUnified, result_df, result_dfHOST)
 
-    with pd.ExcelWriter(output_path3, engine='openpyxl') as writer:
+    with pd.ExcelWriter(output_path, engine='openpyxl') as writer:
         result_df1.to_excel(writer, sheet_name='LOGSvsLO-HOST', index=False)
         result_df2.to_excel(writer, sheet_name='LOGSvsHOST', index=False)
 
