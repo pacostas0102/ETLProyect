@@ -17,24 +17,12 @@ from Task.Transformation.spark_LOGS_LO_HOST import process_logs_with_spark
 from Task.Transformation.spark_LOGS_LO_TR_BB import process_logs_with_spark_tr_bb
 from Task.Load.data_load import load_to_excel  # Importa la función de carga
 from Task.Load.data_load import load_to_excel_tr_bb 
+from pathlib import Path
+
 
 
 start_time = time.time()
 print("Iniciando el proceso ETL...")
-
-
-#---------------------------------------------------------------------------------PATHS----------------------------------------------------------------------------------------------
-
-# Rutas LO
-folder_path = r'C:\Users\paula\UNIR\MasterBigDatayVisualAnalytics\cuatrimestre2\TFM-TFE\Entrega3\TESIS_Maestria_ETL\ETLProyect\ArchivosEntrada\LOCardReports'
-output_path = r'C:\Users\paula\UNIR\MasterBigDatayVisualAnalytics\cuatrimestre2\TFM-TFE\Entrega3\TESIS_Maestria_ETL\ETLProyect\ArchivosSalida\Concatenado2.xlsx'
-folder_path_tr_bb = r'C:\Users\paula\UNIR\MasterBigDatayVisualAnalytics\cuatrimestre2\TFM-TFE\Entrega3\TESIS_Maestria_ETL\ETLProyect\ArchivosEntrada\LO_TR_BBReports'
-
-# Rutas HOST
-host_folder_path = r'C:\Users\paula\UNIR\MasterBigDatayVisualAnalytics\cuatrimestre2\TFM-TFE\Entrega3\TESIS_Maestria_ETL\ETLProyect\ArchivosEntrada\HostReports'
-output_path3 = r'C:\Users\paula\UNIR\MasterBigDatayVisualAnalytics\cuatrimestre2\TFM-TFE\Entrega3\TESIS_Maestria_ETL\ETLProyect\ArchivosSalida\Concatenado3.xlsx'
-# Rutas Logs
-Logs_path = r'C:\Users\paula\UNIR\MasterBigDatayVisualAnalytics\cuatrimestre2\TFM-TFE\Entrega3\TESIS_Maestria_ETL\ETLProyect\ArchivosEntrada\Logs'
 
 
 #-------------------------------------------------------------------------LiveOffice Card Reports----------------------------------------------------------------------------------------------
@@ -42,7 +30,7 @@ Logs_path = r'C:\Users\paula\UNIR\MasterBigDatayVisualAnalytics\cuatrimestre2\TF
 def process_live_office(folder_path, output_path):
     raw_data = extract_data(folder_path)
     transformed_data = transform_data(raw_data)
-    load_to_excel(transformed_data, output_path)
+    load_to_excel(transformed_data, output_path,'locardreport')
     return transformed_data
 
 
@@ -52,7 +40,7 @@ def process_live_office(folder_path, output_path):
 def process_live_office_tr_bb(folder_path_tr_bb, output_path3):
     raw_data_tr_bb = extract_data_tr_bb(folder_path_tr_bb)
     transformed_data_tr_bb = transform_data_tr_bb(raw_data_tr_bb)
-    load_to_excel_tr_bb(transformed_data_tr_bb, output_path3)
+    load_to_excel(transformed_data_tr_bb, output_path3,'lotr-bbreport')
     return transformed_data_tr_bb
 
 #--------------------------------------------------------------------------Host Card Reports----------------------------------------------------------------------------------------------
@@ -74,7 +62,7 @@ def process_host_reports(host_folder_path, output_path3):
 
     if dataframes:
         combined_df = pd.concat(dataframes, ignore_index=True)
-        load_to_excel(combined_df, output_path3)
+        load_to_excel(combined_df, output_path3,'hostcardreports')
         return combined_df
     else:
         print("No se generaron datos para exportar.")
@@ -87,7 +75,7 @@ def process_spark_lo_host(transformed_data, combined_df, output_path, output_pat
         print("Iniciando el procesamiento con Spark...")
         result_df, result_dfHOST = process_with_spark(transformed_data, combined_df, output_path3)
 
-        load_to_excel(result_df, output_path)
+        load_to_excel(result_df, output_path,'lo-host')
 
         if os.path.exists(output_path3):
             print(f"Archivo exportado exitosamente a {output_path3}")
@@ -99,28 +87,18 @@ def process_spark_lo_host(transformed_data, combined_df, output_path, output_pat
 
 #----------------------------------------------------------------------------- Logs Extraction-------------------------------------------------------------------------------
 
-def process_logs(Logs_path, output_path, output_path3):
-    logs_data = extract_logs(Logs_path)
-    df_LogsUnified = pd.DataFrame()
-
-    for log_type in ['ATM', 'CashAdvance']:
-        df_logs = transform_logs(logs_data, log_type)
-        df_LogsUnified = pd.concat([df_LogsUnified, df_logs], ignore_index=True)
-
-    dfLogsTR = transform_logs(logs_data, 'TicketRedemption')
-    dfLogsBB = transform_logs(logs_data, 'BillBreaking')
-
-    load_to_excel(dfLogsTR, output_path)
-    load_to_excel(dfLogsBB, output_path3)
-
-    return df_LogsUnified, dfLogsTR, dfLogsBB
+def process_logs(Logs_path, output_path, option):
+    logs_data = extract_logs(Logs_path,option,output_path)
+ #   df_LogsUnified = pd.DataFrame()
+    dfLogs  = transform_logs(logs_data, option, output_path)
+    return dfLogs
 
 #------------------------------------------------------------------SPARK Consolidado logs------------------------------------------------------------------------------
 
 def process_spark_logs(df_LogsUnified, result_df, result_dfHOST, output_path3):
     result_df1, result_df2 = process_logs_with_spark(df_LogsUnified, result_df, result_dfHOST)
 
-    with pd.ExcelWriter(output_path, engine='openpyxl') as writer:
+    with pd.ExcelWriter(output_path3, engine='openpyxl') as writer:
         result_df1.to_excel(writer, sheet_name='LOGSvsLO-HOST', index=False)
         result_df2.to_excel(writer, sheet_name='LOGSvsHOST', index=False)
 
@@ -128,12 +106,12 @@ def process_spark_logs(df_LogsUnified, result_df, result_dfHOST, output_path3):
 
 #------------------------------------------------------------------SPARK Consolidado logs vs LO (TR-BB)------------------------------------------------------------------------------
 
-def process_spark_logs_tr_bb(dfLogsTR, dfLogsBB, transformed_data_tr_bb, output_path3):
-    result_df1, result_df2 = process_logs_with_spark_tr_bb(dfLogsTR, dfLogsBB, transformed_data_tr_bb)
-
-    with pd.ExcelWriter(output_path3, engine='openpyxl') as writer:
+def process_spark_logs_tr_bb(dfLogs, transformed_data_tr_bb, output_path):
+    #result_df1, result_df2 = process_logs_with_spark_tr_bb(dfLogsTR, dfLogsBB, transformed_data_tr_bb)
+    result_df1  = process_logs_with_spark_tr_bb(dfLogs, transformed_data_tr_bb, output_path)
+    with pd.ExcelWriter(output_path, engine='openpyxl') as writer:
         result_df1.to_excel(writer, sheet_name='LOGSvsLO-TR', index=False)
-        result_df2.to_excel(writer, sheet_name='LOGSvsLO-BB', index=False)
+        #result_df2.to_excel(writer, sheet_name='LOGSvsLO-BB', index=False)
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -142,22 +120,44 @@ def main():
     print("Iniciando el proceso ETL...")
 
     # Definir rutas
-    folder_path = r'C:\Users\paula\UNIR\MasterBigDatayVisualAnalytics\cuatrimestre2\TFM-TFE\Entrega3\TESIS_Maestria_ETL\ETLProyect\ArchivosEntrada\LOCardReports'
-    output_path = r'C:\Users\paula\UNIR\MasterBigDatayVisualAnalytics\cuatrimestre2\TFM-TFE\Entrega3\TESIS_Maestria_ETL\ETLProyect\Concatenado2.xlsx'
-    folder_path_tr_bb = r'C:\Users\paula\UNIR\MasterBigDatayVisualAnalytics\cuatrimestre2\TFM-TFE\Entrega3\TESIS_Maestria_ETL\ETLProyect\ArchivosEntrada\LO_TR_BBReports'
-    host_folder_path = r'C:\Users\paula\UNIR\MasterBigDatayVisualAnalytics\cuatrimestre2\TFM-TFE\Entrega3\TESIS_Maestria_ETL\ETLProyect\ArchivosEntrada\HostReports'
-    output_path3 = r'C:\Users\paula\UNIR\MasterBigDatayVisualAnalytics\cuatrimestre2\TFM-TFE\Entrega3\TESIS_Maestria_ETL\ETLProyect\ArchivosSalida\Concatenado3.xlsx'
-    Logs_path = r'C:\Users\paula\UNIR\MasterBigDatayVisualAnalytics\cuatrimestre2\TFM-TFE\Entrega3\TESIS_Maestria_ETL\ETLProyect\ArchivosEntrada\Logs'
+    folder_path = r'C:\Users\Paula\Documents\LiveOffice\LOGS\variances\ETLProject\ETLProyect\ArchivosEntrada\LOCardReports'
+    output_path = r'C:\Users\Paula\Documents\LiveOffice\LOGS\variances\ETLProject\ETLProyect\ArchivosSalida\Concatenado2.xlsx'
+    folder_path_tr_bb = r'C:\Users\Paula\Documents\LiveOffice\LOGS\variances\ETLProject\ETLProyect\ArchivosEntrada\LO_TR_BBReports'
+    host_folder_path = r'C:\Users\Paula\Documents\LiveOffice\LOGS\variances\ETLProject\ETLProyect\ArchivosEntrada\HostReports'
+    output_path3 = r'C:\Users\Paula\Documents\LiveOffice\LOGS\variances\ETLProject\ETLProyect\ArchivosSalida\Concatenado3.csv'    
+    output_path2 = r'C:\Users\Paula\Documents\LiveOffice\LOGS\variances\ETLProject\ETLProyect\ArchivosSalida\Concatenado3.xlsx'
+    Logs_path = r'C:\Users\Paula\Documents\LiveOffice\LOGS\variances\ETLProject\ETLProyect\ArchivosEntrada\Logs'
+
+    option = input("What type of variance do you want to analyze? (tickets/card/bills): ").strip().lower()
+
+    if option == "tickets":
+        print("You selected ticket variance.")        
+        df_TransformedLogs = process_logs(Logs_path, output_path3, option)
+        transformed_data_tr_bb = process_live_office_tr_bb(folder_path_tr_bb, output_path)
+        result1 = process_spark_logs_tr_bb(df_TransformedLogs, transformed_data_tr_bb, output_path2)
+        
+    elif option == "card":
+        print("You selected card variance.")
+        # Call your function or logic for card transactions here
+    elif option == "bills":
+        print("You selected bill variance.")
+        # Call your function or logic for bills here
+    else:
+        print("Invalid option. Please enter 'tickets', 'card', or 'bills'.")
+
+
+
 
     #  Procesos
-    transformed_data = process_live_office(folder_path, output_path)
-    transformed_data_tr_bb = process_live_office_tr_bb(folder_path_tr_bb, output_path3)
-    combined_df = process_host_reports(host_folder_path, output_path3)
 
-    process_spark_lo_host(transformed_data, combined_df, output_path, output_path3)
-    df_LogsUnified, dfLogsTR, dfLogsBB = process_logs(Logs_path, output_path, output_path3)
-    process_spark_logs(df_LogsUnified, transformed_data, combined_df, output_path3)
-    process_spark_logs_tr_bb(dfLogsTR, dfLogsBB, transformed_data_tr_bb, output_path3)
+    #transformed_data = process_live_office(folder_path, output_path)
+    #transformed_data_tr_bb = process_live_office_tr_bb(folder_path_tr_bb, output_path3)
+    #combined_df = process_host_reports(host_folder_path, output_path3)
+
+    #process_spark_lo_host(transformed_data, combined_df, output_path, output_path3)
+    #df_LogsUnified, dfLogsTR, dfLogsBB = process_logs(Logs_path, output_path, output_path)
+    #process_spark_logs(df_LogsUnified, transformed_data, combined_df, output_path3)
+    #process_spark_logs_tr_bb(dfLogsTR, dfLogsBB, transformed_data_tr_bb, output_path)
 
     print("Proceso ETL completado.")
     print(f"Tiempo total de ejecución: {time.time() - start_time:.2f} segundos")

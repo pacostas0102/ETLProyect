@@ -1,19 +1,24 @@
 # Task/Load/load.py
 
 import pandas as pd
+import os
 
-def load_to_excel(dataframe, output_path):
-    """
-    Carga un DataFrame en un archivo Excel.
-    
-    :param dataframe: El DataFrame que se desea exportar.
-    :param output_path: La ruta del archivo Excel de destino.
-    """
+def load_to_excel(dataframe, output_path,sheet_name):
     try:
-        dataframe.to_excel(output_path, index=False, engine='openpyxl')
-        print(f"Archivo exportado exitosamente a {output_path}")
+            # Verificar si el archivo existe
+            if not os.path.exists(output_path):
+                # Si no existe, crear nuevo archivo con la hoja especificada
+                with pd.ExcelWriter(output_path, engine='openpyxl') as writer:
+                    dataframe.to_excel(writer, index=False, sheet_name=sheet_name)
+            else:
+                # Si ya existe, agregar una nueva hoja
+                with pd.ExcelWriter(output_path, engine='openpyxl', mode='a', if_sheet_exists='new') as writer:
+                    dataframe.to_excel(writer, index=False, sheet_name=sheet_name)
+
+            print(f"✅ Archivo exportado exitosamente en '{output_path}', hoja '{sheet_name}'")
+
     except Exception as e:
-        print(f"Error al exportar el archivo: {e}")
+        print(f"❌ Error al exportar el archivo: {e}")
 
 # Función para cargar los DataFrames en un archivo Excel
 def load_to_excel_tr_bb(transformed_data, output_path3):

@@ -78,5 +78,6 @@ def transform_data_tr_bb(dataframes):
             df = df.loc[df["DATE & TIME"] != "Totals:"]
             
             transformed_data.append(('BB', df))
-    
-    return transformed_data
+ #   print (df)
+ #   print (df.columns)
+    return df
