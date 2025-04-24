@@ -59,6 +59,9 @@ def transform_data_tr_bb(dataframes):
             columnas_a_convertir = ["TRANSAMOUNT($)", "DISPENSED QTYS$1", "nan$5", "nan$10", "nan$20", "nan$50", "nan$100"]
             df[columnas_a_convertir] = df[columnas_a_convertir].astype(float)
             df.fillna(0, inplace=True)
+            df["SEQUENCENUMBER_FILLED"] = df["SEQUENCENUMBER"].replace(0, None).ffill()
+
+
             transformed_data.append(('TR', df))
         
         elif data_type == 'BB':
