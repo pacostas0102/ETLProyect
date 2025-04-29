@@ -3,28 +3,29 @@ import pandas as pd
 
 def extract_host_data(file_path):
     """
-    Extrae datos desde un archivo específico según su tipo.
+    Data is extracted by their host report characteristics 
     """
     file_name = os.path.basename(file_path)
 
     if "TransactionLookup" in file_name:
-        # Lectura específica para TransactionLookup
         df_host = pd.read_excel(file_path, skiprows=4)
-        df_host = df_host[3:]  # Eliminar las filas de encabezado original (0, 1 y 2)
+        df_host = df_host[3:] 
         df_host.reset_index(drop=True, inplace=True)
         df_host['file_name'] = file_name
-        print("Archivo procesado: TransactionLookup")
+        print("Data extracted from : TransactionLookup")
         return df_host, "TransactionLookup"
 
     elif "rpttransactiondetailbytid" in file_name:
-        # Lectura específica para rpttransactiondetailbytid
-        df_host = pd.read_excel(file_path, skiprows=5)
-        df_host = df_host[4:]  # Eliminar las filas de encabezado original (0, 1, 2, y 3)
+        df_host = pd.read_excel(file_path)#, skiprows=5)
+        #new_columns = df_host.iloc[2].astype(str) + df_host.iloc[3].astype(str)
+        #df_host.columns = new_columns  
+        #df_host = df_host[1:]  
         df_host.reset_index(drop=True, inplace=True)
         df_host['file_name'] = file_name
-        print("Archivo procesado: rpttransactiondetailbytid")
+        print("Data extracted from : rpttransactiondetailbytid")
+        #df_host = df_host.dropna(axis=1, how='all')
         return df_host, "rpttransactiondetailbytid"
 
     else:
-        print(f"No se procesó el archivo: {file_name}")
+        print(f"The following file couldn't be processed : {file_name}")
         return None, None

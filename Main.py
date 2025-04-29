@@ -58,31 +58,34 @@ def process_host_reports(host_folder_path, output_path3):
                 else transform_rpttransactiondetailbytid(df_host) if file_type == "rpttransactiondetailbytid"
                 else df_host
             )
-            dataframes.append(df_host)
+        #print(type(df_host))
+        load_to_excel(df_host, output_path3,'hostcardreports')    
+        #dataframes.append(df_host)
 
-    if dataframes:
-        combined_df = pd.concat(dataframes, ignore_index=True)
-        load_to_excel(combined_df, output_path3,'hostcardreports')
-        return combined_df
-    else:
-        print("No se generaron datos para exportar.")
-        return None
+    #if df_host:
+        #combined_df = pd.concat(dataframes, ignore_index=True)
+        #dataF = pd.DataFrame(dataframes)
+       # load_to_excel(df_host, output_path3,'hostcardreports')
+    return df_host, file_type
+    #else:
+     #   print("There were not data to export")
+      #  return None
 
 #--------------------------------------------------------------------------SPARK LO-HOST CONSOLIDATION ----------------------------------------------------------------------------------------------
 
-def process_spark_lo_host(transformed_data, combined_df, output_path, output_path3):
+def process_spark_lo_host(transformed_data, combined_df, host_name, output_path, output_path3):
     if combined_df is not None:
-        print("Iniciando el procesamiento con Spark...")
-        result_df, result_dfHOST = process_with_spark(transformed_data, combined_df, output_path3)
+        print("Spark process begins...")
+        result_df = process_with_spark(transformed_data, combined_df, host_name, output_path3)
 
         load_to_excel(result_df, output_path,'lo-host')
 
-        if os.path.exists(output_path3):
-            print(f"Archivo exportado exitosamente a {output_path3}")
+        if os.path.exists(output_path):
+            print(f"File successfully exported in: {output_path}")
         else:
-            print("No se pudo exportar el archivo.")
+            print("File couldn't be exported.")
     else:
-        print("No se generaron datos para exportar.")
+        print("There isn't any data to export")
 
 
 #----------------------------------------------------------------------------- Logs Extraction-------------------------------------------------------------------------------
@@ -131,14 +134,17 @@ def main():
     option = input("What type of variance do you want to analyze? (tickets/card/bills): ").strip().lower()
 
     if option == "tickets":
-        print("You selected ticket variance.")        
+        print("You selected TICKET variance.")        
         df_TransformedLogs = process_logs(Logs_path, output_path3, option)
         transformed_data_tr_bb = process_live_office_tr_bb(folder_path_tr_bb, output_path)
         result1 = process_spark_logs_tr_bb(df_TransformedLogs, transformed_data_tr_bb, output_path2)
         
     elif option == "card":
-        print("You selected card variance.")
-        # Call your function or logic for card transactions here
+        print("You selected CARD variance.")
+        transformed_data = process_live_office(folder_path, output_path)
+        combined_df, host_name = process_host_reports(host_folder_path, output_path)
+        process_spark_lo_host(transformed_data, combined_df, host_name, output_path, output_path3)
+
     elif option == "bills":
         print("You selected bill variance.")
         # Call your function or logic for bills here

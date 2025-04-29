@@ -1,0 +1,1571 @@
+___00:02:59 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___00:02:59 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___00:02:59 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___00:02:59 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___00:02:59 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___00:02:59 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___00:02:59 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___00:05:09 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___00:05:09 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___00:05:09 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___00:05:09 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___00:05:09 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___00:05:09 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___00:05:09 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___00:40:51 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___00:40:51 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___00:40:51 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___00:40:51 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___00:40:51 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___00:40:51 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___00:40:51 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___01:09:02 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___01:09:02 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___01:09:02 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___01:09:02 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___01:09:02 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___01:09:02 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___01:09:02 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___01:18:28 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___01:18:28 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___01:18:28 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___01:18:28 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___01:18:28 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___01:18:28 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___01:18:28 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___01:20:03 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___01:20:03 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___01:20:03 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___01:20:03 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___01:20:03 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___01:20:03 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___01:20:03 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___01:29:29 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___01:29:29 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___01:29:29 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___01:29:29 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___01:29:29 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___01:29:29 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___01:29:29 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___01:30:23 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___01:30:23 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___01:30:23 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___01:30:23 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___01:30:23 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___01:30:23 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___01:30:23 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___02:26:55 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___02:26:55 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___02:26:55 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___02:26:55 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___02:26:55 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___02:26:55 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___02:26:55 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___02:28:24 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___02:28:24 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___02:28:24 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___02:28:24 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___02:28:24 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___02:28:24 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___02:28:24 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___02:50:04 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___02:50:04 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___02:50:04 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___02:50:04 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___02:50:04 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___02:50:04 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___02:50:04 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___02:50:46 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter GETCREDITFEECOMMAND'  
+___02:50:46 401004 Parameters  '______GetFeeInformation Method______'  
+___02:50:46 401004 Parameters  'GetFeeInformation: Transaction Limit:'  
+___02:50:46 401009 QuickCashAdvance 'Returning on GETCREDITFEECOMMAND -0-'  
+___02:50:46 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter INITIALIZECACREDITTRANSACTIONCOMMAND'  
+___02:50:46 401004 Parameters  '______InitializeCATransaction Method______'  
+___02:50:46 401005 OpenSession  'GetCardHolderName: FINO/ MARIA               '  
+___02:50:46 401005 OpenSession  'CardHolderName: FINO/ MARIA               '  
+___02:50:46 401004 Parameters  'GetFeeForAmount MAC ADDRESS:00-01-29-91-8D-19 FirstURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc SecondURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc'  
+___02:50:46 401004 Parameters  'TypeTrn Credit Track2 434256XXXXXX2743=2903201XXXXXXXXXX Amount $300.00'  
+___02:50:46 401004 Parameters  'GetFeeForAmount Response ErrorCode:0  ErrorDsc:  Fee:18 DynamicPricing:False EchoCommonId:'  
+___02:50:46 401005 OpenSession  'Regular Fee $18.00'  
+___02:50:46 401005 OpenSession  'InitializeCATransaction Response  Transaction {
+  "TrnType": 2,
+  "Total": 300.0,
+  "Fee": 18.0,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "0416202502504623",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX2743",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___02:50:46 401004 Parameters  'InitializeCACreditTransaction result:0'  
+___02:50:46 401009 QuickCashAdvance 'Returning on INITIALIZECACREDITTRANSACTIONCOMMAND -0-'  
+___02:50:53 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter GETAUTHORIZATIONCOMMAND'  
+___02:50:53 401004 Parameters  '_______GetAuthorization Method______'  
+___02:50:53 401004 Parameters  'Starting GetAuthorization Method______Transaction:{
+  "TrnType": 2,
+  "Total": 300.0,
+  "Fee": 18.0,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "0416202502504623",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX2743",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___02:50:53 401005 OpenSession  'Language  es-ES'  
+___02:50:53 401004 Parameters  'Track2:4342XXXX=XXXXXXXXXXX'  
+___02:50:53 401004 Parameters  'EMV Details  5F34 Value XX Index 0'  
+___02:50:53 401004 Parameters  'EMV Details  57 Value XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Index 1'  
+___02:50:53 401004 Parameters  'EMV Details  9F03 Value  Index 2'  
+___02:50:53 401004 Parameters  'EMV Details  84 Value XXXXXXXXXXXXXX Index 3'  
+___02:50:53 401004 Parameters  'EMV Details  9F09 Value XXXX Index 4'  
+___02:50:53 401004 Parameters  'EMV Details  9F34 Value XXXXXX Index 5'  
+___02:50:53 401004 Parameters  'EMV Details  9F1E Value XXXXXXXXXXXXXXXX Index 6'  
+___02:50:53 401004 Parameters  'EMV Details  9F33 Value XXXXXX Index 7'  
+___02:50:53 401004 Parameters  'EMV Details  9F35 Value XX Index 8'  
+___02:50:53 401004 Parameters  'EMV Details  9F41 Value  Index 9'  
+___02:50:53 401004 Parameters  'EMV Details  9F26 Value XXXXXXXXXXXXXXXX Index 10'  
+___02:50:53 401004 Parameters  'EMV Details  82 Value XXXX Index 11'  
+___02:50:53 401004 Parameters  'EMV Details  9F36 Value XXXX Index 12'  
+___02:50:53 401004 Parameters  'EMV Details  9F27 Value XX Index 13'  
+___02:50:53 401004 Parameters  'EMV Details  9F10 Value XXXXXXXXXXXXXX Index 14'  
+___02:50:53 401004 Parameters  'EMV Details  9F02 Value XXXXXXXXXXXX Index 15'  
+___02:50:53 401004 Parameters  'EMV Details  9F1A Value XXXX Index 16'  
+___02:50:53 401004 Parameters  'EMV Details  95 Value XXXXXXXXXX Index 17'  
+___02:50:53 401004 Parameters  'EMV Details  5F2A Value XXXX Index 18'  
+___02:50:53 401004 Parameters  'EMV Details  9A Value XXXXXX Index 19'  
+___02:50:53 401004 Parameters  'EMV Details  9F3C Value  Index 20'  
+___02:50:53 401004 Parameters  'EMV Details  9C Value XX Index 21'  
+___02:50:53 401004 Parameters  'EMV Details  9F37 Value XXXXXXXX Index 22'  
+___02:50:53 401004 Parameters  'EMV Details  9F07 Value XXXX Index 23'  
+___02:50:53 401004 Parameters  'EMV Details  8A Value XXXX Index 24'  
+___02:50:53 401004 Parameters  'EMV Details  9F06 Value XXXXXXXXXXXXXX Index 25'  
+___02:50:53 401004 Parameters  'EMV Details  91 Value  Index 26'  
+___02:50:53 401004 Parameters  'EMV Details  9F5B Value  Index 27'  
+___02:50:53 401004 Parameters  'EMV Details  SECONDARY PIN BLOCK Value  Index 28'  
+___02:50:53 401004 Parameters  'EMV Details  9F6E Value  Index 29'  
+___02:50:53 401004 Parameters  'EMV Details  9F7C Value  Index 30'  
+___02:50:53 401004 Parameters  'EMV Details  9F53 Value  Index 31'  
+___02:50:53 401004 Parameters  'EMV Details  5F24 Value XXXXXX Index 32'  
+___02:50:53 401004 Parameters  'EMV Details  FILER Value  Index 33'  
+___02:50:53 401000 ------------>Cash Advance Transaction Info. 'SmartChip: True Type: CA CREDIT Card Num: XXXXXXX2743 Amount: $300.00 Fee: $18.00'  
+___02:50:53 401003 Cryptogram Info.  'Cryptogram BBAEB868EB19F915 '  
+___02:50:53 401004 Parameters  'Authorization MAC ADDRESS:00-01-29-91-8D-19 FirstURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc SecondURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc'  
+___02:50:53 401004 Parameters  'Requesto to CAS Authorizatoion: Card No:0 Amount:300.0'  
+___02:50:55 401001 Cash Advance Authorization Info.  'Card Num: XXXXXXX2743 Amount: $300.00 Fee: $18.00 Auth Code:  OrderId: 2280 HostSeqNumber :  ErrorCode:1 ErrorDsc:NSF 51          DisplayText:--'  
+___02:50:55 401001 Cash Advance Authorization Info.  'GetAuthorization returning:4'  
+___02:50:55 401004 Parameters  'GetAuthorization result:4'  
+___02:50:55 401004 Parameters  'Transaction is chained -- Dict:-4'  
+___02:50:55 401004 Parameters  'Is Chained Transaction:False'  
+___02:50:55 401004 Parameters  'Transaction is chained -- Dict:-4'  
+___02:50:55 401002 Cash Advance Posting Info.  'Card Num: XXXXXXX2743 Amount: $300.00 Fee: $18.00 Auth Id:  ErrorCode:1 ErrorDsc:NSF 51          '  
+___02:50:55 401002 Cash Advance Posting Info.  'Posting to LO:{
+  "type": "CashAdvance",
+  "accountType": "CREDITAC",
+  "seqNumber": "0416202502504623",
+  "Authorization": {
+    "AuthNumber": "",
+    "ErrorCode": "1",
+    "ErrorDescription": "NSF 51          ",
+    "Fee": 18.0,
+    "OrderId": "2280",
+    "RegisterTime": "2025-04-16T02:50:55.3829315-07:00",
+    "TransactionNumber": 416202502504623
+  },
+  "Operation": {
+    "Amount": 300.0,
+    "BillDespensed": 0.0,
+    "CardNumber": "2743",
+    "HostIP": "",
+    "OperationType": null,
+    "RegistrationDatetime": "2025-04-16T02:50:55.3829315-07:00",
+    "SequenceNumber": "0416202502504623",
+    "Status": "DENIED",
+    "Terminal": null,
+    "TicketData": null
+  },
+  "TransactionDetail": {
+    "RegistrationDatetime": "0001-01-01T00:00:00",
+    "Amount": 300.0,
+    "DispensedTotal": 0.0,
+    "BillDenom_01": 1,
+    "BillDenom_02": 5,
+    "BillDenom_03": 10,
+    "BillDenom_04": 20,
+    "BillDenom_05": 50,
+    "BillDenom_06": 100,
+    "CoinDenom_01": 1,
+    "CoinDenom_02": 5,
+    "CoinDenom_03": 0,
+    "CoinDenom_04": 25,
+    "CoinDenom_05": 0,
+    "CoinDenom_06": 0,
+    "BillCount_01": 0,
+    "BillCount_02": 0,
+    "BillCount_03": 0,
+    "BillCount_04": 0,
+    "BillCount_05": 0,
+    "BillCount_06": 0,
+    "CoinCount_01": 0,
+    "CoinCount_02": 0,
+    "CoinCount_03": 0,
+    "CoinCount_04": 0,
+    "CoinCount_05": 0,
+    "CoinCount_06": 0,
+    "ManualPay": 0.0,
+    "RequestContent": null,
+    "ResponseContent": null,
+    "Status": null,
+    "AccountType": null,
+    "TransactionNumber": null,
+    "TransactionType": "CREDITCATX"
+  }
+}'  
+___02:50:55 401009 QuickCashAdvance 'Returning on GETAUTHORIZATIONCOMMAND -4-'  
+___02:51:34 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___02:51:34 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___02:51:34 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___02:51:34 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___02:51:34 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___02:51:34 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___02:51:34 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___02:51:53 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter GETCREDITFEECOMMAND'  
+___02:51:53 401004 Parameters  '______GetFeeInformation Method______'  
+___02:51:53 401004 Parameters  'GetFeeInformation: Transaction Limit:'  
+___02:51:53 401009 QuickCashAdvance 'Returning on GETCREDITFEECOMMAND -0-'  
+___02:51:53 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter INITIALIZECACREDITTRANSACTIONCOMMAND'  
+___02:51:53 401004 Parameters  '______InitializeCATransaction Method______'  
+___02:51:53 401005 OpenSession  'GetCardHolderName: FINO/ MARIA               '  
+___02:51:53 401005 OpenSession  'CardHolderName: FINO/ MARIA               '  
+___02:51:53 401004 Parameters  'GetFeeForAmount MAC ADDRESS:00-01-29-91-8D-19 FirstURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc SecondURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc'  
+___02:51:53 401004 Parameters  'TypeTrn Credit Track2 434256XXXXXX2743=2903201XXXXXXXXXX Amount $500.00'  
+___02:51:53 401004 Parameters  'GetFeeForAmount Response ErrorCode:0  ErrorDsc:  Fee:30 DynamicPricing:False EchoCommonId:'  
+___02:51:53 401005 OpenSession  'Regular Fee $30.00'  
+___02:51:53 401005 OpenSession  'InitializeCATransaction Response  Transaction {
+  "TrnType": 2,
+  "Total": 500.0,
+  "Fee": 30.0,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "0416202502515322",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX2743",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___02:51:53 401004 Parameters  'InitializeCACreditTransaction result:0'  
+___02:51:53 401009 QuickCashAdvance 'Returning on INITIALIZECACREDITTRANSACTIONCOMMAND -0-'  
+___02:52:00 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter GETAUTHORIZATIONCOMMAND'  
+___02:52:00 401004 Parameters  '_______GetAuthorization Method______'  
+___02:52:00 401004 Parameters  'Starting GetAuthorization Method______Transaction:{
+  "TrnType": 2,
+  "Total": 500.0,
+  "Fee": 30.0,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "0416202502515322",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX2743",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___02:52:00 401005 OpenSession  'Language  en-US'  
+___02:52:00 401004 Parameters  'Track2:4342XXXX=XXXXXXXXXXX'  
+___02:52:00 401004 Parameters  'EMV Details  5F34 Value XX Index 0'  
+___02:52:00 401004 Parameters  'EMV Details  57 Value XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Index 1'  
+___02:52:00 401004 Parameters  'EMV Details  9F03 Value  Index 2'  
+___02:52:00 401004 Parameters  'EMV Details  84 Value XXXXXXXXXXXXXX Index 3'  
+___02:52:00 401004 Parameters  'EMV Details  9F09 Value XXXX Index 4'  
+___02:52:00 401004 Parameters  'EMV Details  9F34 Value XXXXXX Index 5'  
+___02:52:00 401004 Parameters  'EMV Details  9F1E Value XXXXXXXXXXXXXXXX Index 6'  
+___02:52:00 401004 Parameters  'EMV Details  9F33 Value XXXXXX Index 7'  
+___02:52:00 401004 Parameters  'EMV Details  9F35 Value XX Index 8'  
+___02:52:00 401004 Parameters  'EMV Details  9F41 Value  Index 9'  
+___02:52:00 401004 Parameters  'EMV Details  9F26 Value XXXXXXXXXXXXXXXX Index 10'  
+___02:52:00 401004 Parameters  'EMV Details  82 Value XXXX Index 11'  
+___02:52:00 401004 Parameters  'EMV Details  9F36 Value XXXX Index 12'  
+___02:52:00 401004 Parameters  'EMV Details  9F27 Value XX Index 13'  
+___02:52:00 401004 Parameters  'EMV Details  9F10 Value XXXXXXXXXXXXXX Index 14'  
+___02:52:00 401004 Parameters  'EMV Details  9F02 Value XXXXXXXXXXXX Index 15'  
+___02:52:00 401004 Parameters  'EMV Details  9F1A Value XXXX Index 16'  
+___02:52:00 401004 Parameters  'EMV Details  95 Value XXXXXXXXXX Index 17'  
+___02:52:00 401004 Parameters  'EMV Details  5F2A Value XXXX Index 18'  
+___02:52:00 401004 Parameters  'EMV Details  9A Value XXXXXX Index 19'  
+___02:52:00 401004 Parameters  'EMV Details  9F3C Value  Index 20'  
+___02:52:00 401004 Parameters  'EMV Details  9C Value XX Index 21'  
+___02:52:00 401004 Parameters  'EMV Details  9F37 Value XXXXXXXX Index 22'  
+___02:52:00 401004 Parameters  'EMV Details  9F07 Value XXXX Index 23'  
+___02:52:00 401004 Parameters  'EMV Details  8A Value XXXX Index 24'  
+___02:52:00 401004 Parameters  'EMV Details  9F06 Value XXXXXXXXXXXXXX Index 25'  
+___02:52:00 401004 Parameters  'EMV Details  91 Value  Index 26'  
+___02:52:00 401004 Parameters  'EMV Details  9F5B Value  Index 27'  
+___02:52:00 401004 Parameters  'EMV Details  SECONDARY PIN BLOCK Value  Index 28'  
+___02:52:00 401004 Parameters  'EMV Details  9F6E Value  Index 29'  
+___02:52:00 401004 Parameters  'EMV Details  9F7C Value  Index 30'  
+___02:52:00 401004 Parameters  'EMV Details  9F53 Value  Index 31'  
+___02:52:00 401004 Parameters  'EMV Details  5F24 Value XXXXXX Index 32'  
+___02:52:00 401004 Parameters  'EMV Details  FILER Value  Index 33'  
+___02:52:00 401000 ------------>Cash Advance Transaction Info. 'SmartChip: True Type: CA CREDIT Card Num: XXXXXXX2743 Amount: $500.00 Fee: $30.00'  
+___02:52:00 401003 Cryptogram Info.  'Cryptogram 940612625E2C2369 '  
+___02:52:00 401004 Parameters  'Authorization MAC ADDRESS:00-01-29-91-8D-19 FirstURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc SecondURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc'  
+___02:52:00 401004 Parameters  'Requesto to CAS Authorizatoion: Card No:0 Amount:500.0'  
+___02:52:01 401001 Cash Advance Authorization Info.  'Card Num: XXXXXXX2743 Amount: $500.00 Fee: $30.00 Auth Code:  OrderId: 2280 HostSeqNumber :  ErrorCode:1 ErrorDsc:NSF 51          DisplayText:--'  
+___02:52:01 401001 Cash Advance Authorization Info.  'GetAuthorization returning:4'  
+___02:52:01 401004 Parameters  'GetAuthorization result:4'  
+___02:52:01 401004 Parameters  'Transaction is chained -- Dict:-4'  
+___02:52:01 401004 Parameters  'Is Chained Transaction:False'  
+___02:52:01 401004 Parameters  'Transaction is chained -- Dict:-4'  
+___02:52:01 401002 Cash Advance Posting Info.  'Card Num: XXXXXXX2743 Amount: $500.00 Fee: $30.00 Auth Id:  ErrorCode:1 ErrorDsc:NSF 51          '  
+___02:52:01 401002 Cash Advance Posting Info.  'Posting to LO:{
+  "type": "CashAdvance",
+  "accountType": "CREDITAC",
+  "seqNumber": "0416202502515322",
+  "Authorization": {
+    "AuthNumber": "",
+    "ErrorCode": "1",
+    "ErrorDescription": "NSF 51          ",
+    "Fee": 30.0,
+    "OrderId": "2280",
+    "RegisterTime": "2025-04-16T02:52:01.8575075-07:00",
+    "TransactionNumber": 416202502515322
+  },
+  "Operation": {
+    "Amount": 500.0,
+    "BillDespensed": 0.0,
+    "CardNumber": "2743",
+    "HostIP": "",
+    "OperationType": null,
+    "RegistrationDatetime": "2025-04-16T02:52:01.8575075-07:00",
+    "SequenceNumber": "0416202502515322",
+    "Status": "DENIED",
+    "Terminal": null,
+    "TicketData": null
+  },
+  "TransactionDetail": {
+    "RegistrationDatetime": "0001-01-01T00:00:00",
+    "Amount": 500.0,
+    "DispensedTotal": 0.0,
+    "BillDenom_01": 1,
+    "BillDenom_02": 5,
+    "BillDenom_03": 10,
+    "BillDenom_04": 20,
+    "BillDenom_05": 50,
+    "BillDenom_06": 100,
+    "CoinDenom_01": 1,
+    "CoinDenom_02": 5,
+    "CoinDenom_03": 0,
+    "CoinDenom_04": 25,
+    "CoinDenom_05": 0,
+    "CoinDenom_06": 0,
+    "BillCount_01": 0,
+    "BillCount_02": 0,
+    "BillCount_03": 0,
+    "BillCount_04": 0,
+    "BillCount_05": 0,
+    "BillCount_06": 0,
+    "CoinCount_01": 0,
+    "CoinCount_02": 0,
+    "CoinCount_03": 0,
+    "CoinCount_04": 0,
+    "CoinCount_05": 0,
+    "CoinCount_06": 0,
+    "ManualPay": 0.0,
+    "RequestContent": null,
+    "ResponseContent": null,
+    "Status": null,
+    "AccountType": null,
+    "TransactionNumber": null,
+    "TransactionType": "CREDITCATX"
+  }
+}'  
+___02:52:01 401009 QuickCashAdvance 'Returning on GETAUTHORIZATIONCOMMAND -4-'  
+___02:52:22 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___02:52:22 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___02:52:22 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___02:52:22 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___02:52:22 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___02:52:22 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___02:52:22 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___02:52:40 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter GETCREDITFEECOMMAND'  
+___02:52:40 401004 Parameters  '______GetFeeInformation Method______'  
+___02:52:40 401004 Parameters  'GetFeeInformation: Transaction Limit:'  
+___02:52:40 401009 QuickCashAdvance 'Returning on GETCREDITFEECOMMAND -0-'  
+___02:52:40 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter INITIALIZECACREDITTRANSACTIONCOMMAND'  
+___02:52:40 401004 Parameters  '______InitializeCATransaction Method______'  
+___02:52:40 401005 OpenSession  'GetCardHolderName: FINO/ MARIA               '  
+___02:52:40 401005 OpenSession  'CardHolderName: FINO/ MARIA               '  
+___02:52:40 401004 Parameters  'GetFeeForAmount MAC ADDRESS:00-01-29-91-8D-19 FirstURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc SecondURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc'  
+___02:52:40 401004 Parameters  'TypeTrn Credit Track2 434256XXXXXX2743=2903201XXXXXXXXXX Amount $500.00'  
+___02:52:40 401004 Parameters  'GetFeeForAmount Response ErrorCode:0  ErrorDsc:  Fee:30 DynamicPricing:False EchoCommonId:'  
+___02:52:40 401005 OpenSession  'Regular Fee $30.00'  
+___02:52:40 401005 OpenSession  'InitializeCATransaction Response  Transaction {
+  "TrnType": 2,
+  "Total": 500.0,
+  "Fee": 30.0,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "0416202502524032",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX2743",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___02:52:40 401004 Parameters  'InitializeCACreditTransaction result:0'  
+___02:52:40 401009 QuickCashAdvance 'Returning on INITIALIZECACREDITTRANSACTIONCOMMAND -0-'  
+___02:52:45 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter GETAUTHORIZATIONCOMMAND'  
+___02:52:45 401004 Parameters  '_______GetAuthorization Method______'  
+___02:52:45 401004 Parameters  'Starting GetAuthorization Method______Transaction:{
+  "TrnType": 2,
+  "Total": 500.0,
+  "Fee": 30.0,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "0416202502524032",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX2743",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___02:52:45 401005 OpenSession  'Language  en-US'  
+___02:52:45 401004 Parameters  'Track2:4342XXXX=XXXXXXXXXXX'  
+___02:52:45 401004 Parameters  'EMV Details  5F34 Value XX Index 0'  
+___02:52:45 401004 Parameters  'EMV Details  57 Value XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Index 1'  
+___02:52:45 401004 Parameters  'EMV Details  9F03 Value  Index 2'  
+___02:52:45 401004 Parameters  'EMV Details  84 Value XXXXXXXXXXXXXX Index 3'  
+___02:52:45 401004 Parameters  'EMV Details  9F09 Value XXXX Index 4'  
+___02:52:45 401004 Parameters  'EMV Details  9F34 Value XXXXXX Index 5'  
+___02:52:45 401004 Parameters  'EMV Details  9F1E Value XXXXXXXXXXXXXXXX Index 6'  
+___02:52:45 401004 Parameters  'EMV Details  9F33 Value XXXXXX Index 7'  
+___02:52:45 401004 Parameters  'EMV Details  9F35 Value XX Index 8'  
+___02:52:45 401004 Parameters  'EMV Details  9F41 Value  Index 9'  
+___02:52:45 401004 Parameters  'EMV Details  9F26 Value XXXXXXXXXXXXXXXX Index 10'  
+___02:52:45 401004 Parameters  'EMV Details  82 Value XXXX Index 11'  
+___02:52:45 401004 Parameters  'EMV Details  9F36 Value XXXX Index 12'  
+___02:52:45 401004 Parameters  'EMV Details  9F27 Value XX Index 13'  
+___02:52:45 401004 Parameters  'EMV Details  9F10 Value XXXXXXXXXXXXXX Index 14'  
+___02:52:45 401004 Parameters  'EMV Details  9F02 Value XXXXXXXXXXXX Index 15'  
+___02:52:45 401004 Parameters  'EMV Details  9F1A Value XXXX Index 16'  
+___02:52:45 401004 Parameters  'EMV Details  95 Value XXXXXXXXXX Index 17'  
+___02:52:45 401004 Parameters  'EMV Details  5F2A Value XXXX Index 18'  
+___02:52:45 401004 Parameters  'EMV Details  9A Value XXXXXX Index 19'  
+___02:52:45 401004 Parameters  'EMV Details  9F3C Value  Index 20'  
+___02:52:45 401004 Parameters  'EMV Details  9C Value XX Index 21'  
+___02:52:45 401004 Parameters  'EMV Details  9F37 Value XXXXXXXX Index 22'  
+___02:52:45 401004 Parameters  'EMV Details  9F07 Value XXXX Index 23'  
+___02:52:45 401004 Parameters  'EMV Details  8A Value XXXX Index 24'  
+___02:52:45 401004 Parameters  'EMV Details  9F06 Value XXXXXXXXXXXXXX Index 25'  
+___02:52:45 401004 Parameters  'EMV Details  91 Value  Index 26'  
+___02:52:45 401004 Parameters  'EMV Details  9F5B Value  Index 27'  
+___02:52:45 401004 Parameters  'EMV Details  SECONDARY PIN BLOCK Value  Index 28'  
+___02:52:45 401004 Parameters  'EMV Details  9F6E Value  Index 29'  
+___02:52:45 401004 Parameters  'EMV Details  9F7C Value  Index 30'  
+___02:52:45 401004 Parameters  'EMV Details  9F53 Value  Index 31'  
+___02:52:45 401004 Parameters  'EMV Details  5F24 Value XXXXXX Index 32'  
+___02:52:45 401004 Parameters  'EMV Details  FILER Value  Index 33'  
+___02:52:46 401000 ------------>Cash Advance Transaction Info. 'SmartChip: True Type: CA CREDIT Card Num: XXXXXXX2743 Amount: $500.00 Fee: $30.00'  
+___02:52:46 401003 Cryptogram Info.  'Cryptogram EB2186119391CDDF '  
+___02:52:46 401004 Parameters  'Authorization MAC ADDRESS:00-01-29-91-8D-19 FirstURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc SecondURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc'  
+___02:52:46 401004 Parameters  'Requesto to CAS Authorizatoion: Card No:0 Amount:500.0'  
+___02:52:47 401001 Cash Advance Authorization Info.  'Card Num: XXXXXXX2743 Amount: $500.00 Fee: $30.00 Auth Code:  OrderId: 2280 HostSeqNumber :  ErrorCode:1 ErrorDsc:NSF 51          DisplayText:--'  
+___02:52:47 401001 Cash Advance Authorization Info.  'GetAuthorization returning:4'  
+___02:52:47 401004 Parameters  'GetAuthorization result:4'  
+___02:52:47 401004 Parameters  'Transaction is chained -- Dict:-4'  
+___02:52:47 401004 Parameters  'Is Chained Transaction:False'  
+___02:52:47 401004 Parameters  'Transaction is chained -- Dict:-4'  
+___02:52:47 401002 Cash Advance Posting Info.  'Card Num: XXXXXXX2743 Amount: $500.00 Fee: $30.00 Auth Id:  ErrorCode:1 ErrorDsc:NSF 51          '  
+___02:52:47 401002 Cash Advance Posting Info.  'Posting to LO:{
+  "type": "CashAdvance",
+  "accountType": "CREDITAC",
+  "seqNumber": "0416202502524032",
+  "Authorization": {
+    "AuthNumber": "",
+    "ErrorCode": "1",
+    "ErrorDescription": "NSF 51          ",
+    "Fee": 30.0,
+    "OrderId": "2280",
+    "RegisterTime": "2025-04-16T02:52:47.2432174-07:00",
+    "TransactionNumber": 416202502524032
+  },
+  "Operation": {
+    "Amount": 500.0,
+    "BillDespensed": 0.0,
+    "CardNumber": "2743",
+    "HostIP": "",
+    "OperationType": null,
+    "RegistrationDatetime": "2025-04-16T02:52:47.2432174-07:00",
+    "SequenceNumber": "0416202502524032",
+    "Status": "DENIED",
+    "Terminal": null,
+    "TicketData": null
+  },
+  "TransactionDetail": {
+    "RegistrationDatetime": "0001-01-01T00:00:00",
+    "Amount": 500.0,
+    "DispensedTotal": 0.0,
+    "BillDenom_01": 1,
+    "BillDenom_02": 5,
+    "BillDenom_03": 10,
+    "BillDenom_04": 20,
+    "BillDenom_05": 50,
+    "BillDenom_06": 100,
+    "CoinDenom_01": 1,
+    "CoinDenom_02": 5,
+    "CoinDenom_03": 0,
+    "CoinDenom_04": 25,
+    "CoinDenom_05": 0,
+    "CoinDenom_06": 0,
+    "BillCount_01": 0,
+    "BillCount_02": 0,
+    "BillCount_03": 0,
+    "BillCount_04": 0,
+    "BillCount_05": 0,
+    "BillCount_06": 0,
+    "CoinCount_01": 0,
+    "CoinCount_02": 0,
+    "CoinCount_03": 0,
+    "CoinCount_04": 0,
+    "CoinCount_05": 0,
+    "CoinCount_06": 0,
+    "ManualPay": 0.0,
+    "RequestContent": null,
+    "ResponseContent": null,
+    "Status": null,
+    "AccountType": null,
+    "TransactionNumber": null,
+    "TransactionType": "CREDITCATX"
+  }
+}'  
+___02:52:47 401009 QuickCashAdvance 'Returning on GETAUTHORIZATIONCOMMAND -4-'  
+___02:53:08 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___02:53:08 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___02:53:08 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___02:53:08 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___02:53:08 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___02:53:08 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___02:53:08 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___02:53:30 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___02:53:30 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___02:53:30 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___02:53:30 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___02:53:30 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___02:53:30 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___02:53:30 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___02:55:00 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___02:55:00 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___02:55:00 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___02:55:00 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___02:55:00 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___02:55:00 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___02:55:00 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___02:55:38 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___02:55:38 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___02:55:38 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___02:55:38 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___02:55:38 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___02:55:38 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___02:55:38 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___02:55:49 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter GETCREDITFEECOMMAND'  
+___02:55:49 401004 Parameters  '______GetFeeInformation Method______'  
+___02:55:49 401004 Parameters  'GetFeeInformation: Transaction Limit:'  
+___02:55:49 401009 QuickCashAdvance 'Returning on GETCREDITFEECOMMAND -0-'  
+___02:55:49 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter INITIALIZECACREDITTRANSACTIONCOMMAND'  
+___02:55:49 401004 Parameters  '______InitializeCATransaction Method______'  
+___02:55:49 401005 OpenSession  'GetCardHolderName: MARKUS/KYOUNG '  
+___02:55:49 401005 OpenSession  'CardHolderName: MARKUS/KYOUNG '  
+___02:55:49 401004 Parameters  'GetFeeForAmount MAC ADDRESS:00-01-29-91-8D-19 FirstURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc SecondURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc'  
+___02:55:49 401004 Parameters  'TypeTrn Credit Track2 426684XXXXXX7389=2910201XXXXXXXXXXXXXF Amount $500.00'  
+___02:55:49 401004 Parameters  'GetFeeForAmount Response ErrorCode:0  ErrorDsc:  Fee:30 DynamicPricing:False EchoCommonId:'  
+___02:55:49 401005 OpenSession  'Regular Fee $30.00'  
+___02:55:49 401005 OpenSession  'InitializeCATransaction Response  Transaction {
+  "TrnType": 2,
+  "Total": 500.0,
+  "Fee": 30.0,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "0416202502554924",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX7389",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___02:55:49 401004 Parameters  'InitializeCACreditTransaction result:0'  
+___02:55:49 401009 QuickCashAdvance 'Returning on INITIALIZECACREDITTRANSACTIONCOMMAND -0-'  
+___02:55:53 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter GETAUTHORIZATIONCOMMAND'  
+___02:55:53 401004 Parameters  '_______GetAuthorization Method______'  
+___02:55:53 401004 Parameters  'Starting GetAuthorization Method______Transaction:{
+  "TrnType": 2,
+  "Total": 500.0,
+  "Fee": 30.0,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "0416202502554924",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX7389",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___02:55:53 401005 OpenSession  'Language  en-US'  
+___02:55:53 401004 Parameters  'Track2:4266XXXX=XXXXXXXXXXX'  
+___02:55:53 401004 Parameters  'EMV Details  5F34 Value XX Index 0'  
+___02:55:53 401004 Parameters  'EMV Details  57 Value XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Index 1'  
+___02:55:53 401004 Parameters  'EMV Details  9F03 Value  Index 2'  
+___02:55:53 401004 Parameters  'EMV Details  84 Value XXXXXXXXXXXXXX Index 3'  
+___02:55:53 401004 Parameters  'EMV Details  9F09 Value XXXX Index 4'  
+___02:55:53 401004 Parameters  'EMV Details  9F34 Value XXXXXX Index 5'  
+___02:55:53 401004 Parameters  'EMV Details  9F1E Value XXXXXXXXXXXXXXXX Index 6'  
+___02:55:53 401004 Parameters  'EMV Details  9F33 Value XXXXXX Index 7'  
+___02:55:53 401004 Parameters  'EMV Details  9F35 Value XX Index 8'  
+___02:55:53 401004 Parameters  'EMV Details  9F41 Value  Index 9'  
+___02:55:53 401004 Parameters  'EMV Details  9F26 Value XXXXXXXXXXXXXXXX Index 10'  
+___02:55:53 401004 Parameters  'EMV Details  82 Value XXXX Index 11'  
+___02:55:53 401004 Parameters  'EMV Details  9F36 Value XXXX Index 12'  
+___02:55:53 401004 Parameters  'EMV Details  9F27 Value XX Index 13'  
+___02:55:53 401004 Parameters  'EMV Details  9F10 Value XXXXXXXXXXXXXX Index 14'  
+___02:55:53 401004 Parameters  'EMV Details  9F02 Value XXXXXXXXXXXX Index 15'  
+___02:55:53 401004 Parameters  'EMV Details  9F1A Value XXXX Index 16'  
+___02:55:53 401004 Parameters  'EMV Details  95 Value XXXXXXXXXX Index 17'  
+___02:55:53 401004 Parameters  'EMV Details  5F2A Value XXXX Index 18'  
+___02:55:53 401004 Parameters  'EMV Details  9A Value XXXXXX Index 19'  
+___02:55:53 401004 Parameters  'EMV Details  9F3C Value  Index 20'  
+___02:55:53 401004 Parameters  'EMV Details  9C Value XX Index 21'  
+___02:55:53 401004 Parameters  'EMV Details  9F37 Value XXXXXXXX Index 22'  
+___02:55:53 401004 Parameters  'EMV Details  9F07 Value XXXX Index 23'  
+___02:55:53 401004 Parameters  'EMV Details  8A Value XXXX Index 24'  
+___02:55:53 401004 Parameters  'EMV Details  9F06 Value XXXXXXXXXXXXXX Index 25'  
+___02:55:53 401004 Parameters  'EMV Details  91 Value  Index 26'  
+___02:55:53 401004 Parameters  'EMV Details  9F5B Value  Index 27'  
+___02:55:53 401004 Parameters  'EMV Details  SECONDARY PIN BLOCK Value  Index 28'  
+___02:55:53 401004 Parameters  'EMV Details  9F6E Value  Index 29'  
+___02:55:53 401004 Parameters  'EMV Details  9F7C Value  Index 30'  
+___02:55:53 401004 Parameters  'EMV Details  9F53 Value  Index 31'  
+___02:55:53 401004 Parameters  'EMV Details  5F24 Value XXXXXX Index 32'  
+___02:55:53 401004 Parameters  'EMV Details  FILER Value  Index 33'  
+___02:55:53 401000 ------------>Cash Advance Transaction Info. 'SmartChip: True Type: CA CREDIT Card Num: XXXXXXX7389 Amount: $500.00 Fee: $30.00'  
+___02:55:53 401003 Cryptogram Info.  'Cryptogram 70FE8CA591D25F39 '  
+___02:55:53 401004 Parameters  'Authorization MAC ADDRESS:00-01-29-91-8D-19 FirstURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc SecondURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc'  
+___02:55:53 401004 Parameters  'Requesto to CAS Authorizatoion: Card No:0 Amount:500.0'  
+___02:55:54 401001 Cash Advance Authorization Info.  'Card Num: XXXXXXX7389 Amount: $500.00 Fee: $30.00 Auth Code:  OrderId: 2280 HostSeqNumber :  ErrorCode:1 ErrorDsc:NSF 51          DisplayText:--'  
+___02:55:54 401001 Cash Advance Authorization Info.  'GetAuthorization returning:4'  
+___02:55:54 401004 Parameters  'GetAuthorization result:4'  
+___02:55:54 401004 Parameters  'Transaction is chained -- Dict:-4'  
+___02:55:54 401004 Parameters  'Is Chained Transaction:False'  
+___02:55:54 401004 Parameters  'Transaction is chained -- Dict:-4'  
+___02:55:54 401002 Cash Advance Posting Info.  'Card Num: XXXXXXX7389 Amount: $500.00 Fee: $30.00 Auth Id:  ErrorCode:1 ErrorDsc:NSF 51          '  
+___02:55:54 401002 Cash Advance Posting Info.  'Posting to LO:{
+  "type": "CashAdvance",
+  "accountType": "CREDITAC",
+  "seqNumber": "0416202502554924",
+  "Authorization": {
+    "AuthNumber": "",
+    "ErrorCode": "1",
+    "ErrorDescription": "NSF 51          ",
+    "Fee": 30.0,
+    "OrderId": "2280",
+    "RegisterTime": "2025-04-16T02:55:54.6914902-07:00",
+    "TransactionNumber": 416202502554924
+  },
+  "Operation": {
+    "Amount": 500.0,
+    "BillDespensed": 0.0,
+    "CardNumber": "7389",
+    "HostIP": "",
+    "OperationType": null,
+    "RegistrationDatetime": "2025-04-16T02:55:54.6914902-07:00",
+    "SequenceNumber": "0416202502554924",
+    "Status": "DENIED",
+    "Terminal": null,
+    "TicketData": null
+  },
+  "TransactionDetail": {
+    "RegistrationDatetime": "0001-01-01T00:00:00",
+    "Amount": 500.0,
+    "DispensedTotal": 0.0,
+    "BillDenom_01": 1,
+    "BillDenom_02": 5,
+    "BillDenom_03": 10,
+    "BillDenom_04": 20,
+    "BillDenom_05": 50,
+    "BillDenom_06": 100,
+    "CoinDenom_01": 1,
+    "CoinDenom_02": 5,
+    "CoinDenom_03": 0,
+    "CoinDenom_04": 25,
+    "CoinDenom_05": 0,
+    "CoinDenom_06": 0,
+    "BillCount_01": 0,
+    "BillCount_02": 0,
+    "BillCount_03": 0,
+    "BillCount_04": 0,
+    "BillCount_05": 0,
+    "BillCount_06": 0,
+    "CoinCount_01": 0,
+    "CoinCount_02": 0,
+    "CoinCount_03": 0,
+    "CoinCount_04": 0,
+    "CoinCount_05": 0,
+    "CoinCount_06": 0,
+    "ManualPay": 0.0,
+    "RequestContent": null,
+    "ResponseContent": null,
+    "Status": null,
+    "AccountType": null,
+    "TransactionNumber": null,
+    "TransactionType": "CREDITCATX"
+  }
+}'  
+___02:55:54 401009 QuickCashAdvance 'Returning on GETAUTHORIZATIONCOMMAND -4-'  
+___02:56:10 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___02:56:10 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___02:56:10 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___02:56:10 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___02:56:10 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___02:56:10 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___02:56:10 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___06:35:09 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___06:35:09 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___06:35:09 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___06:35:09 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___06:35:09 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___06:35:09 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___06:35:09 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___06:36:23 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___06:36:23 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___06:36:23 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___06:36:23 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___06:36:23 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___06:36:23 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___06:36:23 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___11:15:48 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___11:15:48 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___11:15:48 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___11:15:48 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___11:15:48 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___11:15:48 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___11:15:48 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___11:21:58 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___11:21:58 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___11:21:58 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___11:21:58 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___11:21:58 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___11:21:58 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___11:21:58 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___11:41:05 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___11:41:05 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___11:41:05 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___11:41:05 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___11:41:05 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___11:41:05 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___11:41:05 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___11:58:05 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___11:58:05 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___11:58:05 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___11:58:05 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___11:58:05 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___11:58:05 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___11:58:05 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___12:33:25 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___12:33:25 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___12:33:25 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___12:33:25 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___12:33:25 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___12:33:25 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___12:33:25 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___12:55:22 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___12:55:22 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___12:55:22 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___12:55:22 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___12:55:22 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___12:55:22 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___12:55:22 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___13:49:05 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___13:49:05 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___13:49:05 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___13:49:05 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___13:49:05 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___13:49:05 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___13:49:05 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___14:25:43 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___14:25:43 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___14:25:43 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___14:25:43 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___14:25:43 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___14:25:43 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___14:25:43 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___15:04:09 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___15:04:09 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___15:04:09 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___15:04:09 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___15:04:09 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___15:04:09 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___15:04:09 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___15:22:03 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___15:22:03 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___15:22:03 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___15:22:03 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___15:22:03 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___15:22:03 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___15:22:03 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___15:48:38 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___15:48:38 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___15:48:38 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___15:48:38 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___15:48:38 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___15:48:38 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___15:48:38 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___15:56:42 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___15:56:42 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___15:56:42 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___15:56:42 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___15:56:42 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___15:56:42 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___15:56:42 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___15:57:40 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___15:57:40 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___15:57:40 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___15:57:40 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___15:57:40 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___15:57:40 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___15:57:40 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___15:59:49 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___15:59:49 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___15:59:49 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___15:59:49 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___15:59:49 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___15:59:49 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___15:59:49 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___16:01:22 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___16:01:23 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___16:01:23 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___16:01:23 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___16:01:23 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___16:01:23 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___16:01:23 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___16:42:45 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___16:42:45 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___16:42:45 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___16:42:45 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___16:42:45 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___16:42:45 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___16:42:45 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___17:26:52 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___17:26:52 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___17:26:52 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___17:26:52 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___17:26:52 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___17:26:52 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___17:26:52 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___17:43:04 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___17:43:04 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___17:43:04 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___17:43:04 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___17:43:04 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___17:43:04 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___17:43:04 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___17:44:16 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___17:44:16 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___17:44:16 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___17:44:16 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___17:44:16 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___17:44:16 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___17:44:16 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___17:46:45 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___17:46:45 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___17:46:45 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___17:46:45 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___17:46:45 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___17:46:45 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___17:46:45 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___17:54:14 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___17:54:14 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___17:54:14 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___17:54:14 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___17:54:14 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___17:54:14 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___17:54:14 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___18:05:12 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___18:05:12 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___18:05:12 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___18:05:12 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___18:05:12 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___18:05:12 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___18:05:12 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___18:15:33 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___18:15:33 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___18:15:33 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___18:15:33 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___18:15:33 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___18:15:33 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___18:15:33 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___18:33:59 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___18:33:59 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___18:33:59 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___18:33:59 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___18:33:59 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___18:33:59 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___18:33:59 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___19:01:21 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___19:01:21 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___19:01:21 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___19:01:21 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___19:01:21 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___19:01:21 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___19:01:21 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___19:08:00 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___19:08:00 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___19:08:00 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___19:08:00 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___19:08:00 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___19:08:00 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___19:08:00 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___19:20:48 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___19:20:48 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___19:20:48 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___19:20:48 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___19:20:48 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___19:20:48 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___19:20:48 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___19:21:56 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___19:21:56 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___19:21:56 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___19:21:56 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___19:21:56 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___19:21:56 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___19:21:56 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___19:23:33 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___19:23:33 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___19:23:33 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___19:23:33 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___19:23:33 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___19:23:33 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___19:23:33 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___19:29:05 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___19:29:05 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___19:29:05 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___19:29:05 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___19:29:05 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___19:29:05 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___19:29:05 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___19:38:46 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___19:38:46 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___19:38:46 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___19:38:46 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___19:38:46 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___19:38:46 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___19:38:46 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___20:19:00 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___20:19:00 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___20:19:00 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___20:19:00 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___20:19:00 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___20:19:00 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___20:19:00 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___20:28:00 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___20:28:00 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___20:28:00 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___20:28:00 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___20:28:00 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___20:28:00 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___20:28:00 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___20:34:29 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___20:34:29 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___20:34:29 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___20:34:29 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___20:34:29 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___20:34:29 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___20:34:29 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___20:34:45 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter GETCREDITFEECOMMAND'  
+___20:34:45 401004 Parameters  '______GetFeeInformation Method______'  
+___20:34:45 401004 Parameters  'GetFeeInformation: Transaction Limit:'  
+___20:34:45 401009 QuickCashAdvance 'Returning on GETCREDITFEECOMMAND -0-'  
+___20:34:45 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter INITIALIZECACREDITTRANSACTIONCOMMAND'  
+___20:34:45 401004 Parameters  '______InitializeCATransaction Method______'  
+___20:34:46 401005 OpenSession  'GetCardHolderName: GUEDJ/ELIAHOU '  
+___20:34:46 401005 OpenSession  'CardHolderName: GUEDJ/ELIAHOU '  
+___20:34:46 401004 Parameters  'GetFeeForAmount MAC ADDRESS:00-01-29-91-8D-19 FirstURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc SecondURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc'  
+___20:34:46 401004 Parameters  'TypeTrn Credit Track2 426684XXXXXX4188=2807201XXXXXXXXXXXXXF Amount $300.00'  
+___20:34:46 401004 Parameters  'GetFeeForAmount Response ErrorCode:0  ErrorDsc:  Fee:18 DynamicPricing:False EchoCommonId:'  
+___20:34:46 401005 OpenSession  'Regular Fee $18.00'  
+___20:34:46 401005 OpenSession  'InitializeCATransaction Response  Transaction {
+  "TrnType": 2,
+  "Total": 300.0,
+  "Fee": 18.0,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "0416202520344613",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX4188",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___20:34:46 401004 Parameters  'InitializeCACreditTransaction result:0'  
+___20:34:46 401009 QuickCashAdvance 'Returning on INITIALIZECACREDITTRANSACTIONCOMMAND -0-'  
+___20:34:49 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter GETAUTHORIZATIONCOMMAND'  
+___20:34:49 401004 Parameters  '_______GetAuthorization Method______'  
+___20:34:49 401004 Parameters  'Starting GetAuthorization Method______Transaction:{
+  "TrnType": 2,
+  "Total": 300.0,
+  "Fee": 18.0,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "0416202520344613",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX4188",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___20:34:49 401005 OpenSession  'Language  en-US'  
+___20:34:49 401004 Parameters  'Track2:4266XXXX=XXXXXXXXXXX'  
+___20:34:49 401004 Parameters  'EMV Details  5F34 Value XX Index 0'  
+___20:34:49 401004 Parameters  'EMV Details  57 Value XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Index 1'  
+___20:34:49 401004 Parameters  'EMV Details  9F03 Value  Index 2'  
+___20:34:49 401004 Parameters  'EMV Details  84 Value XXXXXXXXXXXXXX Index 3'  
+___20:34:49 401004 Parameters  'EMV Details  9F09 Value XXXX Index 4'  
+___20:34:49 401004 Parameters  'EMV Details  9F34 Value XXXXXX Index 5'  
+___20:34:49 401004 Parameters  'EMV Details  9F1E Value XXXXXXXXXXXXXXXX Index 6'  
+___20:34:49 401004 Parameters  'EMV Details  9F33 Value XXXXXX Index 7'  
+___20:34:49 401004 Parameters  'EMV Details  9F35 Value XX Index 8'  
+___20:34:49 401004 Parameters  'EMV Details  9F41 Value  Index 9'  
+___20:34:49 401004 Parameters  'EMV Details  9F26 Value XXXXXXXXXXXXXXXX Index 10'  
+___20:34:49 401004 Parameters  'EMV Details  82 Value XXXX Index 11'  
+___20:34:49 401004 Parameters  'EMV Details  9F36 Value XXXX Index 12'  
+___20:34:49 401004 Parameters  'EMV Details  9F27 Value XX Index 13'  
+___20:34:49 401004 Parameters  'EMV Details  9F10 Value XXXXXXXXXXXXXX Index 14'  
+___20:34:50 401004 Parameters  'EMV Details  9F02 Value XXXXXXXXXXXX Index 15'  
+___20:34:50 401004 Parameters  'EMV Details  9F1A Value XXXX Index 16'  
+___20:34:50 401004 Parameters  'EMV Details  95 Value XXXXXXXXXX Index 17'  
+___20:34:50 401004 Parameters  'EMV Details  5F2A Value XXXX Index 18'  
+___20:34:50 401004 Parameters  'EMV Details  9A Value XXXXXX Index 19'  
+___20:34:50 401004 Parameters  'EMV Details  9F3C Value  Index 20'  
+___20:34:50 401004 Parameters  'EMV Details  9C Value XX Index 21'  
+___20:34:50 401004 Parameters  'EMV Details  9F37 Value XXXXXXXX Index 22'  
+___20:34:50 401004 Parameters  'EMV Details  9F07 Value XXXX Index 23'  
+___20:34:50 401004 Parameters  'EMV Details  8A Value XXXX Index 24'  
+___20:34:50 401004 Parameters  'EMV Details  9F06 Value XXXXXXXXXXXXXX Index 25'  
+___20:34:50 401004 Parameters  'EMV Details  91 Value  Index 26'  
+___20:34:50 401004 Parameters  'EMV Details  9F5B Value  Index 27'  
+___20:34:50 401004 Parameters  'EMV Details  SECONDARY PIN BLOCK Value  Index 28'  
+___20:34:50 401004 Parameters  'EMV Details  9F6E Value  Index 29'  
+___20:34:50 401004 Parameters  'EMV Details  9F7C Value  Index 30'  
+___20:34:50 401004 Parameters  'EMV Details  9F53 Value  Index 31'  
+___20:34:50 401004 Parameters  'EMV Details  5F24 Value XXXXXX Index 32'  
+___20:34:50 401004 Parameters  'EMV Details  FILER Value  Index 33'  
+___20:34:50 401000 ------------>Cash Advance Transaction Info. 'SmartChip: True Type: CA CREDIT Card Num: XXXXXXX4188 Amount: $300.00 Fee: $18.00'  
+___20:34:50 401003 Cryptogram Info.  'Cryptogram 2C7CED7B67D57079 '  
+___20:34:50 401004 Parameters  'Authorization MAC ADDRESS:00-01-29-91-8D-19 FirstURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc SecondURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc'  
+___20:34:50 401004 Parameters  'Requesto to CAS Authorizatoion: Card No:0 Amount:300.0'  
+___20:34:51 401001 Cash Advance Authorization Info.  'Card Num: XXXXXXX4188 Amount: $300.00 Fee: $18.00 Auth Code: 05236C OrderId: 2280 HostSeqNumber :  ErrorCode:0 ErrorDsc: Elegible:NO DisplayText: RequiresVerification:YES'  
+___20:34:51 401006 Copying Transaction to CAS Sever:  'QuickCA Function is enabled?:False'  
+___20:34:51 401001 Cash Advance Authorization Info.  'GetAuthorization returning:5'  
+___20:34:51 401004 Parameters  'GetAuthorization result:5'  
+___20:34:51 401004 Parameters  'Transaction is chained -- Dict:-4'  
+___20:34:51 401004 Parameters  'Is Chained Transaction:False'  
+___20:34:51 401004 Parameters  'Transaction is chained -- Dict:-4'  
+___20:34:51 401002 Cash Advance Posting Info.  'Card Num: XXXXXXX4188 Amount: $300.00 Fee: $18.00 Auth Id: 05236C ErrorCode:0 ErrorDsc:'  
+___20:34:51 401002 Cash Advance Posting Info.  'Posting to LO:{
+  "type": "CashAdvance",
+  "accountType": "CREDITAC",
+  "seqNumber": "0416202520344613",
+  "Authorization": {
+    "AuthNumber": "05236C",
+    "ErrorCode": "0",
+    "ErrorDescription": "",
+    "Fee": 18.0,
+    "OrderId": "2280",
+    "RegisterTime": "2025-04-16T20:34:51.69027-07:00",
+    "TransactionNumber": 416202520344613
+  },
+  "Operation": {
+    "Amount": 300.0,
+    "BillDespensed": 0.0,
+    "CardNumber": "4188",
+    "HostIP": "",
+    "OperationType": null,
+    "RegistrationDatetime": "2025-04-16T20:34:51.69027-07:00",
+    "SequenceNumber": "0416202520344613",
+    "Status": "APPROVED",
+    "Terminal": null,
+    "TicketData": null
+  },
+  "TransactionDetail": {
+    "RegistrationDatetime": "0001-01-01T00:00:00",
+    "Amount": 300.0,
+    "DispensedTotal": 0.0,
+    "BillDenom_01": 1,
+    "BillDenom_02": 5,
+    "BillDenom_03": 10,
+    "BillDenom_04": 20,
+    "BillDenom_05": 50,
+    "BillDenom_06": 100,
+    "CoinDenom_01": 1,
+    "CoinDenom_02": 5,
+    "CoinDenom_03": 0,
+    "CoinDenom_04": 25,
+    "CoinDenom_05": 0,
+    "CoinDenom_06": 0,
+    "BillCount_01": 0,
+    "BillCount_02": 0,
+    "BillCount_03": 0,
+    "BillCount_04": 0,
+    "BillCount_05": 0,
+    "BillCount_06": 0,
+    "CoinCount_01": 0,
+    "CoinCount_02": 0,
+    "CoinCount_03": 0,
+    "CoinCount_04": 0,
+    "CoinCount_05": 0,
+    "CoinCount_06": 0,
+    "ManualPay": 0.0,
+    "RequestContent": null,
+    "ResponseContent": null,
+    "Status": null,
+    "AccountType": null,
+    "TransactionNumber": null,
+    "TransactionType": "CREDITCATX"
+  }
+}'  
+___20:34:51 401009 QuickCashAdvance 'Returning on GETAUTHORIZATIONCOMMAND -5-'  
+___20:34:53 401004 Parameters  'CA RECEIPT START'  
+___20:34:53 401004 Parameters  'Printer Status Before send command :20'  
+___20:34:53 401004 Parameters  'If printer status is 21 Bad News, and i send reset command '  
+___20:34:53 401004 Parameters  'If printer status is 20 all good '  
+___20:34:53 401004 Parameters  'value of propertyValuecat : {
+  "TrnType": 2,
+  "Total": 300.0,
+  "Fee": 18.0,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "0416202520344613",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX4188",
+  "ErrorCode": 0,
+  "ErrorDescription": "",
+  "ApprovalCode": "05236C",
+  "OrderId": "2280",
+  "ApplicationId": "A0000000031010",
+  "TerminalId": "LK389672",
+  "SessionId": 6353672,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___20:34:53 401004 Parameters  'Kiosk Type  : 7720'  
+___20:35:01 401004 Parameters  'CA RECEIPT END'  
+___21:00:25 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___21:00:25 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___21:00:25 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___21:00:25 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___21:00:25 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___21:00:25 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___21:00:25 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___21:01:37 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___21:01:37 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___21:01:38 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___21:01:38 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___21:01:38 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___21:01:38 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___21:01:38 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___21:11:17 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___21:11:17 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___21:11:17 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___21:11:17 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___21:11:17 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___21:11:17 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___21:11:17 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___21:14:19 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___21:14:19 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___21:14:19 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___21:14:19 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___21:14:19 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___21:14:19 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___21:14:19 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___21:19:57 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___21:19:57 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___21:19:57 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___21:19:57 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___21:19:57 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___21:19:57 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___21:19:57 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___21:20:27 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter INITIALIZECADEBITTRANSACTIONCOMMAND'  
+___21:20:27 401004 Parameters  '______InitializeCATransaction Method______'  
+___21:20:27 401005 OpenSession  'GetCardHolderName: KIELY/ TRACEY             '  
+___21:20:27 401005 OpenSession  'CardHolderName: KIELY/ TRACEY             '  
+___21:20:28 401004 Parameters  'GetFeeForAmount MAC ADDRESS:00-01-29-91-8D-19 FirstURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc SecondURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc'  
+___21:20:28 401004 Parameters  'TypeTrn Debit Track2 415390XXXXXX3684=2805201XXXXXXXF Amount $600.00'  
+___21:20:28 401004 Parameters  'GetFeeForAmount Response ErrorCode:0  ErrorDsc:  Fee:30 DynamicPricing:False EchoCommonId:'  
+___21:20:28 401005 OpenSession  'Regular Fee $30.00'  
+___21:20:28 401005 OpenSession  'InitializeCATransaction Response  Transaction {
+  "TrnType": 3,
+  "Total": 600.0,
+  "Fee": 30.0,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "0416202521202800",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX3684",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___21:20:28 401004 Parameters  'InitializeCADebitTransaction result:0'  
+___21:20:28 401009 QuickCashAdvance 'Returning on INITIALIZECADEBITTRANSACTIONCOMMAND -0-'  
+___21:20:28 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter GETDEBITFEECOMMAND'  
+___21:20:28 401004 Parameters  '______GetFeeInformation Method______'  
+___21:20:28 401004 Parameters  'GetFeeInformation: Transaction Limit:'  
+___21:20:28 401005 OpenSession  'Fee  $30.00'  
+___21:20:28 401005 OpenSession  'Fee Corrected:30.00'  
+___21:20:28 401000 ------------>Cash Advance Transaction Info. 'GETDEBITFEECOMMAND Conversion :  3000 '  
+___21:20:28 401000 ------------>Cash Advance Transaction Info. 'GETDEBITFEECOMMAND Set Corrected Fee in CCHPFW_PROP_GEN_B_DATA:  3000 Ret:0'  
+___21:20:28 401009 QuickCashAdvance 'Returning on GETDEBITFEECOMMAND -0-'  
+___21:20:36 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter QUICKPOSDEBITISOK'  
+___21:20:36 401011 QuickPOSDebit:  'QuickPOSDebitEnabled True'  
+___21:20:36 401011 QuickPOSDebit:  'QuickPOSDebitEnabledByKiosk -500-'  
+___21:20:36 401011 QuickPOSDebit:  'QuickPOSDebit LImit 500.0'  
+___21:20:36 401011 QuickPOSDebit:  'QuickPOSDebit Transaction {
+  "TrnType": 3,
+  "Total": 600.0,
+  "Fee": 30.0,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "0416202521202800",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX3684",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___21:20:36 401009 QuickCashAdvance 'Returning on QUICKPOSDEBITISOK -1-'  
+___21:20:36 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter LOGTRANSACTIONCOMMAND'  
+___21:20:36 401010 POSTicketPurchase:  '--Starting LOGPOSDEBIT--'  
+___21:20:36 401007 IsPosDebitAuthorized:  'Seq Number 1371'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 0 Value:  Result :0 bringReceiptToCage:False TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 1 Value:  MORONGO CASINO TR20   Result :0 bringReceiptToCage:False TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 2 Value: 49750 SEMINOLE DRIVE   Result :0 bringReceiptToCage:False TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 3 Value:  CABAZON       CA US   Result :0 bringReceiptToCage:False TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 4 Value:  Result :0 bringReceiptToCage:False TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 5 Value:   DATE   TIME    ATM Result :0 bringReceiptToCage:False TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 6 Value: 04/16/25 21:20 P330775  Result :0 bringReceiptToCage:False TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 7 Value:  Result :0 bringReceiptToCage:False TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 8 Value:XXXXXXXXXXXX3684 Result :0 bringReceiptToCage:False TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 9 Value:SEQ NUMB           1371 Result :0 bringReceiptToCage:False TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 10 Value:  Result :0 bringReceiptToCage:False TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 11 Value:CASH ADVANCE    $600.00 Result :0 bringReceiptToCage:False TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 12 Value:FROM DEF ACCT Result :0 bringReceiptToCage:False TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 13 Value:AID: A0000000031010 Result :0 bringReceiptToCage:False TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 14 Value:     VISA DEBIT Result :0 bringReceiptToCage:False TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 15 Value:FEE              $30.00 Result :0 bringReceiptToCage:False TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 16 Value:  Result :0 bringReceiptToCage:False TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 17 Value:  Result :0 bringReceiptToCage:False TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 18 Value:PLEASE BRING RECEIPT TO CAGE FOR CASH Result :0 bringReceiptToCage:True TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 19 Value:  Result :0 bringReceiptToCage:True TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 20 Value:  Result :0 bringReceiptToCage:True TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 21 Value:AVAIL            $25.05 Result :0 bringReceiptToCage:True TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 22 Value:----------------------- Result :0 bringReceiptToCage:True TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 23 Value:  Result :0 bringReceiptToCage:True TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 24 Value:  Result :0 bringReceiptToCage:True TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 25 Value: Result :-4 bringReceiptToCage:True TransactionAborted False'  
+___21:20:36 401007 IsPosDebitAuthorized:  'Authorized -----True-----'  
+___21:20:36 401004 Parameters  '______CopyTransactionToCAS Method______'  
+___21:20:36 401006 Copying Transaction to CAS Sever:  'starting CopyTransactionToCAS: {
+  "TrnType": 3,
+  "Total": 600.0,
+  "Fee": 30.0,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "0416202521202800",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX3684",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___21:20:36 401006 Copying Transaction to CAS Sever:  'CCHPFW_PROP_PRINTER_VARIABLE AID 13 Value:AID: A0000000031010 Result:0'  
+___21:20:36 401004 Parameters  'Building Log Transaction: TransactionType Debit Track2 415390XXXXXX3684=2805201XXXXXXX  SeqNumber 1371 ApprovalCode 0000  RawRequest UKNOWN RawResponse UKNOWN, amount 600 fee 30 AuthNumber 1371 ErrorCode 000 AID  A0000000031010 TVR 8000040000 IAD 06011203A02000 TSI 6000 AC 9173E5E96D79552C APN 56495341204445424954'  
+___21:20:36 401005 OpenSession  'Language  en-US'  
+___21:20:36 401006 Copying Transaction to CAS Sever:  'LogTransaction MAC ADDRESS:00-01-29-91-8D-19 FirstURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc SecondURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc'  
+___21:20:36 401006 Copying Transaction to CAS Sever:  'CopyTransactionToCAS Response CAS LogTransation:Status:True IsElegible:NO SessionID:6353859 DisplayText:--RequiresVerification: YES'  
+___21:20:36 401006 Copying Transaction to CAS Sever:  'QuickCA Function is enabled?:False'  
+___21:20:36 401006 Copying Transaction to CAS Sever:  'CopyTransactionToCAS Final Transaction JSON:{
+  "TrnType": 3,
+  "Total": 600.0,
+  "Fee": 30.0,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "0416202521202800",
+  "HostSeqNumber": "1371",
+  "PAN": "XXXXXXX3684",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": "1371",
+  "OrderId": null,
+  "ApplicationId": " A0000000031010",
+  "TerminalId": "P330775",
+  "SessionId": 6353859,
+  "EchoCommonId": "",
+  "bills": null
+} Return 5'  
+___21:20:36 401004 Parameters  'CopyPOSDebitToCAS result:5'  
+___21:20:36 401004 Parameters  'Transaction is chained -- Dict:-4'  
+___21:20:36 401004 Parameters  'Is Chained Transaction:False'  
+___21:20:36 401004 Parameters  'Transaction is chained -- Dict:-4'  
+___21:20:37 401002 Cash Advance Posting Info.  'Card Num: XXXXXXX3684 Amount: $600.00 Fee: $30.00 Auth Id: 1371 ErrorCode:0 ErrorDsc:'  
+___21:20:37 401002 Cash Advance Posting Info.  'Posting to LO:{
+  "type": "CashAdvance",
+  "accountType": "CHEKAC",
+  "seqNumber": "0416202521202800",
+  "Authorization": {
+    "AuthNumber": "1371",
+    "ErrorCode": "0",
+    "ErrorDescription": null,
+    "Fee": 30.0,
+    "OrderId": null,
+    "RegisterTime": "2025-04-16T21:20:36.9758343-07:00",
+    "TransactionNumber": 416202521202800
+  },
+  "Operation": {
+    "Amount": 600.0,
+    "BillDespensed": 0.0,
+    "CardNumber": "3684",
+    "HostIP": "",
+    "OperationType": null,
+    "RegistrationDatetime": "2025-04-16T21:20:36.9758343-07:00",
+    "SequenceNumber": "0416202521202800",
+    "Status": "APPROVED",
+    "Terminal": null,
+    "TicketData": null
+  },
+  "TransactionDetail": {
+    "RegistrationDatetime": "0001-01-01T00:00:00",
+    "Amount": 600.0,
+    "DispensedTotal": 0.0,
+    "BillDenom_01": 1,
+    "BillDenom_02": 5,
+    "BillDenom_03": 10,
+    "BillDenom_04": 20,
+    "BillDenom_05": 50,
+    "BillDenom_06": 100,
+    "CoinDenom_01": 1,
+    "CoinDenom_02": 5,
+    "CoinDenom_03": 0,
+    "CoinDenom_04": 25,
+    "CoinDenom_05": 0,
+    "CoinDenom_06": 0,
+    "BillCount_01": 0,
+    "BillCount_02": 0,
+    "BillCount_03": 0,
+    "BillCount_04": 0,
+    "BillCount_05": 0,
+    "BillCount_06": 0,
+    "CoinCount_01": 0,
+    "CoinCount_02": 0,
+    "CoinCount_03": 0,
+    "CoinCount_04": 0,
+    "CoinCount_05": 0,
+    "CoinCount_06": 0,
+    "ManualPay": 0.0,
+    "RequestContent": null,
+    "ResponseContent": null,
+    "Status": null,
+    "AccountType": null,
+    "TransactionNumber": null,
+    "TransactionType": "DEBITCATX"
+  }
+}'  
+___21:20:37 401004 Parameters  'Log POS Debit result:5'  
+___21:20:37 401009 QuickCashAdvance 'Returning on LOGTRANSACTIONCOMMAND -5-'  
+___21:20:39 401004 Parameters  'CA RECEIPT START'  
+___21:20:39 401004 Parameters  'Printer Status Before send command :20'  
+___21:20:39 401004 Parameters  'If printer status is 21 Bad News, and i send reset command '  
+___21:20:39 401004 Parameters  'If printer status is 20 all good '  
+___21:20:39 401004 Parameters  'value of propertyValuecat : {
+  "TrnType": 3,
+  "Total": 600.0,
+  "Fee": 30.0,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "0416202521202800",
+  "HostSeqNumber": "1371",
+  "PAN": "XXXXXXX3684",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": "1371",
+  "OrderId": null,
+  "ApplicationId": " A0000000031010",
+  "TerminalId": "P330775",
+  "SessionId": 6353859,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___21:20:39 401004 Parameters  'Kiosk Type  : 7720'  
+___21:20:47 401004 Parameters  'CA RECEIPT END'  
+___22:00:51 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___22:00:51 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___22:00:51 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___22:00:51 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___22:00:51 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___22:00:51 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___22:00:51 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___22:34:55 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___22:34:55 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___22:34:55 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___22:34:55 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___22:34:55 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___22:34:55 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___22:34:55 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___22:47:18 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___22:47:18 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___22:47:18 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___22:47:18 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___22:47:18 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___22:47:18 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___22:47:18 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___22:48:17 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___22:48:17 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___22:48:17 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___22:48:17 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___22:48:17 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___22:48:17 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___22:48:17 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___22:59:40 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___22:59:40 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___22:59:40 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___22:59:40 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___22:59:40 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___22:59:40 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___22:59:40 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___23:03:42 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___23:03:42 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___23:03:42 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___23:03:42 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___23:03:42 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___23:03:42 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___23:03:42 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___23:06:08 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___23:06:08 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___23:06:08 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___23:06:08 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___23:06:08 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___23:06:08 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___23:06:08 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___23:07:12 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___23:07:12 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___23:07:12 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___23:07:13 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___23:07:13 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___23:07:13 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___23:07:13 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___23:08:31 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___23:08:31 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___23:08:31 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___23:08:31 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___23:08:31 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___23:08:31 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___23:08:31 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___23:15:55 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___23:15:55 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___23:15:55 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___23:15:55 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___23:15:55 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___23:15:55 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___23:15:55 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___23:25:45 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___23:25:45 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___23:25:45 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___23:25:45 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___23:25:45 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___23:25:45 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___23:25:45 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___23:29:06 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___23:29:06 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___23:29:06 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___23:29:06 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___23:29:06 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___23:29:06 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___23:29:06 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___23:47:09 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___23:47:09 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___23:47:09 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___23:47:09 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___23:47:09 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___23:47:09 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___23:47:09 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___23:59:02 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___23:59:02 401004 Parameters  'Hours to disable CashAdvance on WEDNESDAY is :'  
+___23:59:02 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___23:59:02 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___23:59:02 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___23:59:02 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___23:59:02 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  

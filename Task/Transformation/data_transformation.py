@@ -28,10 +28,10 @@ def transform_data(dataframes):
         elif "Pos_Ticket_Purchase" in file_name:
             df = transform_pos_ticket_purchase(df)
         else:
-            print(f"Archivo no clasificado: {file_name}")
+            print(f"No classified File: {file_name}")
 
-        transformed_dataframes.append(df)
-
+        transformed_dataframes.append(df) 
+   
     return pd.concat(transformed_dataframes, ignore_index=True)
 
 
