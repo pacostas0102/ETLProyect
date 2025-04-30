@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 
-def transform_logs(dfLogs, log_type, output_path):
+def transform_logs(dfLogs, log_type, output_path, detected_types):
     print ("I'm transforming Filtered Data column")
     dfLogs1 = pd.DataFrame()
 
@@ -11,15 +11,12 @@ def transform_logs(dfLogs, log_type, output_path):
         dfLogs['Amount'] = dfLogs["FilteredData"].str.extract(r'"Amount":([0-9]+(?:\.[0-9]+)?)')
         dfLogs['DispensedTotal'] = dfLogs["FilteredData"].str.extract(r'"DispensedTotal":([0-9]+(?:\.[0-9]+)?)')
         dfLogs['Status'] = dfLogs["FilteredData"].str.extract(r'"Status":"([^"]+)"').astype(str)
-        if log_type in ['ATM', 'CashAdvance']:
-            dfLogs['AuthNumber'] = dfLogs["FilteredData"].str.extract(r'"AuthNumber":"(\d+)"').astype(str)
-            dfLogs['CardNumber'] = dfLogs["FilteredData"].str.extract(r'"CardNumber":"(\d+)"').astype(str)
-            dfLogs['HostIP'] = dfLogs["FilteredData"].str.extract(r'"HostIP":"([^"]+)"').astype(str)
-            dfLogs['TransactionType'] = dfLogs["FilteredData"].str.extract(r'"TransactionType":"([^"]+)"').astype(str)
-            if log_type == 'ATM':
-                dfLogs['JournalName'] = dfLogs["FilteredData"].str.extract(r'\d+\s+([^\s]+)\s+\'Posting Transaction Result').squeeze().str.replace(r'\.', '', regex=True).astype(str)
-            elif log_type == 'CashAdvance':
-                dfLogs['JournalName'] = dfLogs["FilteredData"].str.extract(r'------------>\s*(.*?)\s*Transaction Info\.').squeeze().str.replace(r'\.', '', regex=True).astype(str)
+        dfLogs['AuthNumber'] = dfLogs["FilteredData"].str.extract(r'"AuthNumber":"(\d+)"').astype(str)
+        dfLogs['CardNumber'] = dfLogs["FilteredData"].str.extract(r'"CardNumber":"(\d+)"').astype(str)
+        dfLogs['HostIP'] = dfLogs["FilteredData"].str.extract(r'"HostIP":"([^"]+)"').astype(str)
+        dfLogs['TransactionType'] = dfLogs["FilteredData"].str.extract(r'"TransactionType":"([^"]+)"').astype(str)
+        if 'ATM' or 'CASHADVANCE' in detected_types:
+            dfLogs['Type'] = dfLogs["FilteredData"].str.extract(r'"type"\s*:\s*"([^"]+)"', expand=False)
     elif log_type in ['bills']:
         print ("BillBreaking logs filter")
         dfLogs['TimeDate'] = dfLogs["FilteredData"].str.extract( r'<TimeDate>([^<]+)</TimeDate>').astype(str)

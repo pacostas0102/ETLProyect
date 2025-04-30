@@ -3,6 +3,7 @@ import pandas as pd
 
 def extract_logs(Logs_path, option, output_path, column_names=["FilteredData"]):
     logs_dataframes = []
+    detected_types = []
     found_filters = {filtro: 0 for filtro in ["SMS", "TicketRedemption", "ATM", "CashAdvance", "BillBreaking"]}
 
     # Mapear las opciones del usuario a las carpetas correctas
@@ -29,6 +30,8 @@ def extract_logs(Logs_path, option, output_path, column_names=["FilteredData"]):
         "cards": filters["ATM"] + filters["CashAdvance"],
         "bills": filters["BillBreaking"]
     }
+
+
 
     # Obtener las carpetas y filtros correctos
     selected_folders = folder_mapping.get(option.lower(), [])
@@ -59,10 +62,12 @@ def extract_logs(Logs_path, option, output_path, column_names=["FilteredData"]):
                                     for key, values in filters.items():
                                         if filtro in values:
                                             found_filters[key] += 1
-
+             
+                    
                     if filtered_lines:
                         logs_df = pd.DataFrame(filtered_lines, columns=column_names)
                         logs_dataframes.append(logs_df)
+            detected_types.append(subcarpeta)         
 
     # Combinar los logs extraídos en un solo DataFrame
     if logs_dataframes:
@@ -79,4 +84,6 @@ def extract_logs(Logs_path, option, output_path, column_names=["FilteredData"]):
         elif key in filter_mapping[option.lower()]:  # Solo avisar de los filtros esperados
             print(f"⚠️ No se encontraron datos para {key}")
 
-    return df_logs
+    print (detected_types)        
+
+    return df_logs, detected_types

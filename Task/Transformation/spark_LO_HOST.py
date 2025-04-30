@@ -70,19 +70,19 @@ def process_with_spark(df_combined, df_host, host_name, output_path):
         
         dfHOST = dfHOST.withColumn("last_4_digits", F.regexp_extract(F.col("Card Number"), r"(\d{4})$", 1))
         
-        joined_df = dfHOST.join(
-            dfLO,
-            dfHOST["Seq"] == dfLO["hostseq"] ,
+        joined_df = dfLO.join(
+            dfHOST,
+            dfLO["hostseq"] == dfHOST["Seq"],
             "left"
         )
         
         result_df = joined_df.withColumn(
-            "found_in_datastream",
-            F.when(F.col("hostseq").isNotNull(), True).otherwise(False)
-        ).orderBy(F.col("Terminal DateTime").asc())
+            "found_in_cds",
+            F.when(F.col("Seq").isNotNull(), True).otherwise(False)
+        ).orderBy(F.col("DATE & TIME").asc())
 
 
-        print(result_df.head(10)) 
+        #print(result_df.head(10)) 
 
     
 

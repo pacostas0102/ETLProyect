@@ -18,10 +18,8 @@ def transform_rpttransactiondetailbytid(df):
     df = df[header_row + 1:].reset_index(drop=True)
     df = df.dropna(thresh=4)
     df = df[~df["Card Number"].astype(str).str.contains("Card Number|Business Date", na=False)]
-    df.columns = df.columns.str.strip()
-    df = df[df['Card Number'].notna()]
+    df.columns = df.columns.str.strip()    
     df['Switch Seq.'] = df['Switch Seq.'].astype(str)
-    #df = df.dropna(axis=1, how='all')
     #df = df[df['Switch Seq.'].str.match(r'^\d{4}$')] #Debit transactions only
     # df = pd.DataFrame (df)
     print("Transform methods where applied to rpttransactiondetailbytid")
