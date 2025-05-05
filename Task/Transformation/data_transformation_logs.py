@@ -1,6 +1,10 @@
 import os
 import pandas as pd
 
+barcode_seq_map = {}
+
+
+
 def transform_logs(dfLogs, log_type, output_path, detected_types):
     print ("I'm transforming Filtered Data column")
     dfLogs1 = pd.DataFrame()
@@ -36,16 +40,17 @@ def transform_logs(dfLogs, log_type, output_path, detected_types):
         dfLogs['seqNumber'] = dfLogs["FilteredData"].str.extract(r'"seqNumber":"(\d+)"').astype(str)
         dfLogs['Amount'] = dfLogs["FilteredData"].str.extract(r'"Amount":([0-9]+(?:\.[0-9]+)?)')
         dfLogs['DispensedTotal'] = dfLogs["FilteredData"].str.extract(r'"DispensedTotal":([0-9]+(?:\.[0-9]+)?)')        
-        dfLogs['Status'] = dfLogs["FilteredData"].str.extract(r'"Status":"([^"]+)"').astype(str)
-        dfLogs['Barcode'] = dfLogs["FilteredData"].str.extract(r'<Barcode>(\d+)</Barcode>').astype(str) 
-        dfLogs['TicketData'] = dfLogs["FilteredData"].str.extract(r'"TicketData":"([^"]+)"').astype(str)
+        status_extracted = dfLogs["FilteredData"].str.extract(r'"Status":"([^"]+)"|<Status>([^<]+)</Status>')
+        dfLogs["Status"] = status_extracted[0].combine_first(status_extracted[1])
+        barcode_extracted = dfLogs["FilteredData"].str.extract(r'<Barcode>(\d+)</Barcode>|"TicketData":"([^"]+)"')
+        dfLogs["TicketBarcode"] = barcode_extracted[0].combine_first(barcode_extracted[1])
         dfLogs['Type'] = dfLogs["FilteredData"].str.extract(r'"type"\s*:\s*"([^"]+)"', expand=False)
         for i, denom in enumerate([1, 2, 3, 4, 5, 6], start=1):
             dfLogs[f'BillCount_0{i}_{denom}'] = dfLogs["FilteredData"].str.extract(rf'"BillCount_0{i}":([0-9]+(?:\.[0-9]+)?)')
             dfLogs[f'CoinCount_0{i}_{denom}'] = dfLogs["FilteredData"].str.extract(rf'"CoinCount_0{i}":([0-9]+(?:\.[0-9]+)?)')            
         dfLogs['JournalName']= dfLogs["FilteredData"].str.extract( r'(Receiving from Konami Server|TicketRedemption)').squeeze()
-        
-   
+
+
     dfLogs.to_csv(output_path, index=False)
  #   print (dfLogs1)
     return dfLogs

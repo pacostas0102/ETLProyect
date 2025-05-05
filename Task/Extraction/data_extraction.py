@@ -27,19 +27,20 @@ def extract_data(folder_path):
 # -------------------------------------------------------------------------
 # Función de extracción tr and bb
 # -------------------------------------------------------------------------
-def extract_data_tr_bb(folder_path_tr_bb):
+def extract_data_tr_bb(folder_path_tr_bb, option):
     file_list = [os.path.join(folder_path_tr_bb, f) for f in os.listdir(folder_path_tr_bb) if f.endswith(('.xls', '.xlsx'))]
     
     dataframes = []
     for file in file_list:
         file_name = os.path.basename(file)
-        if "Voucher_Redemption_Transaction" in file_name:
+        if option.lower() == "tickets" and "Voucher_Redemption_Transaction" in file_name:
             print("The File has 'Voucher Redemption' included in the file name.")
             df_tr = pd.read_excel(file, skiprows=15, header=None)
             dataframes.append(('TR', df_tr, file_name))  
-        elif "Bill_Breaking_Transaction" in file_name:
+
+        elif option.lower() == "bills" and "Bill_Breaking_Transaction" in file_name:
             print("The File has 'Bill Breaking' included in the file name.")
             df_bb = pd.read_excel(file, sheet_name="Sheet2", skiprows=3, header=None)
-            dataframes.append(('BB', df_bb, file_name))  
+            dataframes.append(('BB', df_bb, file_name))   
     
     return dataframes

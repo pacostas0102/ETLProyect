@@ -37,8 +37,8 @@ def process_live_office(folder_path, output_path):
 #-------------------------------------------------------------------------LiveOffice TR && BB Reports----------------------------------------------------------------------------------------------
 
 
-def process_live_office_tr_bb(folder_path_tr_bb, output_path3):
-    raw_data_tr_bb = extract_data_tr_bb(folder_path_tr_bb)
+def process_live_office_tr_bb(folder_path_tr_bb, output_path3, option):
+    raw_data_tr_bb = extract_data_tr_bb(folder_path_tr_bb, option)
     transformed_data_tr_bb = transform_data_tr_bb(raw_data_tr_bb)
     load_to_excel(transformed_data_tr_bb, output_path3,'lotr-bbreport')
     return transformed_data_tr_bb
@@ -140,7 +140,7 @@ def main():
     if option == "tickets":
         print("You selected TICKET variance.")        
         df_TransformedLogs = process_logs(Logs_path, output_path3, option)
-        transformed_data_tr_bb = process_live_office_tr_bb(folder_path_tr_bb, output_path)
+        transformed_data_tr_bb = process_live_office_tr_bb(folder_path_tr_bb, output_path, option)
         result1 = process_spark_logs_tr_bb(df_TransformedLogs, transformed_data_tr_bb, output_path2)
         
     elif option == "cards":
@@ -153,10 +153,13 @@ def main():
 
 
     elif option == "bills":
-        print("You selected bill variance.")
-        # Call your function or logic for bills here
+        print("You selected BILL variance.")
+        df_TransformedLogs = process_logs(Logs_path, output_path3, option)
+        transformed_data_tr_bb = process_live_office_tr_bb(folder_path_tr_bb, output_path, option)
+        #result1 = process_spark_logs_tr_bb(df_TransformedLogs, transformed_data_tr_bb, output_path2)
+
     else:
-        print("Invalid option. Please enter 'tickets', 'card', or 'bills'.")
+        print("Invalid option. Please enter 'tickets', 'cards', or 'bills'.")
 
 
 

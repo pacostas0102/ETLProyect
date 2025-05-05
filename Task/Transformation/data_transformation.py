@@ -65,6 +65,7 @@ def transform_data_tr_bb(dataframes):
             transformed_data.append(('TR', df))
         
         elif data_type == 'BB':
+            
             # Transformaciones específicas para "Bill Breaking"
             new_columns = df.iloc[2].astype(str) + df.iloc[3].astype(str)
             df.columns = new_columns  # Asignar los nuevos encabezados
