@@ -113,11 +113,11 @@ def process_spark_logs(df_LogsUnified, combined_df, dfHOST,host_name, output_pat
 
 #------------------------------------------------------------------SPARK Consolidado logs vs LO (TR-BB)------------------------------------------------------------------------------
 
-def process_spark_logs_tr_bb(dfLogs, transformed_data_tr_bb, output_path):
+def process_spark_logs_tr_bb(dfLogs, transformed_data_tr_bb, output_path,option):
     #result_df1, result_df2 = process_logs_with_spark_tr_bb(dfLogsTR, dfLogsBB, transformed_data_tr_bb)
-    result_df1  = process_logs_with_spark_tr_bb(dfLogs, transformed_data_tr_bb, output_path)
+    result_df1  = process_logs_with_spark_tr_bb(dfLogs, transformed_data_tr_bb, output_path,option)
     with pd.ExcelWriter(output_path, engine='openpyxl') as writer:
-        result_df1.to_excel(writer, sheet_name='LOGSvsLO-TR', index=False)
+        result_df1.to_excel(writer, sheet_name='LOGSvsLO-BBTR', index=False)
         #result_df2.to_excel(writer, sheet_name='LOGSvsLO-BB', index=False)
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -141,7 +141,7 @@ def main():
         print("You selected TICKET variance.")        
         df_TransformedLogs = process_logs(Logs_path, output_path3, option)
         transformed_data_tr_bb = process_live_office_tr_bb(folder_path_tr_bb, output_path, option)
-        result1 = process_spark_logs_tr_bb(df_TransformedLogs, transformed_data_tr_bb, output_path2)
+        result1 = process_spark_logs_tr_bb(df_TransformedLogs, transformed_data_tr_bb, output_path2,option)
         
     elif option == "cards":
         print("You selected CARD variance.")
@@ -156,7 +156,7 @@ def main():
         print("You selected BILL variance.")
         df_TransformedLogs = process_logs(Logs_path, output_path3, option)
         transformed_data_tr_bb = process_live_office_tr_bb(folder_path_tr_bb, output_path, option)
-        #result1 = process_spark_logs_tr_bb(df_TransformedLogs, transformed_data_tr_bb, output_path2)
+        result1 = process_spark_logs_tr_bb(df_TransformedLogs, transformed_data_tr_bb, output_path2,option)
 
     else:
         print("Invalid option. Please enter 'tickets', 'cards', or 'bills'.")

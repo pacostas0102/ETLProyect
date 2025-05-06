@@ -9,105 +9,139 @@ from pyspark.sql.functions import col
 
 
 
-def process_logs_with_spark_tr_bb(dfLogs, transformed_data_tr_bb, output_path):
+def process_logs_with_spark_tr_bb(dfLogs, transformed_data_tr_bb, output_path, option):
 
-    #Validation
+    if option == 'tickets':
 
-    duplicates = dfLogs[dfLogs.duplicated(subset=['seqNumber', 'TicketBarcode'], keep=False)]
+        #Validation
 
-    # Identify the groups in which the duplicated has Completed and partial dispensed
-    mask = duplicates.groupby(['seqNumber', 'TicketBarcode'])['Status'].transform(lambda x: set(x) == {'COMPLETED', 'PARTIALDISPENSING'})
+        duplicates = dfLogs[dfLogs.duplicated(subset=['seqNumber', 'TicketBarcode'], keep=False)]
 
-    # Delette Partial Dispensing status
-    filtered_duplicates = duplicates[mask]
-    to_drop = filtered_duplicates[filtered_duplicates['Status'] == 'PARTIALDISPENSING']
+        # Identify the groups in which the duplicated has Completed and partial dispensed
+        mask = duplicates.groupby(['seqNumber', 'TicketBarcode'])['Status'].transform(lambda x: set(x) == {'COMPLETED', 'PARTIALDISPENSING'})
 
-    #Delete the registers from the original 
-    df_cleaned = dfLogs.drop(index=to_drop.index)
+        # Delete Partial Dispensing status
+        filtered_duplicates = duplicates[mask]
+        to_drop = filtered_duplicates[filtered_duplicates['Status'] == 'PARTIALDISPENSING']
 
-    print(df_cleaned)
+        #Delete the registers from the original 
+        df_cleaned = dfLogs.drop(index=to_drop.index)
 
-
-    dflogtr = dfLogs[dfLogs['JournalName'] == 'TicketRedemption']
-    dflogsms = dfLogs[dfLogs['JournalName'] == 'Receiving from Konami Server']
-
-    dflogsms = dflogsms.dropna(axis=1, how='all')
-
-    def buscar_seq(barcode):
-        match = dflogtr[dflogtr['TicketBarcode'].str.contains(barcode)]
-        if not match.empty:
-            return match['seqNumber'].values[0]  # Puedes ajustar si hay múltiples matches
-        return None
-
-    dflogsms['seqNumber'] = dflogsms['TicketBarcode'].apply(buscar_seq)
-    # Filtrar los registros donde JournalName sea 'TicketRedemption'
-    #dfLogs_filtered = dfLogs[dfLogs["JournalName"] == "TicketRedemption"]
-#    print (type(transformed_data_tr_bb))
-#    df_pandasLOTR = pd.DataFrame(transformed_data_tr_bb) 
-    
-    print('Im into logs spark process for ticket redemption')
-            
-    # Inicializar la sesión de Spark
-    spark = SparkSession.builder.appName("Logs_LO TR_BB Comparative").getOrCreate()   
-
-    df_sparkLOGSTR = spark.createDataFrame(dflogtr)
-    df_sparkLOTR = spark.createDataFrame(transformed_data_tr_bb)
-    df_sparkLOSMS = spark.createDataFrame(dflogsms)
-
-    df_sparkLOGSTR.printSchema()
-    df_sparkLOSMS.printSchema()
-
-    #SMSbarcodes = [row['TicketBarcode'] for row in df_sparkLOSMS.select("TicketBarcode").distinct().collect()]
+        print(df_cleaned)
 
 
-    #for barcode in SMSbarcodes:
-    #    matching_rows = df_sparkLOGSTR.filter(col("TicketBarcode").contains(barcode))
-    #    print(f"Resultados para barcode: {barcode}")
-    #    matching_rows.select("seqNumber", "TicketBarcode")
+        dflogtr = dfLogs[dfLogs['JournalName'] == 'TicketRedemption']
+        dflogsms = dfLogs[dfLogs['JournalName'] == 'Receiving from Konami Server']
 
-    # Limpia el TicketBarcode de los logs
-    #df_sparkLOGSTR = df_sparkLOGSTR.withColumn("TicketBarcode_clean", F.regexp_extract("TicketBarcode", r'^(\d+)', 1))
+        dflogsms = dflogsms.dropna(axis=1, how='all')
 
-    # Explota múltiples valores en TICKETBARCODE_FILLED usando split y explode
-    #df_sparkLOTR = df_sparkLOTR.withColumn("BarcodeExploded", F.explode(F.split(F.col("VOUCHERSDATA"), ",")))
+        def buscar_seq(barcode):
+            match = dflogtr[dflogtr['TicketBarcode'].str.contains(barcode)]
+            if not match.empty:
+                return match['seqNumber'].values[0]  # Puedes ajustar si hay múltiples matches
+            return None
 
-    #df_sparkLOTR = df_sparkLOTR.withColumn("Barcode_clean", F.regexp_extract("BarcodeExploded", r'^(\d+)', 1))
+        dflogsms['seqNumber'] = dflogsms['TicketBarcode'].apply(buscar_seq)
+        # Filtrar los registros donde JournalName sea 'TicketRedemption'
+        #dfLogs_filtered = dfLogs[dfLogs["JournalName"] == "TicketRedemption"]
+    #    print (type(transformed_data_tr_bb))
+    #    df_pandasLOTR = pd.DataFrame(transformed_data_tr_bb) 
+        
+        print('Im into logs spark process for ticket redemption')
+                
+        # Inicializar la sesión de Spark
+        spark = SparkSession.builder.appName("Logs_LO TR Comparative").getOrCreate()   
 
-    # Asigna alias a los DataFrames
-    df_sparkLOSMS = df_sparkLOSMS.alias("sms")
-    df_sparkLOGSTR = df_sparkLOGSTR.alias("logstr")
-    df_sparkLOTR = df_sparkLOTR.alias("lotr")
+        df_sparkLOGSTR = spark.createDataFrame(dflogtr)
+        df_sparkLOTR = spark.createDataFrame(transformed_data_tr_bb)
+        df_sparkLOSMS = spark.createDataFrame(dflogsms)
 
-    # Join entre df_sparkLOSMS y df_sparkLOGSTR usando alias
-    matched_df = df_sparkLOSMS.join(
-        df_sparkLOGSTR,
-        col("sms.seqNumber") == col("logstr.seqNumber"),
-        how="left"
-    ).drop(col("logstr.seqNumber")).drop(col("logstr.TicketBarcode"))
+        df_sparkLOGSTR.printSchema()
+        df_sparkLOSMS.printSchema()
 
-    # Segundo join con df_sparkLOTR
-    matched_df1 = matched_df.join(
-        df_sparkLOTR,
-        matched_df["seqNumber"] == col("lotr.SEQUENCENUMBER_FILLED"),
-        how="left"
-    ).drop(col("lotr.SEQUENCENUMBER_FILLED")).drop(col("lotr.TicketBarcode"))
+        #SMSbarcodes = [row['TicketBarcode'] for row in df_sparkLOSMS.select("TicketBarcode").distinct().collect()]
 
-    # Si hay múltiples matches por TicketBarcode, tomamos el primero por orden arbitrario
-    #windowSpec = Window.partitionBy("TicketBarcode_clean").orderBy("SEQUENCENUMBER_FILLED")
-    #unique_matches = matched_df.withColumn("row_num", row_number().over(windowSpec)).filter(F.col("row_num") == 1)
 
-    result_df = matched_df1.withColumn(
-        "found_in_Systems",
-        F.when(F.col("SEQUENCENUMBER_FILLED").isNotNull(), True).otherwise(False)
-    )#.orderBy(F.col("TimeDate").asc())
+        #for barcode in SMSbarcodes:
+        #    matching_rows = df_sparkLOGSTR.filter(col("TicketBarcode").contains(barcode))
+        #    print(f"Resultados para barcode: {barcode}")
+        #    matching_rows.select("seqNumber", "TicketBarcode")
 
-    pandas_df = result_df.toPandas()
-            #pandas_df = dfLOGSTR.toPandas()
-            #pandas_df.to_csv(output_path, index=False)
-            
-            # Finalizar la sesión de Spark
-    spark.stop()
+        # Limpia el TicketBarcode de los logs
+        #df_sparkLOGSTR = df_sparkLOGSTR.withColumn("TicketBarcode_clean", F.regexp_extract("TicketBarcode", r'^(\d+)', 1))
 
+        # Explota múltiples valores en TICKETBARCODE_FILLED usando split y explode
+        #df_sparkLOTR = df_sparkLOTR.withColumn("BarcodeExploded", F.explode(F.split(F.col("VOUCHERSDATA"), ",")))
+
+        #df_sparkLOTR = df_sparkLOTR.withColumn("Barcode_clean", F.regexp_extract("BarcodeExploded", r'^(\d+)', 1))
+
+        # Asigna alias a los DataFrames
+        df_sparkLOSMS = df_sparkLOSMS.alias("sms")
+        df_sparkLOGSTR = df_sparkLOGSTR.alias("logstr")
+        df_sparkLOTR = df_sparkLOTR.alias("lotr")
+
+        # Join entre df_sparkLOSMS y df_sparkLOGSTR usando alias
+        matched_df = df_sparkLOSMS.join(
+            df_sparkLOGSTR,
+            col("sms.seqNumber") == col("logstr.seqNumber"),
+            how="left"
+        ).drop(col("logstr.seqNumber")).drop(col("logstr.TicketBarcode"))
+
+        # Segundo join con df_sparkLOTR
+        matched_df1 = matched_df.join(
+            df_sparkLOTR,
+            matched_df["seqNumber"] == col("lotr.SEQUENCENUMBER_FILLED"),
+            how="left"
+        ).drop(col("lotr.SEQUENCENUMBER_FILLED")).drop(col("lotr.TicketBarcode"))
+
+        # Si hay múltiples matches por TicketBarcode, tomamos el primero por orden arbitrario
+        #windowSpec = Window.partitionBy("TicketBarcode_clean").orderBy("SEQUENCENUMBER_FILLED")
+        #unique_matches = matched_df.withColumn("row_num", row_number().over(windowSpec)).filter(F.col("row_num") == 1)
+
+        result_df = matched_df1.withColumn(
+            "found_in_Systems",
+            F.when(F.col("SEQUENCENUMBER_FILLED").isNotNull(), True).otherwise(False)
+        )#.orderBy(F.col("TimeDate").asc())
+
+        pandas_df = result_df.toPandas()
+                #pandas_df = dfLOGSTR.toPandas()
+                #pandas_df.to_csv(output_path, index=False)
+                
+                # Finalizar la sesión de Spark
+        spark.stop()
+
+    elif option == 'bills':
+        print('Im into logs spark process for Bill Breaking ')
+                
+        # Inicializar la sesión de Spark
+        spark = SparkSession.builder.appName("Logs_LO BB Comparative").getOrCreate()
+
+        df_sparkLOGSBB = spark.createDataFrame(dfLogs)
+        df_sparkLOBB = spark.createDataFrame(transformed_data_tr_bb)
+
+        df_sparkLOGSBB.printSchema()
+        df_sparkLOBB.printSchema()
+
+        joined_df = df_sparkLOGSBB.join(
+            df_sparkLOBB,
+            df_sparkLOGSBB["seqNumber"] == df_sparkLOBB["SEQUENCENUMBER"],
+            how="left"
+        )
+
+        sorted_df1 = joined_df.orderBy("TimeDate")
+
+        result_df = sorted_df1.withColumn(
+            "found_in_Systems",
+            F.when(F.col("SEQUENCENUMBER").isNotNull(), True).otherwise(False)
+        )
+
+
+        pandas_df = result_df.toPandas()
+                #pandas_df = dfLOGSTR.toPandas()
+                #pandas_df.to_csv(output_path, index=False)
+                
+                # Finalizar la sesión de Spark
+        spark.stop()
 
         #print(pandas_df)
     return pandas_df

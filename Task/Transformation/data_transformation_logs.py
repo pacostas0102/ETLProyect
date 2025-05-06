@@ -23,7 +23,7 @@ def transform_logs(dfLogs, log_type, output_path, detected_types):
             dfLogs['Type'] = dfLogs["FilteredData"].str.extract(r'"type"\s*:\s*"([^"]+)"', expand=False)
     elif log_type in ['bills']:
         print ("BillBreaking logs filter")
-        dfLogs['TimeDate'] = dfLogs["FilteredData"].str.extract( r'<TimeDate>([^<]+)</TimeDate>').astype(str)
+        dfLogs['TimeDate'] = dfLogs["FilteredData"].str.extract(r'"RegistrationDatetime":"([^"]+)"').squeeze().astype(str).str.replace("T", " ", regex=False)
         dfLogs['seqNumber'] = dfLogs["FilteredData"].str.extract(r'"seqNumber":"(\d+)"').astype(str)
         dfLogs['Amount'] = dfLogs["FilteredData"].str.extract(r'"Amount":([0-9]+(?:\.[0-9]+)?)')
         dfLogs['DispensedTotal'] = dfLogs["FilteredData"].str.extract(r'"DispensedTotal":([0-9]+(?:\.[0-9]+)?)')        
