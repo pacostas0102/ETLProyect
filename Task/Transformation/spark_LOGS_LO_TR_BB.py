@@ -13,27 +13,26 @@ def process_logs_with_spark_tr_bb(dfLogs, transformed_data_tr_bb, output_path, o
 
     if option == 'tickets':
 
+        duplicates = dfLogs[dfLogs.duplicated(subset=['seqNumber', 'TicketBarcode'], keep=False)]
+
+            # Identify the groups in which the duplicated has Completed and partial dispensed
+        mask = duplicates.groupby(['seqNumber', 'TicketBarcode'])['Status'].transform(lambda x: set(x) == {'COMPLETED', 'PARTIALDISPENSING'})
+
+            # Delete Partial Dispensing status
+        filtered_duplicates = duplicates[mask]
+        to_drop = filtered_duplicates[filtered_duplicates['Status'] == 'PARTIALDISPENSING']
+
+            #Delete the registers from the original 
+        df_cleaned = dfLogs.drop(index=to_drop.index)
+
+        #print(df_cleaned)
+
         #Validation
         if dfLogs['JournalName'].str.contains('Receiving from Konami Server', na=False).any():
             print("✅ At least one value contains 'Receiving from Konami Server'")
 
-            duplicates = dfLogs[dfLogs.duplicated(subset=['seqNumber', 'TicketBarcode'], keep=False)]
-
-            # Identify the groups in which the duplicated has Completed and partial dispensed
-            mask = duplicates.groupby(['seqNumber', 'TicketBarcode'])['Status'].transform(lambda x: set(x) == {'COMPLETED', 'PARTIALDISPENSING'})
-
-            # Delete Partial Dispensing status
-            filtered_duplicates = duplicates[mask]
-            to_drop = filtered_duplicates[filtered_duplicates['Status'] == 'PARTIALDISPENSING']
-
-            #Delete the registers from the original 
-            df_cleaned = dfLogs.drop(index=to_drop.index)
-
-            print(df_cleaned)
-
-
-            dflogtr = dfLogs[dfLogs['JournalName'] == 'TicketRedemption']
-            dflogsms = dfLogs[dfLogs['JournalName'] == 'Receiving from Konami Server']
+            dflogtr = df_cleaned[df_cleaned['JournalName'] == 'TicketRedemption']
+            dflogsms = df_cleaned[df_cleaned['JournalName'] == 'Receiving from Konami Server']
 
             dflogsms = dflogsms.dropna(axis=1, how='all')
 
@@ -121,7 +120,7 @@ def process_logs_with_spark_tr_bb(dfLogs, transformed_data_tr_bb, output_path, o
             # Inicializar la sesión de Spark
             spark = SparkSession.builder.appName("Logs_LO TR Comparative").getOrCreate()   
 
-            df_sparkLOGSTR = spark.createDataFrame(dfLogs)
+            df_sparkLOGSTR = spark.createDataFrame(df_cleaned)
             df_sparkLOTR = spark.createDataFrame(transformed_data_tr_bb)
 
             df_sparkLOGSTR.printSchema()
