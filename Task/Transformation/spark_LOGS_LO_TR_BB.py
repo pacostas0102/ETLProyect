@@ -107,6 +107,7 @@ def process_logs_with_spark_tr_bb(dfLogs, transformed_data_tr_bb, output_path, o
                 F.when(F.col("SEQUENCENUMBER_FILLED").isNotNull(), True).otherwise(False)
             )#.orderBy(F.col("TimeDate").asc())
 
+            
             pandas_df = result_df.toPandas()
                     #pandas_df = dfLOGSTR.toPandas()
                     #pandas_df.to_csv(output_path, index=False)
@@ -132,9 +133,9 @@ def process_logs_with_spark_tr_bb(dfLogs, transformed_data_tr_bb, output_path, o
             how="left"
             )
 
-            sorted_df1 = joined_df.orderBy("TimeDate")
+            #sorted_df1 = joined_df.orderBy("TimeDate")
 
-            result_df = sorted_df1.withColumn(
+            result_df = joined_df.withColumn(
                 "found_in_Systems",
                 F.when(F.col("SEQUENCENUMBER").isNotNull(), True).otherwise(False)
             )
@@ -165,9 +166,9 @@ def process_logs_with_spark_tr_bb(dfLogs, transformed_data_tr_bb, output_path, o
             how="left"
         )
 
-        sorted_df1 = joined_df.orderBy("TimeDate")
+        #sorted_df1 = joined_df.orderBy("TimeDate")
 
-        result_df = sorted_df1.withColumn(
+        result_df = joined_df.withColumn(
             "found_in_Systems",
             F.when(F.col("SEQUENCENUMBER").isNotNull(), True).otherwise(False)
         )
