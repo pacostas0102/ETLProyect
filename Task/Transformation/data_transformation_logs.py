@@ -11,6 +11,7 @@ def transform_logs(dfLogs, log_type, output_path, detected_types):
 
     if log_type in ['cards']:
         # Extraer campos comunes
+        dfLogs['TimeDate'] = dfLogs["FilteredData"].str.extract(r'"RegistrationDatetime":"([^"]+)"').squeeze().astype(str).str.replace("T", " ", regex=False)
         dfLogs['seqNumber'] = dfLogs["FilteredData"].str.extract(r'"seqNumber":"(\d+)"').astype(str)
         dfLogs['Amount'] = dfLogs["FilteredData"].str.extract(r'"Amount":([0-9]+(?:\.[0-9]+)?)')
         dfLogs['DispensedTotal'] = dfLogs["FilteredData"].str.extract(r'"DispensedTotal":([0-9]+(?:\.[0-9]+)?)')
