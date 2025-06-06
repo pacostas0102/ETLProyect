@@ -28,9 +28,19 @@ print("Iniciando el proceso ETL...")
 #-------------------------------------------------------------------------LiveOffice Card Reports----------------------------------------------------------------------------------------------
 
 def process_live_office(folder_path, output_path):
+    #raw_data = extract_data(folder_path)
+    #transformed_data = transform_data(raw_data)
+    #load_to_excel(transformed_data, output_path,'locardreport')
+    
     raw_data = extract_data(folder_path)
-    transformed_data = transform_data(raw_data)
-    load_to_excel(transformed_data, output_path,'locardreport')
+    
+    if not raw_data:
+        print(f"[WARNING] There are no data in {folder_path}.")
+        return None
+    else:
+        transformed_data = transform_data(raw_data)
+        load_to_excel(transformed_data, output_path, 'locardreport')
+    
     return transformed_data
 
 
@@ -59,7 +69,7 @@ def process_host_reports(host_folder_path, output_path3):
                 else df_host
             )
         #print(type(df_host))
-        load_to_excel(df_host, output_path3,'hostcardreports')    
+        load_to_excel(df_host, output_path3,'hostcardreports')  
         #dataframes.append(df_host)
 
     #if df_host:
@@ -74,7 +84,7 @@ def process_host_reports(host_folder_path, output_path3):
 #--------------------------------------------------------------------------SPARK LO-HOST CONSOLIDATION ----------------------------------------------------------------------------------------------
 
 def process_spark_lo_host(transformed_data, combined_df, host_name, output_path, output_path3):
-    if combined_df is not None:
+    if combined_df is not None and transformed_data is not None :
         print("Spark process begins...")
         result_df = process_with_spark(transformed_data, combined_df, host_name, output_path3)
 
@@ -102,14 +112,16 @@ def process_logs(Logs_path, output_path, option):
 
 #------------------------------------------------------------------SPARK Consolidado logs------------------------------------------------------------------------------
 
-def process_spark_logs(df_LogsUnified, combined_df, dfHOST,host_name, output_path):
-    result_df1, result_df2 = process_logs_with_spark(df_LogsUnified, combined_df, dfHOST,host_name)
+def process_spark_logs(df_LogsUnified, combined_df, dfHOST,host_name, output_path, LOReports):
+    result_df1, result_df2 = process_logs_with_spark(df_LogsUnified, combined_df, dfHOST,host_name,LOReports)
 
     with pd.ExcelWriter(output_path, engine='openpyxl') as writer:
         result_df1.to_excel(writer, sheet_name='LOGSvsLO-HOST', index=False)
         result_df2.to_excel(writer, sheet_name='LOGSvsHOST', index=False)
 
     print(f"Archivo exportado exitosamente card transactions a {output_path}")
+
+
 
 #------------------------------------------------------------------SPARK Consolidado logs vs LO (TR-BB)------------------------------------------------------------------------------
 
@@ -145,11 +157,13 @@ def main():
         
     elif option == "cards":
         print("You selected CARD variance.")
+        LOReports = input("Do we have to analyze LO? (y/n)").strip().lower()
         transformed_data = process_live_office(folder_path, output_path)
         df_host, host_name = process_host_reports(host_folder_path, output_path)
         combined_df = process_spark_lo_host(transformed_data, df_host, host_name, output_path, output_path3)
         df_TransformedLogs = process_logs(Logs_path, output_path3, option)
-        result2= process_spark_logs(df_TransformedLogs, combined_df, df_host,host_name, output_path2)
+        result2= process_spark_logs(df_TransformedLogs, combined_df, df_host,host_name, output_path2,LOReports)
+
 
 
     elif option == "bills":

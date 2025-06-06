@@ -2,51 +2,67 @@ from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
 from pyspark.sql.types import StructType, StructField, StringType, DoubleType, IntegerType
 import pandas as pd
+from pyspark.sql.functions import expr
 
-def process_logs_with_spark(df_LogsUnified, result_dflO, dfhost, host_name):
+def process_logs_with_spark(df_LogsUnified, result_dflO, dfhost, host_name, LOReports):
+    
     
     print (host_name)
-    # Iniciar la sesión de Spark
-    spark = SparkSession.builder.appName("Logs_LO_Host Comparative").getOrCreate()
+    # When Casino is not using LO system---------------------------------------------------------------------------------------
 
-    # Convertir los DataFrames de Pandas a Spark
+    if LOReports == 'y':
+        # Iniciar la sesión de Spark
+        spark = SparkSession.builder.appName("Logs_LO_Host Comparative").getOrCreate()
+
+        #print (result_dflO.head(5))    
+        # Convertir los DataFrames de Pandas a Spark
+        dfLogs = spark.createDataFrame(df_LogsUnified)
+        dfLOHOST = spark.createDataFrame(result_dflO)
+
+        dfLogs.printSchema()
+        dfLOHOST.printSchema()
+
+        # Realizar el join con Logs y LOHOST
+        joined_df = dfLogs.join(
+            dfLOHOST,
+            dfLogs["seqNumber"] == dfLOHOST["SEQUENCENUMBER"],
+            "left"
+        )
+        sorted_df1 = joined_df.orderBy("seqNumber")
+
+        # Agregar columna de indicador
+        result_df2 = sorted_df1.withColumn(
+            "found_in_Systems",
+            F.when(F.col("SEQUENCENUMBER").isNotNull(), True).otherwise(False)
+        )
+        
+        pandas_df1 = result_df2.toPandas()
+        spark.stop()
+    else:
+        pandas_df1 = pd.DataFrame()     
+
+    spark = SparkSession.builder.appName("Logs_Host Comparative").getOrCreate()
     dfLogs = spark.createDataFrame(df_LogsUnified)
-    dfLOHOST = spark.createDataFrame(result_dflO)
-
-    dfLogs.printSchema()
-    dfLOHOST.printSchema()
-
-    # Realizar el join con Logs y LOHOST
-    joined_df = dfLogs.join(
-        dfLOHOST,
-        dfLogs["seqNumber"] == dfLOHOST["SEQUENCENUMBER"],
-        "left"
-    )
-    sorted_df1 = joined_df.orderBy("seqNumber")
-
-    # Agregar columna de indicador
-    result_df2 = sorted_df1.withColumn(
-        "found_in_Systems",
-        F.when(F.col("SEQUENCENUMBER").isNotNull(), True).otherwise(False)
-    )
 
     # Realizar el join con Logs y HOST
 
-    #if host_name == 'TransactionLookup' :
+    if host_name == 'TransactionLookup' :
+        print ("LOGSvsHOST session begin with DataStream")
+        dfHOST = spark.createDataFrame(dfhost)
 
-     #   dfHOST = spark.createDataFrame(dfhost)
-
-     #   sorted_df1 = dfLogs.join(
-     #       dfHOST,
-     #       dfLogs["AuthNumber"] == dfHOST["seq"],
-     #       "left"
-     #   )
+        sorted_df1 = dfLogs.join(
+            dfHOST,
+            dfLogs["CardNumber"] == expr("substring(PAN, 2, length(PAN)-1)"),
+            "left"
+        )
 
         # Agregar columna de indicador
-     #   result_df3 = sorted_df1.withColumn(
-     #       "found_in_datastream",
-     #       F.when(F.col("seq").isNotNull(), True).otherwise(False)
-     #   )
+        result_df3 = sorted_df1.withColumn(
+            "found_in_datastream",
+            F.when(F.col("seq").isNotNull(), True).otherwise(False)
+        )
+
+
     if host_name == 'rpttransactiondetailbytid' : 
         print ('Im comparing CDS with LOGS')
         dfhost = dfhost.dropna(axis=1, how='all')
@@ -89,7 +105,7 @@ def process_logs_with_spark(df_LogsUnified, result_dflO, dfhost, host_name):
         )  
 
     # Convertir los DataFrames de Spark a Pandas para exportarlos
-    pandas_df1 = result_df2.toPandas()
-    pandas_df2 = result_df3.toPandas()
 
+    pandas_df2 = result_df3.toPandas()
+    #spark.stop()
     return pandas_df1, pandas_df2

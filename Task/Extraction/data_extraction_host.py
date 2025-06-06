@@ -8,11 +8,28 @@ def extract_host_data(file_path):
     file_name = os.path.basename(file_path)
 
     if "TransactionLookup" in file_name:
-        df_host = pd.read_excel(file_path, skiprows=4)
-        df_host = df_host[3:] 
-        df_host.reset_index(drop=True, inplace=True)
-        df_host['file_name'] = file_name
-        print("Data extracted from : TransactionLookup")
+        print (file_path)
+        ext = os.path.splitext(file_path)[1].lower()
+        try:
+            if ext == '.xls':
+                df_host = pd.read_excel(file_path, skiprows=4, engine='xlrd')
+                #df_host = df_host[1:] 
+                df_host.reset_index(drop=True, inplace=True)
+                df_host['file_name'] = file_name
+                print("Data extracted from : TransactionLookup")
+
+            elif ext == '.xlsx':
+                df_host = pd.read_excel(file_path, skiprows=4, engine='openpyxl')
+            else:
+                raise ValueError(f"Archivo no soportado: {file_path}")
+        except Exception as e:
+            print(f"Error leyendo archivo: {file_path} -> {e}")
+            df_host = None
+        #df_host = pd.read_excel(file_path, skiprows=4, engine='openpyxl')
+        #df_host = df_host[3:] 
+        #df_host.reset_index(drop=True, inplace=True)
+        #df_host['file_name'] = file_name
+        #print("Data extracted from : TransactionLookup")
         return df_host, "TransactionLookup"
 
     elif "rpttransactiondetailbytid" in file_name:
