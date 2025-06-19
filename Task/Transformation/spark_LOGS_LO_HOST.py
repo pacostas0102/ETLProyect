@@ -37,7 +37,7 @@ def process_logs_with_spark(df_LogsUnified, result_dflO, dfhost, host_name, LORe
         )
         
         pandas_df1 = result_df2.toPandas()
-        spark.stop()
+        
     else:
         pandas_df1 = pd.DataFrame()     
 

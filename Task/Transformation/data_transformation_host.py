@@ -2,6 +2,7 @@ import pandas as pd
 
 def transform_transaction_lookup(df):
     df['Seq'] = df['Seq'].astype(str)
+    df['Seq'] = df['Seq'].apply(lambda x: x.rjust(4, '0') if len(x) == 3 else x)
     df['PAN'] = df['PAN'].astype(str)
     df['Amt. Req'] = df['Amt. Req'].str.replace(',', '', regex=False).astype(str)
     df['Amt. Disp'] = df['Amt. Disp'].str.replace(',', '', regex=False).astype(str)
