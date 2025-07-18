@@ -1,2 +1,5 @@
 __pycache__/
+ETLProject/ArchivosEntrada/
+ETLProject/ArchivosSalida/
+ETLProject/__pycache__/
 *.pyc
