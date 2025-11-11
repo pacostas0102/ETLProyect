@@ -92,6 +92,8 @@ def process_logs_with_spark(df_LogsUnified, result_dflO, dfhost, host_name, LORe
 
         dfHOST = dfHOST.withColumn("last_4_digits", F.regexp_extract(F.col("Card Number"), r"(\d{4})$", 1))
 
+        print (dfHOST.head(10))
+
         sorted_df1 = dfLogs.join(
             dfHOST,
             dfLogs["AuthNumber"] == dfHOST["Seq"],

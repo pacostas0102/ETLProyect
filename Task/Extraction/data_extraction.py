@@ -21,8 +21,9 @@ def extract_data(folder_path):
         dataframes.append((df, file_name))
         print("File Name:", file_name)
 
-    #dataframesLO = pd.DataFrame(df)  
-
+    dataframesLO = pd.DataFrame(df)  
+    print (dataframesLO)
+    
     return dataframes
 # -------------------------------------------------------------------------
 # Función de extracción tr and bb

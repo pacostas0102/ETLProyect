@@ -5,7 +5,7 @@ def clean_and_convert_columns(df):
     df['TRANSACTIONTYPE'] = df['TRANSACTIONTYPE'].str.strip().replace(r"\s+", " ", regex=True).astype(str)
     df['SEQUENCENUMBER'] = df['SEQUENCENUMBER'].astype(str)
     df['CARDNUMBER'] = df['CARDNUMBER'].astype(str)
-    df['HOSTSEQ NUMBER'] = df['HOSTSEQ NUMBER'].astype(str)
+    #df['HOSTSEQ NUMBER'] = df['HOSTSEQ NUMBER'].astype(str)
     return df
 
 #para el Host

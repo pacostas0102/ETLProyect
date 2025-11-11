@@ -15,7 +15,7 @@ def extract_logs(Logs_path, option, output_path, column_names=["FilteredData"]):
 
     # Definir los filtros por tipo de log
     filters = {
-        'ATM': ["ATM.     'Posting Transaction Result"],
+        'ATM': ["ATM.     'Posting Transaction Result",  '"action":"Posting Transaction Result"'],
         'CashAdvance': ["Cash Advance Transaction Info. 'Posting Transaction Result"],
         'TicketRedemption': ['Posting: {"type":"TicketRedemption"'],
         'BillBreaking': ['Posting: {"type":"BillBreak"'],

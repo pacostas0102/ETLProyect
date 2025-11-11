@@ -1,0 +1,1611 @@
+___02:03:56 401004 Parameters  'ASAICashAdvanceStep.Constructor.CAIsEnabled true'  
+___02:03:56 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___02:03:56 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T02:03:56.704-0500","event":"StartUp","action":"ASAIDispenser Constructor Start","module":"ASAIDispenserStep"}'   
+___02:03:56 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T02:03:56.724-0500","event":"StartUp","action":"JAR File Metadata","JarInfo":{"lastModified":"08/20/2025","size":37,"path":"C:\\ProFlex4\\Base\\java\\lib\\cctransactionfw-ASAIDispenserStep-steps.jar"},"module":"ASAIDispenserStep"}'   
+___02:03:56 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T02:03:56.744-0500","event":"StartUpError","action":"ruleDispense20sFirst100s","errorMessage":"Not a JSON Object: null","module":"ASAIDispenserStep"}'   
+___02:03:56 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T02:03:56.752-0500","event":"StartUp","action":"Checking if Rule Dispense With 20s First 100s is enabled","Dispense20sFirst100s":false,"module":"ASAIDispenserStep"}'   
+___02:03:56 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T02:03:56.867-0500","event":"StartUp","action":"ASAIDispenser Constructor End","module":"ASAIDispenserStep"}'   
+___02:04:02 401004 Parameters  'Loading FW'  
+___02:22:05 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___02:22:05 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___02:22:06 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___02:22:06 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___02:22:06 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___02:22:06 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___02:22:06 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___02:22:17 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter INITIALIZEPOSTICKETTRANSACTION'  
+___02:22:17 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___02:22:17 401004 Parameters  '______InitializeCATransaction Method______'  
+___02:22:17 401005 OpenSession  'GetCardHolderName: GIBSON/DAVID M'  
+___02:22:17 401005 OpenSession  'CardHolderName: GIBSON/DAVID M'  
+___02:22:17 401004 Parameters  'GetFeeForAmount MAC ADDRESS:A4-1C-B4-02-D3-C5 FirstURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc SecondURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc'  
+___02:22:17 401004 Parameters  'TypeTrn POSTicketPurchase Track2 514399XXXXXX3508=2707201XXXXXXXX Amount $300.00'  
+___02:22:18 401004 Parameters  'GetFeeForAmount Response ErrorCode:0  ErrorDsc:  Fee:9.45 DynamicPricing:False EchoCommonId:'  
+___02:22:18 401005 OpenSession  'Regular Fee $9.45'  
+___02:22:18 401005 OpenSession  'InitializeCATransaction Response  Transaction {
+  "TrnType": 8,
+  "Total": 300.0,
+  "Fee": 9.45,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "1102202502221740",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX3508",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___02:22:18 401010 POSTicketPurchase:  'InitializePOSTicketPurchaseTransaction result:0 limit 2500'  
+___02:22:18 401009 QuickCashAdvance 'Returning on INITIALIZEPOSTICKETTRANSACTION -0-'  
+___02:22:18 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter GETDEBITFEECOMMAND'  
+___02:22:18 401004 Parameters  '______GetFeeInformation Method______'  
+___02:22:18 401004 Parameters  'GetFeeInformation: Transaction Limit:'  
+___02:22:18 401005 OpenSession  'Fee  $9.45'  
+___02:22:18 401005 OpenSession  'Fee Corrected:9.45'  
+___02:22:18 401000 ------------>Cash Advance Transaction Info. 'GETDEBITFEECOMMAND Conversion :  945 '  
+___02:22:18 401000 ------------>Cash Advance Transaction Info. 'GETDEBITFEECOMMAND Set Corrected Fee in CCHPFW_PROP_GEN_B_DATA:  945 Ret:0'  
+___02:22:18 401009 QuickCashAdvance 'Returning on GETDEBITFEECOMMAND -0-'  
+___02:22:25 401010 POSTicketPurchase:  'ASAIIssuanceStep - process: StepParameter: CREATECATICKET'  
+___02:22:25 401010 POSTicketPurchase:  'ASAIIssuanceStep - process: StepParameter: CREATECATICKET Return 0'  
+___02:22:25 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter LOGPOSTICKETCOMMAND'  
+___02:22:25 401010 POSTicketPurchase:  '--Starting LOGPOSTICKET--'  
+___02:22:25 401007 IsPosDebitAuthorized:  'Seq Number 4769'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 0 Value:  Result :0 bringReceiptToCage:False TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 1 Value:        FIREKEEPERS CASINO HOTEL Result :0 bringReceiptToCage:False TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 2 Value:          11177 E MICHIGAN AVE Result :0 bringReceiptToCage:False TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 3 Value:BATTLE CREEK                   MI US Result :0 bringReceiptToCage:False TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 4 Value:  Result :0 bringReceiptToCage:False TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 5 Value:   DATE   TIME    ATM Result :0 bringReceiptToCage:False TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 6 Value: 11/02/25 02:22 DFK00015 Result :0 bringReceiptToCage:False TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 7 Value:  Result :0 bringReceiptToCage:False TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 8 Value:XXXXXXXXXXXX3508 Result :0 bringReceiptToCage:False TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 9 Value:SEQ NUMB                            4769 Result :0 bringReceiptToCage:False TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 10 Value:  Result :0 bringReceiptToCage:False TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 11 Value:TICKET PURCHASE                  $300.00 Result :0 bringReceiptToCage:False TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 12 Value:FROM DEF ACCT Result :0 bringReceiptToCage:False TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 13 Value:AID: A0000000041010 Result :0 bringReceiptToCage:False TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 14 Value:FEE                                $9.45 Result :0 bringReceiptToCage:False TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 15 Value:  Result :0 bringReceiptToCage:False TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 16 Value:  Result :0 bringReceiptToCage:False TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 17 Value:PLEASE BRING RECEIPT TO CAGE FOR CASH Result :0 bringReceiptToCage:True TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 18 Value:  Result :0 bringReceiptToCage:True TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 19 Value:  Result :0 bringReceiptToCage:True TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 20 Value:             [000] APPROVED Result :0 bringReceiptToCage:True TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 21 Value:---------------------------------------- Result :0 bringReceiptToCage:True TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 22 Value: Result :-4 bringReceiptToCage:True TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 23 Value: Result :-4 bringReceiptToCage:True TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 24 Value: Result :-4 bringReceiptToCage:True TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 25 Value: Result :-4 bringReceiptToCage:True TransactionAborted False'  
+___02:22:25 401007 IsPosDebitAuthorized:  'Authorized -----True-----'  
+___02:22:25 401004 Parameters  '______CopyTransactionToCAS Method______'  
+___02:22:25 401006 Copying Transaction to CAS Sever:  'starting CopyTransactionToCAS: {
+  "TrnType": 8,
+  "Total": 300.0,
+  "Fee": 9.45,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "1102202502221740",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX3508",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___02:22:25 401006 Copying Transaction to CAS Sever:  'CCHPFW_PROP_PRINTER_VARIABLE AID 13 Value:AID: A0000000041010 Result:0'  
+___02:22:25 401004 Parameters  'Building Log Transaction: TransactionType POSTicket Track2 514399XXXXXX3508=2707201XXXXXXXX  SeqNumber 4769 ApprovalCode 0000  RawRequest UKNOWN RawResponse UKNOWN, amount 300 fee 9.45 AuthNumber 4769 ErrorCode 000 AID  A0000000041010 TVR 8000040000 IAD 0110A00001240000000000000000000000FF TSI 6000 AC 8E8EF45240EBD822 APN 4D617374657263617264204465626974'  
+___02:22:25 401005 OpenSession  'Language  en-US'  
+___02:22:25 401006 Copying Transaction to CAS Sever:  'LogTransaction MAC ADDRESS:A4-1C-B4-02-D3-C5 FirstURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc SecondURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc'  
+___02:22:26 401006 Copying Transaction to CAS Sever:  'CopyTransactionToCAS Response CAS LogTransation:Status:True IsElegible:NO SessionID:7258534 DisplayText:--RequiresVerification: YES'  
+___02:22:26 401006 Copying Transaction to CAS Sever:  'QuickCA Function is enabled?:False'  
+___02:22:26 401006 Copying Transaction to CAS Sever:  'CopyTransactionToCAS Final Transaction JSON:{
+  "TrnType": 8,
+  "Total": 300.0,
+  "Fee": 9.45,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "1102202502221740",
+  "HostSeqNumber": "4769",
+  "PAN": "XXXXXXX3508",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": "4769",
+  "OrderId": null,
+  "ApplicationId": " A0000000041010",
+  "TerminalId": "DFK00015",
+  "SessionId": 7258534,
+  "EchoCommonId": "",
+  "bills": null
+} Return 5'  
+___02:22:26 401010 POSTicketPurchase:  'CopyPOSTicketToCAS result:5'  
+___02:22:26 401010 POSTicketPurchase:  'Log POS Ticket result:5'  
+___02:22:26 401010 POSTicketPurchase:  'LogPOSTicket return 5'  
+___02:22:26 401010 POSTicketPurchase:  'PostPOSTicket Transaction to POST {
+  "TrnType": 8,
+  "Total": 300.0,
+  "Fee": 9.45,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "1102202502221740",
+  "HostSeqNumber": "4769",
+  "PAN": "XXXXXXX3508",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": "4769",
+  "OrderId": null,
+  "ApplicationId": " A0000000041010",
+  "TerminalId": "DFK00015",
+  "SessionId": 7258534,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___02:22:26 401010 POSTicketPurchase:  'Transaction is chained --'  
+___02:22:26 401010 POSTicketPurchase:  'Transaction is chained -false-'  
+___02:22:40 401000 ------------>Cash Advance Transaction Info. 'Posting Transaction Result  0:{"type":"POSTicketPurchase","accountType":"CHEKAC","seqNumber":"1102202502221740","Authorization":{"AuthNumber":"4769","ErrorCode":"0","ErrorDescription":"0","Fee":9.45,"RegisterTime":"2025-11-02T02:22:26.426-05:00","TransactionNumber":1102202502221740},"Operation":{"Amount":300.0,"BillDespensed":0.0,"CardNumber":"3508","HostIP":"","RegistrationDatetime":"2025-11-02T02:22:26.426-05:00","SequenceNumber":"1102202502221740","Status":"COMPLETED"},"TransactionDetail":{"Amount":300.0,"DispensedTotal":0.0,"BillDenom_01":1,"BillDenom_02":5,"BillDenom_03":10,"BillDenom_04":20,"BillDenom_05":50,"BillDenom_06":100,"CoinDenom_01":1,"CoinDenom_02":5,"CoinDenom_03":10,"CoinDenom_04":25,"CoinDenom_05":0,"CoinDenom_06":0,"BillCount_01":0,"BillCount_02":0,"BillCount_03":0,"BillCount_04":0,"BillCount_05":0,"BillCount_06":0,"CoinCount_01":0,"CoinCount_02":0,"CoinCount_03":0,"CoinCount_04":0,"CoinCount_05":0,"CoinCount_06":0,"ManualPay":0.0,"TransactionNumber":0,"TransactionType":"POSTKDEBTX"}}'  
+___02:22:40 401010 POSTicketPurchase:  'ASAICashAdvanceStep: RestClient - atmPostingURL: http://208.224.250.10/Journals/rest/dieboldTransactions'  
+___02:22:40 401010 POSTicketPurchase:  'ASAICashAdvanceStep: RestClient - atmPostingUser: admin'  
+___02:22:40 401010 POSTicketPurchase:  'ASAICashAdvanceStep: RestClient - atmPostingPwd: Passport_key'  
+___02:22:40 401010 POSTicketPurchase:  'ASAICashAdvanceStep: SetTransactions start'  
+___02:22:41 401010 POSTicketPurchase:  'Returning on LOGPOSTICKETCOMMAND -5-'  
+___02:22:41 401009 QuickCashAdvance 'ASAICashAdvanceStep: SetTransactions terminal: DFK00015'  
+___02:22:41 401010 POSTicketPurchase:  'ASAICashAdvanceStep: SetTransactions terminal: DFK00015'  
+___02:22:41 401010 POSTicketPurchase:  'ASAICashAdvanceStep: SetTransactions SeqNumber: 4769'  
+___02:22:41 401010 POSTicketPurchase:  'ASAICashAdvanceStep: SetTransactions CardData: 3508'  
+___02:22:41 401010 POSTicketPurchase:  'ASAICashAdvanceStep:ASAIATmStep: SetTransactions HostDate: 2025-11-02'  
+___02:22:41 401010 POSTicketPurchase:  'ASAICashAdvanceStep: SetTransactions HostTime: 02:22:41'  
+___02:22:41 401010 POSTicketPurchase:  'ASAICashAdvanceStep: SetTransactions requestedAmount: 300.00'  
+___02:22:41 401010 POSTicketPurchase:  'ASAICashAdvanceStep: SetTransactions DispensedAmount: 0.00'  
+___02:22:41 401010 POSTicketPurchase:  'ASAICashAdvanceStep: SetTransactions ErrorDetails: NORMAL TRANSACTION'  
+___02:22:41 401010 POSTicketPurchase:  'ASAICashAdvanceStep: SetTransactions AvailableBalance: '  
+___02:22:41 401010 POSTicketPurchase:  'ASAICashAdvanceStep: SetTransactions ledgerBalance: '  
+___02:22:41 401010 POSTicketPurchase:  'ASAICashAdvanceStep: SetTransactions fee: 9.45'  
+___02:22:41 401010 POSTicketPurchase:  'ASAICashAdvanceStep: CA Transaction TransactionType: 20'  
+___02:22:41 401010 POSTicketPurchase:  'ASAICashAdvanceStep: SetTransactions AccountFrom: CA-Debit'  
+___02:22:41 401010 POSTicketPurchase:  'ASAICashAdvanceStep: SetTransactions Transaction Type: 04'  
+___02:22:41 401010 POSTicketPurchase:  'ASAICashAdvanceStep: SetTransactions TransactionID: 11022025022241DFK000157258534'  
+___02:22:41 401010 POSTicketPurchase:  'ASAICashAdvanceStep SendPost start'  
+___02:22:41 401010 POSTicketPurchase:  'ASAICashAdvanceStep - RestClient status: 200'  
+___02:22:41 401010 POSTicketPurchase:  'ASAICashAdvanceStep- RestClient Output from Server +  inputLine: {"status":"Approved","transactionId":"11022025022241DFK000157258534"}'  
+___02:22:41 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter PRINTPOSTICKETCOMMAND'  
+___02:22:41 401010 POSTicketPurchase:  'ASAIPrinterFW - PrintPOSTicket method'  
+___02:22:41 401010 POSTicketPurchase:  'POSTicketPostData method'  
+___02:22:41 401010 POSTicketPurchase:  'POSTicketPostData JsonPost: {
+  "type": "TicketIssuance",
+  "accountType": "None",
+  "seqNumber": "1102202502224163",
+  "Authorization": {
+    "AuthNumber": "",
+    "ErrorCode": "0",
+    "ErrorDescription": "0",
+    "Fee": 0.0,
+    "OrderId": "",
+    "RegisterTime": "2025-11-02T02:22:41.6357484-05:00",
+    "TransactionNumber": 1102202502224163
+  },
+  "Operation": {
+    "Amount": 300.0,
+    "BillDespensed": 0.0,
+    "CardNumber": "XXXX",
+    "HostIP": "1102202502221740",
+    "OperationType": null,
+    "RegistrationDatetime": "2025-11-02T02:22:41.6357484-05:00",
+    "SequenceNumber": "1102202502224163",
+    "Status": "COMPLETED",
+    "Terminal": null,
+    "TicketData": "806493784387663318[1]     $300.0"
+  },
+  "TransactionDetail": {
+    "RegistrationDatetime": "0001-01-01T00:00:00",
+    "Amount": 300.0,
+    "DispensedTotal": 0.0,
+    "BillDenom_01": 1,
+    "BillDenom_02": 5,
+    "BillDenom_03": 10,
+    "BillDenom_04": 20,
+    "BillDenom_05": 50,
+    "BillDenom_06": 100,
+    "CoinDenom_01": 1,
+    "CoinDenom_02": 5,
+    "CoinDenom_03": 0,
+    "CoinDenom_04": 25,
+    "CoinDenom_05": 0,
+    "CoinDenom_06": 0,
+    "BillCount_01": 0,
+    "BillCount_02": 0,
+    "BillCount_03": 0,
+    "BillCount_04": 0,
+    "BillCount_05": 0,
+    "BillCount_06": 0,
+    "CoinCount_01": 0,
+    "CoinCount_02": 0,
+    "CoinCount_03": 0,
+    "CoinCount_04": 0,
+    "CoinCount_05": 0,
+    "CoinCount_06": 0,
+    "ManualPay": 0.0,
+    "RequestContent": null,
+    "ResponseContent": null,
+    "Status": null,
+    "AccountType": null,
+    "TransactionNumber": null,
+    "TransactionType": null
+  }
+}'  
+___02:22:41 401010 POSTicketPurchase:  'POSTicketPostData  sPostData: {
+  "type": "TicketIssuance",
+  "accountType": "None",
+  "seqNumber": "1102202502224163",
+  "Authorization": {
+    "AuthNumber": "",
+    "ErrorCode": "0",
+    "ErrorDescription": "0",
+    "Fee": 0.0,
+    "OrderId": "",
+    "RegisterTime": "2025-11-02T02:22:41.6357484-05:00",
+    "TransactionNumber": 1102202502224163
+  },
+  "Operation": {
+    "Amount": 300.0,
+    "BillDespensed": 0.0,
+    "CardNumber": "XXXX",
+    "HostIP": "1102202502221740",
+    "OperationType": null,
+    "RegistrationDatetime": "2025-11-02T02:22:41.6357484-05:00",
+    "SequenceNumber": "1102202502224163",
+    "Status": "COMPLETED",
+    "Terminal": null,
+    "TicketData": "806493784387663318[1]     $300.0"
+  },
+  "TransactionDetail": {
+    "RegistrationDatetime": "0001-01-01T00:00:00",
+    "Amount": 300.0,
+    "DispensedTotal": 0.0,
+    "BillDenom_01": 1,
+    "BillDenom_02": 5,
+    "BillDenom_03": 10,
+    "BillDenom_04": 20,
+    "BillDenom_05": 50,
+    "BillDenom_06": 100,
+    "CoinDenom_01": 1,
+    "CoinDenom_02": 5,
+    "CoinDenom_03": 0,
+    "CoinDenom_04": 25,
+    "CoinDenom_05": 0,
+    "CoinDenom_06": 0,
+    "BillCount_01": 0,
+    "BillCount_02": 0,
+    "BillCount_03": 0,
+    "BillCount_04": 0,
+    "BillCount_05": 0,
+    "BillCount_06": 0,
+    "CoinCount_01": 0,
+    "CoinCount_02": 0,
+    "CoinCount_03": 0,
+    "CoinCount_04": 0,
+    "CoinCount_05": 0,
+    "CoinCount_06": 0,
+    "ManualPay": 0.0,
+    "RequestContent": null,
+    "ResponseContent": null,
+    "Status": null,
+    "AccountType": null,
+    "TransactionNumber": null,
+    "TransactionType": null
+  }
+}'  
+___02:22:41 401010 POSTicketPurchase:  'POSTicketPostData end Posting Complete'  
+___02:22:41 401010 POSTicketPurchase:  'ASAIPrinterFW - PrintPOSTicket after posting'  
+___02:22:41 401010 POSTicketPurchase:  'ASAIPrinterFW - PrintPOSTicket-newTicketProperties: {
+  "smsEstablishment": "FireKeepers Casino Hotel",
+  "smsLocationLeft": "11177 East Michigan Ave.",
+  "smsLocationRigth": "",
+  "smsWording": "Kiosk Ticket",
+  "smsValidationName": "VALIDATION",
+  "smsTicketNumber": "806493784387663318",
+  "smsPrintDate": "11/2/2025",
+  "smsPrintTime": "2:22 AM",
+  "smsSeqNumber": "Ticket # 2340",
+  "smsAmount": null,
+  "amount": 300.0,
+  "smsExpDate": "180",
+  "smsMachine": "ASSET # 11042837",
+  "smsAmountLetters": null,
+  "smsMessage": null
+}'  
+___02:22:41 401010 POSTicketPurchase:  'ASAIPrinterFW - PrintPOSTicket: Establishment: FireKeepers Casino Hotel LocationLeft: 11177 East Michigan Ave. LocationRight:  Wording: Kiosk Ticket ValidationName: VALIDATION TicketNumber: 806493784387663318 Date: 11/2/2025 Time: 2:22 AM Sequencenumber: Ticket # 2340 ExpirationDate: 180 ValueinNumber: 300.00 Machine: ASSET # 11042837'  
+___02:22:49 401010 POSTicketPurchase:  'ASAIPrinterFW - PrintPOSTicket method result about the print: True'  
+___02:22:49 401010 POSTicketPurchase:  'ASAIPrinterFW - PrintPOSTicket Acknowledgment result: 0'  
+___02:22:49 401009 QuickCashAdvance 'Returning on PRINTPOSTICKETCOMMAND -0-'  
+___03:01:58 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___03:01:59 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___03:01:59 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___03:01:59 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___03:01:59 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___03:01:59 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___03:01:59 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___03:24:03 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___03:24:03 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___03:24:03 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___03:24:03 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___03:24:03 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___03:24:03 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___03:24:03 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___03:50:53 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___03:50:53 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___03:50:53 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___03:50:53 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___03:50:53 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___03:50:53 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___03:50:53 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___04:01:45 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___04:01:45 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___04:01:45 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___04:01:45 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___04:01:45 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___04:01:45 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___04:01:45 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___04:24:34 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___04:24:34 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___04:24:34 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___04:24:34 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___04:24:34 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___04:24:34 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___04:24:34 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___04:53:22 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___04:53:22 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___04:53:22 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___04:53:22 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___04:53:22 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___04:53:22 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___04:53:22 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___04:53:37 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter INITIALIZECADEBITTRANSACTIONCOMMAND'  
+___04:53:37 401004 Parameters  '______InitializeCATransaction Method______'  
+___04:53:37 401005 OpenSession  'GetCardHolderName: YODER/JASON'  
+___04:53:37 401005 OpenSession  'CardHolderName: YODER/JASON'  
+___04:53:37 401004 Parameters  'GetFeeForAmount MAC ADDRESS:A4-1C-B4-02-D3-C5 FirstURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc SecondURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc'  
+___04:53:37 401004 Parameters  'TypeTrn Debit Track2 551336XXXXXX4274=2908201XXXXXXXXXXXXXF Amount $100.00'  
+___04:53:38 401004 Parameters  'GetFeeForAmount Response ErrorCode:0  ErrorDsc:  Fee:4.45 DynamicPricing:False EchoCommonId:'  
+___04:53:38 401005 OpenSession  'Regular Fee $4.45'  
+___04:53:38 401005 OpenSession  'InitializeCATransaction Response  Transaction {
+  "TrnType": 3,
+  "Total": 100.0,
+  "Fee": 4.45,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "1102202504533757",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX4274",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___04:53:38 401004 Parameters  'InitializeCADebitTransaction result:0'  
+___04:53:38 401009 QuickCashAdvance 'Returning on INITIALIZECADEBITTRANSACTIONCOMMAND -0-'  
+___04:53:38 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter QUICKPOSDEBITISOK'  
+___04:53:38 401011 QuickPOSDebit:  'QuickPOSDebitEnabled True'  
+___04:53:38 401011 QuickPOSDebit:  'QuickPOSDebitEnabledByKiosk -500-'  
+___04:53:38 401011 QuickPOSDebit:  'QuickPOSDebit LImit 500.0'  
+___04:53:38 401011 QuickPOSDebit:  'QuickPOSDebit Transaction {
+  "TrnType": 3,
+  "Total": 100.0,
+  "Fee": 4.45,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "1102202504533757",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX4274",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___04:53:38 401009 QuickCashAdvance 'Returning on QUICKPOSDEBITISOK -0-'  
+___04:53:38 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter GETDEBITFEECOMMAND'  
+___04:53:38 401004 Parameters  '______GetFeeInformation Method______'  
+___04:53:38 401004 Parameters  'GetFeeInformation: Transaction Limit:'  
+___04:53:38 401005 OpenSession  'Fee  $4.45'  
+___04:53:38 401005 OpenSession  'Fee Corrected:4.45'  
+___04:53:38 401000 ------------>Cash Advance Transaction Info. 'GETDEBITFEECOMMAND Conversion :  444 '  
+___04:53:38 401000 ------------>Cash Advance Transaction Info. 'GETDEBITFEECOMMAND Set Corrected Fee in CCHPFW_PROP_GEN_B_DATA:  444 Ret:0'  
+___04:53:38 401009 QuickCashAdvance 'Returning on GETDEBITFEECOMMAND -0-'  
+___04:53:46 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter QUICKPOSDEBITISOK'  
+___04:53:46 401011 QuickPOSDebit:  'QuickPOSDebitEnabled True'  
+___04:53:46 401011 QuickPOSDebit:  'QuickPOSDebitEnabledByKiosk -500-'  
+___04:53:46 401011 QuickPOSDebit:  'QuickPOSDebit LImit 500.0'  
+___04:53:46 401011 QuickPOSDebit:  'QuickPOSDebit Transaction {
+  "TrnType": 3,
+  "Total": 100.0,
+  "Fee": 4.45,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "1102202504533757",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX4274",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___04:53:46 401009 QuickCashAdvance 'Returning on QUICKPOSDEBITISOK -0-'  
+___04:53:46 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter LOGQUICKPOSDEBITCOMMAND'  
+___04:53:46 401011 QuickPOSDebit:  '--Starting LOGQUICKPOSDEBIT--'  
+___04:53:46 401011 QuickPOSDebit:  'Converting POSDebit to QuickPOSDebit: {
+  "TrnType": 9,
+  "Total": 100.0,
+  "Fee": 4.45,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "1102202504533757",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX4274",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___04:53:46 401007 IsPosDebitAuthorized:  'Seq Number 4777'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 0 Value:  Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 1 Value:        FIREKEEPERS CASINO HOTEL Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 2 Value:          11177 E MICHIGAN AVE Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 3 Value:BATTLE CREEK                   MI US Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 4 Value:  Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 5 Value:   DATE   TIME    ATM Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 6 Value: 11/02/25 04:53 DFK00015 Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 7 Value:  Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 8 Value:XXXXXXXXXXXX4274 Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 9 Value:SEQ NUMB                            4777 Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 10 Value:  Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 11 Value:POS DEBIT DISPENSE               $100.00 Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 12 Value:FROM DEF ACCT Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 13 Value:AID: A0000000041010 Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 14 Value:FEE                                $4.44 Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 15 Value:        [116] INSUFFICIENT FUNDS Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 16 Value:---------------------------------------- Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 17 Value: Result :-4 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 18 Value: Result :-4 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 19 Value: Result :-4 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 20 Value: Result :-4 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 21 Value: Result :-4 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 22 Value: Result :-4 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 23 Value: Result :-4 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 24 Value: Result :-4 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 25 Value: Result :-4 bringReceiptToCage:False TransactionAborted False'  
+___04:53:46 401007 IsPosDebitAuthorized:  'Authorized -----False-----'  
+___04:53:46 401011 QuickPOSDebit:  'Log Quick POS Debit result:2'  
+___04:53:46 401011 QuickPOSDebit:  'LogQuickPOSDebit return 2'  
+___04:53:46 401009 QuickCashAdvance 'Returning on LOGQUICKPOSDEBITCOMMAND -2-'  
+___04:53:46 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTQUICKPOSDEBITCOMMAND'  
+___04:53:46 401011 QuickPOSDebit:  'PostQuickPOSDebit Transaction to POST {
+  "TrnType": 9,
+  "Total": 100.0,
+  "Fee": 4.45,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "1102202504533757",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX4274",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___04:53:46 401010 POSTicketPurchase:  'Transaction is chained --'  
+___04:53:46 401010 POSTicketPurchase:  'Transaction is chained -false-'  
+___04:54:01 401000 ------------>Cash Advance Transaction Info. 'Posting Transaction Result  0:{"type":"QUICKPOSDebit","accountType":"CHEKAC","seqNumber":"1102202504533757","Authorization":{"ErrorCode":"0","ErrorDescription":"0","Fee":4.45,"RegisterTime":"2025-11-02T04:53:46.811-05:00","TransactionNumber":1102202504533757},"Operation":{"Amount":100.0,"BillDespensed":0.0,"CardNumber":"4274","HostIP":"","RegistrationDatetime":"2025-11-02T04:53:46.811-05:00","SequenceNumber":"1102202504533757","Status":"DENIED"},"TransactionDetail":{"Amount":100.0,"DispensedTotal":0.0,"BillDenom_01":1,"BillDenom_02":5,"BillDenom_03":10,"BillDenom_04":20,"BillDenom_05":50,"BillDenom_06":100,"CoinDenom_01":1,"CoinDenom_02":5,"CoinDenom_03":10,"CoinDenom_04":25,"CoinDenom_05":0,"CoinDenom_06":0,"BillCount_01":0,"BillCount_02":0,"BillCount_03":0,"BillCount_04":0,"BillCount_05":0,"BillCount_06":0,"CoinCount_01":0,"CoinCount_02":0,"CoinCount_03":0,"CoinCount_04":0,"CoinCount_05":0,"CoinCount_06":0,"ManualPay":0.0,"TransactionNumber":0,"TransactionType":"QPOSDEBITX"}}'  
+___04:54:01 401011 QuickPOSDebit:  'ASAICashAdvanceStep: RestClient - atmPostingURL: http://208.224.250.10/Journals/rest/dieboldTransactions'  
+___04:54:01 401011 QuickPOSDebit:  'ASAICashAdvanceStep: RestClient - atmPostingUser: admin'  
+___04:54:01 401011 QuickPOSDebit:  'ASAICashAdvanceStep: RestClient - atmPostingPwd: Passport_key'  
+___04:54:01 401010 POSTicketPurchase:  'ASAICashAdvanceStep: SetTransactions start'  
+___04:54:01 401011 QuickPOSDebit:  'Returning on POSTQUICKPOSDEBITCOMMAND -0-'  
+___04:54:01 401009 QuickCashAdvance 'ASAICashAdvanceStep: SetTransactions terminal: null'  
+___04:54:01 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions terminal: null'  
+___04:54:01 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions SeqNumber: null'  
+___04:54:01 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions CardData: 4274'  
+___04:54:01 401011 QuickPOSDebit:  'ASAICashAdvanceStep:ASAIATmStep: SetTransactions HostDate: 2025-11-02'  
+___04:54:01 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions HostTime: 04:54:01'  
+___04:54:01 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions requestedAmount: 100.00'  
+___04:54:01 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions DispensedAmount: 0.00'  
+___04:54:01 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions ErrorDetails: DECLINED'  
+___04:54:01 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions AvailableBalance: '  
+___04:54:01 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions ledgerBalance: '  
+___04:54:01 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions fee: 4.45'  
+___04:54:01 401011 QuickPOSDebit:  'ASAICashAdvanceStep: CA Transaction TransactionType: 20'  
+___04:54:01 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions AccountFrom: CA-Debit'  
+___04:54:01 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions Transaction Type: 03'  
+___04:54:01 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions TransactionID: 11022025045401null0'  
+___04:54:01 401011 QuickPOSDebit:  'ASAICashAdvanceStep SendPost start'  
+___04:54:01 401011 QuickPOSDebit:  'ASAICashAdvanceStep: Error RestClient General: null'  
+___04:59:13 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___04:59:13 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___04:59:13 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___04:59:13 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___04:59:13 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___04:59:13 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___04:59:13 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___04:59:33 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter INITIALIZECADEBITTRANSACTIONCOMMAND'  
+___04:59:33 401004 Parameters  '______InitializeCATransaction Method______'  
+___04:59:33 401005 OpenSession  'GetCardHolderName: YODER/JASON'  
+___04:59:33 401005 OpenSession  'CardHolderName: YODER/JASON'  
+___04:59:33 401004 Parameters  'GetFeeForAmount MAC ADDRESS:A4-1C-B4-02-D3-C5 FirstURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc SecondURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc'  
+___04:59:33 401004 Parameters  'TypeTrn Debit Track2 551336XXXXXX4274=2908201XXXXXXXXXXXXXF Amount $60.00'  
+___04:59:34 401004 Parameters  'GetFeeForAmount Response ErrorCode:0  ErrorDsc:  Fee:3.83 DynamicPricing:False EchoCommonId:'  
+___04:59:34 401005 OpenSession  'Regular Fee $3.83'  
+___04:59:34 401005 OpenSession  'InitializeCATransaction Response  Transaction {
+  "TrnType": 3,
+  "Total": 60.0,
+  "Fee": 3.83,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "1102202504593383",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX4274",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___04:59:34 401004 Parameters  'InitializeCADebitTransaction result:0'  
+___04:59:34 401009 QuickCashAdvance 'Returning on INITIALIZECADEBITTRANSACTIONCOMMAND -0-'  
+___04:59:34 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter QUICKPOSDEBITISOK'  
+___04:59:34 401011 QuickPOSDebit:  'QuickPOSDebitEnabled True'  
+___04:59:34 401011 QuickPOSDebit:  'QuickPOSDebitEnabledByKiosk -500-'  
+___04:59:34 401011 QuickPOSDebit:  'QuickPOSDebit LImit 500.0'  
+___04:59:34 401011 QuickPOSDebit:  'QuickPOSDebit Transaction {
+  "TrnType": 3,
+  "Total": 60.0,
+  "Fee": 3.83,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "1102202504593383",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX4274",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___04:59:34 401009 QuickCashAdvance 'Returning on QUICKPOSDEBITISOK -0-'  
+___04:59:34 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter GETDEBITFEECOMMAND'  
+___04:59:34 401004 Parameters  '______GetFeeInformation Method______'  
+___04:59:34 401004 Parameters  'GetFeeInformation: Transaction Limit:'  
+___04:59:34 401005 OpenSession  'Fee  $3.83'  
+___04:59:34 401005 OpenSession  'Fee Corrected:3.83'  
+___04:59:34 401000 ------------>Cash Advance Transaction Info. 'GETDEBITFEECOMMAND Conversion :  383 '  
+___04:59:34 401000 ------------>Cash Advance Transaction Info. 'GETDEBITFEECOMMAND Set Corrected Fee in CCHPFW_PROP_GEN_B_DATA:  383 Ret:0'  
+___04:59:34 401009 QuickCashAdvance 'Returning on GETDEBITFEECOMMAND -0-'  
+___04:59:39 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter QUICKPOSDEBITISOK'  
+___04:59:39 401011 QuickPOSDebit:  'QuickPOSDebitEnabled True'  
+___04:59:39 401011 QuickPOSDebit:  'QuickPOSDebitEnabledByKiosk -500-'  
+___04:59:39 401011 QuickPOSDebit:  'QuickPOSDebit LImit 500.0'  
+___04:59:39 401011 QuickPOSDebit:  'QuickPOSDebit Transaction {
+  "TrnType": 3,
+  "Total": 60.0,
+  "Fee": 3.83,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "1102202504593383",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX4274",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___04:59:39 401009 QuickCashAdvance 'Returning on QUICKPOSDEBITISOK -0-'  
+___04:59:39 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter LOGQUICKPOSDEBITCOMMAND'  
+___04:59:39 401011 QuickPOSDebit:  '--Starting LOGQUICKPOSDEBIT--'  
+___04:59:39 401011 QuickPOSDebit:  'Converting POSDebit to QuickPOSDebit: {
+  "TrnType": 9,
+  "Total": 60.0,
+  "Fee": 3.83,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "1102202504593383",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX4274",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___04:59:39 401007 IsPosDebitAuthorized:  'Seq Number 4778'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 0 Value:  Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 1 Value:        FIREKEEPERS CASINO HOTEL Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 2 Value:          11177 E MICHIGAN AVE Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 3 Value:BATTLE CREEK                   MI US Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 4 Value:  Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 5 Value:   DATE   TIME    ATM Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 6 Value: 11/02/25 04:59 DFK00015 Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 7 Value:  Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 8 Value:XXXXXXXXXXXX4274 Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 9 Value:SEQ NUMB                            4778 Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 10 Value:  Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 11 Value:POS DEBIT DISPENSE                $60.00 Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 12 Value:FROM DEF ACCT Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 13 Value:AID: A0000000041010 Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 14 Value:FEE                                $3.83 Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 15 Value:  Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 16 Value:  Result :0 bringReceiptToCage:False TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 17 Value:PLEASE BRING RECEIPT TO CAGE FOR CASH Result :0 bringReceiptToCage:True TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 18 Value:  Result :0 bringReceiptToCage:True TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 19 Value:  Result :0 bringReceiptToCage:True TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 20 Value:             [000] APPROVED Result :0 bringReceiptToCage:True TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 21 Value:---------------------------------------- Result :0 bringReceiptToCage:True TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 22 Value: Result :-4 bringReceiptToCage:True TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 23 Value: Result :-4 bringReceiptToCage:True TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 24 Value: Result :-4 bringReceiptToCage:True TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'CCHPFW_PROP_PRINTER_VARIABLE Index 25 Value: Result :-4 bringReceiptToCage:True TransactionAborted False'  
+___04:59:39 401007 IsPosDebitAuthorized:  'Authorized -----True-----'  
+___04:59:39 401004 Parameters  '______CopyTransactionToCAS Method______'  
+___04:59:39 401006 Copying Transaction to CAS Sever:  'starting CopyTransactionToCAS: {
+  "TrnType": 9,
+  "Total": 60.0,
+  "Fee": 3.83,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "1102202504593383",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX4274",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___04:59:39 401006 Copying Transaction to CAS Sever:  'CCHPFW_PROP_PRINTER_VARIABLE AID 13 Value:AID: A0000000041010 Result:0'  
+___04:59:39 401004 Parameters  'Building Log Transaction: TransactionType DebitDspns Track2 551336XXXXXX4274=2908201XXXXXXXXXXXXX  SeqNumber 4778 ApprovalCode 0000  RawRequest UKNOWN RawResponse UKNOWN, amount 60 fee 3.83 AuthNumber 4778 ErrorCode 000 AID  A0000000041010 TVR 8000040000 IAD 0110A00001240000000000000000000000FF TSI 6000 AC 922FFB601737DBE0 APN 4D617374657263617264204465626974'  
+___04:59:39 401005 OpenSession  'Language  en-US'  
+___04:59:39 401006 Copying Transaction to CAS Sever:  'LogTransaction MAC ADDRESS:A4-1C-B4-02-D3-C5 FirstURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc SecondURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc'  
+___04:59:39 401006 Copying Transaction to CAS Sever:  'CopyTransactionToCAS Response CAS LogTransation:Status:True IsElegible:NO SessionID:7259242 DisplayText:--RequiresVerification: YES'  
+___04:59:39 401006 Copying Transaction to CAS Sever:  'QuickCA Function is enabled?:False'  
+___04:59:39 401006 Copying Transaction to CAS Sever:  'CopyTransactionToCAS Final Transaction JSON:{
+  "TrnType": 9,
+  "Total": 60.0,
+  "Fee": 3.83,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "1102202504593383",
+  "HostSeqNumber": "4778",
+  "PAN": "XXXXXXX4274",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": "4778",
+  "OrderId": null,
+  "ApplicationId": " A0000000041010",
+  "TerminalId": "DFK00015",
+  "SessionId": 7259242,
+  "EchoCommonId": "",
+  "bills": null
+} Return 5'  
+___04:59:39 401011 QuickPOSDebit:  'CopyPOSTicketToCAS result:5'  
+___04:59:39 401011 QuickPOSDebit:  'Log Quick POS Debit result:5'  
+___04:59:39 401011 QuickPOSDebit:  'LogQuickPOSDebit return 5'  
+___04:59:39 401009 QuickCashAdvance 'Returning on LOGQUICKPOSDEBITCOMMAND -5-'  
+___04:59:43 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:43.271-0500","event":"TransactionInit","action":"Detecting Type Of Transaction","transaction":{"TrnType":9,"Total":60.0,"Fee":3.83,"ShortPay":0.0,"LocalSeqNumber":"1102202504593383","HostSeqNumber":"4778","PAN":"XXXXXXX4274","ErrorCode":0,"ApprovalCode":"4778","ApplicationId":" A0000000041010","TerminalId":"DFK00015","SessionId":7259242,"EchoCommonId":"","OriginalFeeAmount":0.0,"FeeTypeID":0,"FeeLogId":0,"BaseFeeID":0,"BaseFee":0.0,"GeneralFeeID":0,"GeneralFee":0.0},"module":"ASAIDispenserStep"}'   
+___04:59:43 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:43.327-0500","event":"StartDispense","action":"CASHADVDISPENSEBYDEN","module":"ASAIDispenserStep"}'   
+___04:59:43 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:43.334-0500","event":"CashDispenser","action":"PerformCashDispenserCommandStart","AmountToDispense":60,"module":"ASAIDispenserStep"}'   
+___04:59:43 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:43.348-0500","event":"CashDispenser","action":"TakeCountersSnapshotsBeforeDispensingStart","module":"ASAIDispenserStep"}'   
+___04:59:43 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:43.355-0500","event":"CashDispenser","action":"Log  CCCDM Status","fNewCounter":false,"fOldValues":false,"sCashUnits":0,"sDevice":0,"sSafeDoor":3,"usCashTray":0,"usRetractAct":0,"usShutter":0,"usTransportWay":0,"module":"ASAIDispenserStep"}'   
+___04:59:43 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:43.361-0500","event":"CashDispenser","action":"CASH_UNIT_STATUS","index":0,"unitID":"REJCT","cashInCount":0,"count":1668,"values":0,"status":0,"dispensedCount":0,"initialCount":0,"presentedCount":0,"rejectCount":0,"retractedCount":0,"physicalCUs":1,"type":2,"module":"ASAIDispenserStep"}'   
+___04:59:43 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:43.366-0500","event":"CashDispenser","action":"CASH_UNIT_STATUS","index":1,"unitID":"RET  ","cashInCount":0,"count":0,"values":0,"status":0,"dispensedCount":0,"initialCount":0,"presentedCount":0,"rejectCount":0,"retractedCount":0,"physicalCUs":1,"type":5,"module":"ASAIDispenserStep"}'   
+___04:59:43 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:43.371-0500","event":"CashDispenser","action":"CASH_UNIT_STATUS","index":2,"unitID":"USD A","cashInCount":0,"count":1384,"values":100,"status":0,"dispensedCount":616,"initialCount":2000,"presentedCount":616,"rejectCount":0,"retractedCount":0,"physicalCUs":1,"type":3,"module":"ASAIDispenserStep"}'   
+___04:59:43 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:43.375-0500","event":"CashDispenser","action":"CASH_UNIT_STATUS","index":3,"unitID":"USD F","cashInCount":0,"count":607,"values":10000,"status":0,"dispensedCount":1393,"initialCount":2000,"presentedCount":1393,"rejectCount":0,"retractedCount":0,"physicalCUs":1,"type":3,"module":"ASAIDispenserStep"}'   
+___04:59:43 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:43.382-0500","event":"CashDispenser","action":"CASH_UNIT_STATUS","index":4,"unitID":"USD D","cashInCount":0,"count":1233,"values":2000,"status":0,"dispensedCount":2767,"initialCount":4000,"presentedCount":2745,"rejectCount":22,"retractedCount":0,"physicalCUs":2,"type":3,"module":"ASAIDispenserStep"}'   
+___04:59:43 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:43.387-0500","event":"CashDispenser","action":"CASH_UNIT_STATUS","index":5,"unitID":"USD B","cashInCount":0,"count":1135,"values":500,"status":0,"dispensedCount":865,"initialCount":2000,"presentedCount":857,"rejectCount":8,"retractedCount":0,"physicalCUs":1,"type":3,"module":"ASAIDispenserStep"}'   
+___04:59:43 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:43.403-0500","event":"CashDispenser","action":"TakeCountersSnapshotsBeforeDispensingEnd","module":"ASAIDispenserStep"}'   
+___04:59:43 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:43.593-0500","event":"CashDispenser","action":"LogDispensedValues","Cassette_0_Value":0,"Cassette_1_Value":0,"Cassette_2_Value":0,"Cassette_3_Value":0,"Cassette_4_Value":0,"Cassette_5_Value":0,"Cassette_6_Value":0,"Cassette_7_Value":0,"Cassette_8_Value":0,"Cassette_9_Value":0,"Cassette_10_Value":0,"Cassette_11_Value":0,"module":"ASAIDispenserStep"}'   
+___04:59:43 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:43.600-0500","event":"CashDispenser","action":"DenominateWithConditions","resultCode":0,"module":"ASAIDispenserStep"}'   
+___04:59:43 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:43.606-0500","event":"CashDispenser","action":"Denominate","module":"ASAIDispenserStep"}'   
+___04:59:43 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:43.616-0500","event":"CashDispenser","action":"DenominateChunkAttempt","chunkIndex":0,"chunkAmount":60,"resultCode":0,"module":"ASAIDispenserStep"}'   
+___04:59:43 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:43.623-0500","event":"CashDispenser","action":"DenominateChunkSuccess","chunkIndex":0,"chunkAmountUsed":60,"notesInChunk":3,"totalNotesSoFar":3,"remainingAmount":0,"module":"ASAIDispenserStep"}'   
+___04:59:43 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:43.628-0500","event":"CashDispenser","action":"DenominateSplitSuccess","totalNotes":3,"module":"ASAIDispenserStep"}'   
+___04:59:43 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:43.635-0500","event":"CashDispenser","action":"LogDispensedValues","Cassette_0_Value":0,"Cassette_1_Value":0,"Cassette_2_Value":3,"Cassette_3_Value":0,"Cassette_4_Value":0,"Cassette_5_Value":0,"Cassette_6_Value":0,"Cassette_7_Value":0,"Cassette_8_Value":0,"Cassette_9_Value":0,"Cassette_10_Value":0,"Cassette_11_Value":0,"module":"ASAIDispenserStep"}'   
+___04:59:43 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:43.640-0500","event":"CashDispenser","action":"Dispense","algorithm":"DispenseWith20sFirst100s","amount":0,"module":"ASAIDispenserStep"}'   
+___04:59:43 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:43.645-0500","event":"CashDispenser","action":"LogDispensedValues","Cassette_0_Value":0,"Cassette_1_Value":0,"Cassette_2_Value":3,"Cassette_3_Value":0,"Cassette_4_Value":0,"Cassette_5_Value":0,"Cassette_6_Value":0,"Cassette_7_Value":0,"Cassette_8_Value":0,"Cassette_9_Value":0,"Cassette_10_Value":0,"Cassette_11_Value":0,"module":"ASAIDispenserStep"}'   
+___04:59:48 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:48.202-0500","event":"DispenseOperation","action":"DispenseResult","DispenserResult":0,"module":"ASAIDispenserStep"}'   
+___04:59:48 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:48.209-0500","event":"CashDispenser","action":"DispenseResult","resultCode":0,"algorithm":"DispenseWith20sFirst100s","module":"ASAIDispenserStep"}'   
+___04:59:48 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:48.214-0500","event":"CashDispenser","action":"PerformCashDispenserEnd","return":0,"module":"ASAIDispenserStep"}'   
+___04:59:48 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:48.220-0500","event":"EndDispense","action":"CASHADVDISPENSEBYDEN","return":0,"module":"ASAIDispenserStep"}'   
+___04:59:48 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:48.226-0500","event":"StartPresent","action":"CASHADVPRESENT","module":"ASAIDispenserStep"}'   
+___04:59:48 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:48.232-0500","event":"TransactionInit","action":"Detecting Type Of Transaction","transaction":{"TrnType":9,"Total":60.0,"Fee":3.83,"ShortPay":0.0,"LocalSeqNumber":"1102202504593383","HostSeqNumber":"4778","PAN":"XXXXXXX4274","ErrorCode":0,"ApprovalCode":"4778","ApplicationId":" A0000000041010","TerminalId":"DFK00015","SessionId":7259242,"EchoCommonId":"","OriginalFeeAmount":0.0,"FeeTypeID":0,"FeeLogId":0,"BaseFeeID":0,"BaseFee":0.0,"GeneralFeeID":0,"GeneralFee":0.0},"module":"ASAIDispenserStep"}'   
+___04:59:48 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:48.240-0500","event":"CashDispenser","action":"PresentCommandStart","module":"ASAIDispenserStep"}'   
+___04:59:48 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:48.252-0500","event":"CashDispenser","action":"PresenterStatusBefore","returnCode":0,"presenterState":2,"module":"ASAIDispenserStep"}'   
+___04:59:57 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:57.616-0500","event":"CashDispenser","action":"Presenting","cashToPresent":60,"presentResult":0,"module":"ASAIDispenserStep"}'   
+___04:59:57 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:57.625-0500","event":"CashDispenser","action":"DispenserCapabilities","capabilitiesResult":0,"shutter":{"type":"bo","zero":[98,111,48],"low":0,"high":1,"value":0,"signed":false},"shutterControl":{"type":"bo","zero":[98,111,48],"low":0,"high":1,"value":1,"signed":false},"module":"ASAIDispenserStep"}'   
+___04:59:57 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:57.637-0500","event":"CashDispenser","action":"PresenterStatusAfter","returnCode":0,"amount":60,"presenterState":1,"module":"ASAIDispenserStep"}'   
+___04:59:57 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:57.642-0500","event":"CashDispenser","action":"PresentationStatus","message":"Amount was presented","module":"ASAIDispenserStep"}'   
+___04:59:57 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:57.650-0500","event":"CashDispenser","action":"PresentCommandEnd","return":0,"module":"ASAIDispenserStep"}'   
+___04:59:57 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:57.658-0500","event":"EndPresent","action":"CASHADVPRESENT","return":0,"module":"ASAIDispenserStep"}'   
+___04:59:59 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:59.749-0500","event":"TransactioEnd","action":"CASHADVDISPCOUNTERS","module":"ASAIDispenserStep"}'   
+___04:59:59 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:59.758-0500","event":"TransactionInit","action":"Detecting Type Of Transaction","transaction":{"TrnType":9,"Total":60.0,"Fee":3.83,"ShortPay":0.0,"LocalSeqNumber":"1102202504593383","HostSeqNumber":"4778","PAN":"XXXXXXX4274","ErrorCode":0,"ApprovalCode":"4778","ApplicationId":" A0000000041010","TerminalId":"DFK00015","SessionId":7259242,"EchoCommonId":"","OriginalFeeAmount":0.0,"FeeTypeID":0,"FeeLogId":0,"BaseFeeID":0,"BaseFee":0.0,"GeneralFeeID":0,"GeneralFee":0.0},"module":"ASAIDispenserStep"}'   
+___04:59:59 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:59.770-0500","event":"CashDispenser","action":"CashAdvDispenserCountersCommandStart","module":"ASAIDispenserStep"}'   
+___04:59:59 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:59.774-0500","event":"CashDispenser","action":"CASH_UNIT_STATUS","index":0,"unitID":"REJCT","cashInCount":0,"count":1668,"values":0,"status":0,"dispensedCount":0,"initialCount":0,"presentedCount":0,"rejectCount":0,"retractedCount":0,"physicalCUs":1,"type":2,"module":"ASAIDispenserStep"}'   
+___04:59:59 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:59.780-0500","event":"CashDispenser","action":"CASH_UNIT_STATUS","index":1,"unitID":"RET  ","cashInCount":0,"count":0,"values":0,"status":0,"dispensedCount":0,"initialCount":0,"presentedCount":0,"rejectCount":0,"retractedCount":0,"physicalCUs":1,"type":5,"module":"ASAIDispenserStep"}'   
+___04:59:59 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:59.785-0500","event":"CashDispenser","action":"CASH_UNIT_STATUS","index":2,"unitID":"USD A","cashInCount":0,"count":1384,"values":100,"status":0,"dispensedCount":616,"initialCount":2000,"presentedCount":616,"rejectCount":0,"retractedCount":0,"physicalCUs":1,"type":3,"module":"ASAIDispenserStep"}'   
+___04:59:59 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:59.789-0500","event":"CashDispenser","action":"CASH_UNIT_STATUS","index":3,"unitID":"USD F","cashInCount":0,"count":607,"values":10000,"status":0,"dispensedCount":1393,"initialCount":2000,"presentedCount":1393,"rejectCount":0,"retractedCount":0,"physicalCUs":1,"type":3,"module":"ASAIDispenserStep"}'   
+___04:59:59 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:59.793-0500","event":"CashDispenser","action":"CASH_UNIT_STATUS","index":4,"unitID":"USD D","cashInCount":0,"count":1230,"values":2000,"status":0,"dispensedCount":2770,"initialCount":4000,"presentedCount":2748,"rejectCount":22,"retractedCount":0,"physicalCUs":2,"type":3,"module":"ASAIDispenserStep"}'   
+___04:59:59 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:59.798-0500","event":"CashDispenser","action":"CASH_UNIT_STATUS","index":5,"unitID":"USD B","cashInCount":0,"count":1135,"values":500,"status":0,"dispensedCount":865,"initialCount":2000,"presentedCount":857,"rejectCount":8,"retractedCount":0,"physicalCUs":1,"type":3,"module":"ASAIDispenserStep"}'   
+___04:59:59 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:59.809-0500","event":"CashDispenser","action":"CompareSnapshots","message":"Calculating Bills Denominate EXTENDED","module":"ASAIDispenserStep"}'   
+___04:59:59 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:59.816-0500","event":"DispensingCalculation","action":"CompareCassetteSnapshot","cassetteDeltas":[{"cassetteId":0,"denomination":0,"cassetteType":2,"dispensedDelta":0,"toCustomerDelta":0,"remainingDelta":0,"action":""},{"cassetteId":1,"denomination":0,"cassetteType":5,"dispensedDelta":0,"toCustomerDelta":0,"remainingDelta":0,"action":""},{"cassetteId":2,"denomination":100,"cassetteType":3,"dispensedDelta":0,"toCustomerDelta":0,"remainingDelta":0,"action":""},{"cassetteId":3,"denomination":10000,"cassetteType":3,"dispensedDelta":0,"toCustomerDelta":0,"remainingDelta":0,"action":""},{"cassetteId":4,"denomination":2000,"cassetteType":3,"dispensedDelta":3,"toCustomerDelta":3,"remainingDelta":-3,"action":"Disp=3"},{"cassetteId":5,"denomination":500,"cassetteType":3,"dispensedDelta":0,"toCustomerDelta":0,"remainingDelta":0,"action":""}],"summary":"== Snapshot Delta Summary  ==\nID   | Den   | Type | Disp(B->A)   | Cust(B->A)   | Rem(B->A)    | Action      \n--------------------------------------------------------------------------------------\n0    | 0     | 2    | 0->0 (+0)    | 0->0 (+0)    | 1668->1668 (+0) | \n1    | 0     | 5    | 0->0 (+0)    | 0->0 (+0)    | 0->0 (+0)    | \n2    | 100   | 3    | 616->616 (+0) | 616->616 (+0) | 1384->1384 (+0) | \n3    | 10000 | 3    | 1393->1393 (+0) | 1393->1393 (+0) | 607->607 (+0) | \n4    | 2000  | 3    | 2767->2770 (+3) | 2745->2748 (+3) | 1233->1230 (-3) | Disp=3\n5    | 500   | 3    | 865->865 (+0) | 857->857 (+0) | 1135->1135 (+0) | \n","module":"ASAIDispenserStep"}'   
+___04:59:59 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:59.821-0500","event":"CashDispenser","action":"LogDispensedValues","Cassette_0_Value":0,"Cassette_1_Value":0,"Cassette_2_Value":3,"Cassette_3_Value":0,"Cassette_4_Value":0,"Cassette_5_Value":0,"Cassette_6_Value":0,"Cassette_7_Value":0,"Cassette_8_Value":0,"Cassette_9_Value":0,"Cassette_10_Value":0,"Cassette_11_Value":0,"module":"ASAIDispenserStep"}'   
+___04:59:59 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:59.825-0500","event":"CashDispenser","action":"CreateBillDispensingResponse","message":"Creating with EXTENDED","module":"ASAIDispenserStep"}'   
+___04:59:59 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:59.833-0500","event":"TransactionEnd","action":"Transaction with Dispensing Info","transaction":{"TrnType":9,"Total":60.0,"Fee":3.83,"ShortPay":0.0,"LocalSeqNumber":"1102202504593383","HostSeqNumber":"4778","PAN":"XXXXXXX4274","ErrorCode":0,"ApprovalCode":"4778","ApplicationId":" A0000000041010","TerminalId":"DFK00015","SessionId":7259242,"EchoCommonId":"","OriginalFeeAmount":0.0,"FeeTypeID":0,"FeeLogId":0,"BaseFeeID":0,"BaseFee":0.0,"GeneralFeeID":0,"GeneralFee":0.0,"bills":[{"denomination":20,"position":2,"numberOfNotes":3}]},"module":"ASAIDispenserStep"}'   
+___04:59:59 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:59.837-0500","event":"CashDispenser","action":"CashAdvDispenserCountersCommandEnd","return":0,"module":"ASAIDispenserStep"}'   
+___04:59:59 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T04:59:59.842-0500","event":"TransactioEnd","action":"CASHADVDISPCOUNTERS","return":0,"module":"ASAIDispenserStep"}'   
+___05:00:01 401004 Parameters  'POSTICKETPURCHASE RECEIPT START'  
+___05:00:01 401004 Parameters  'Printer Status Before send command :20'  
+___05:00:01 401004 Parameters  'If printer status is 21 Bad News, and i send reset command '  
+___05:00:01 401004 Parameters  'If printer status is 20 all good '  
+___05:00:01 401004 Parameters  'value of propertyValuecat : {"TrnType":9,"Total":60.0,"Fee":3.83,"ShortPay":0.0,"LocalSeqNumber":"1102202504593383","HostSeqNumber":"4778","PAN":"XXXXXXX4274","ErrorCode":0,"ApprovalCode":"4778","ApplicationId":" A0000000041010","TerminalId":"DFK00015","SessionId":7259242,"EchoCommonId":"","OriginalFeeAmount":0.0,"FeeTypeID":0,"FeeLogId":0,"BaseFeeID":0,"BaseFee":0.0,"GeneralFeeID":0,"GeneralFee":0.0,"bills":[{"denomination":20,"position":2,"numberOfNotes":3}]}'  
+___05:00:01 401004 Parameters  'ASAIShortpayPrintingStep POSTICKETPURCHASE : 9Debit Dispense'  
+___05:00:01 401004 Parameters  'Kiosk Type  : 7720'  
+___05:00:08 401004 Parameters  'POSTICKETPURCHASE RECEIPT END'  
+___05:00:08 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTQUICKPOSDEBITCOMMAND'  
+___05:00:08 401011 QuickPOSDebit:  'PostQuickPOSDebit Transaction to POST {"TrnType":9,"Total":60.0,"Fee":3.83,"ShortPay":0.0,"LocalSeqNumber":"1102202504593383","HostSeqNumber":"4778","PAN":"XXXXXXX4274","ErrorCode":0,"ApprovalCode":"4778","ApplicationId":" A0000000041010","TerminalId":"DFK00015","SessionId":7259242,"EchoCommonId":"","OriginalFeeAmount":0.0,"FeeTypeID":0,"FeeLogId":0,"BaseFeeID":0,"BaseFee":0.0,"GeneralFeeID":0,"GeneralFee":0.0,"bills":[{"denomination":20,"position":2,"numberOfNotes":3}]}'  
+___05:00:08 401010 POSTicketPurchase:  'Transaction is chained --'  
+___05:00:08 401010 POSTicketPurchase:  'Transaction is chained -false-'  
+___05:00:23 401000 ------------>Cash Advance Transaction Info. 'Posting Transaction Result  0:{"type":"QUICKPOSDebit","accountType":"CHEKAC","seqNumber":"1102202504593383","Authorization":{"AuthNumber":"4778","ErrorCode":"0","ErrorDescription":"0","Fee":3.83,"RegisterTime":"2025-11-02T05:00:08.905-05:00","TransactionNumber":1102202504593383},"Operation":{"Amount":60.0,"BillDespensed":60.0,"CardNumber":"4274","HostIP":"","RegistrationDatetime":"2025-11-02T05:00:08.905-05:00","SequenceNumber":"1102202504593383","Status":"COMPLETED"},"TransactionDetail":{"Amount":60.0,"DispensedTotal":60.0,"BillDenom_01":1,"BillDenom_02":5,"BillDenom_03":10,"BillDenom_04":20,"BillDenom_05":50,"BillDenom_06":100,"CoinDenom_01":1,"CoinDenom_02":5,"CoinDenom_03":10,"CoinDenom_04":25,"CoinDenom_05":0,"CoinDenom_06":0,"BillCount_01":0,"BillCount_02":0,"BillCount_03":0,"BillCount_04":3,"BillCount_05":0,"BillCount_06":0,"CoinCount_01":0,"CoinCount_02":0,"CoinCount_03":0,"CoinCount_04":0,"CoinCount_05":0,"CoinCount_06":0,"ManualPay":0.0,"TransactionNumber":0,"TransactionType":"QPOSDEBITX"}}'  
+___05:00:23 401011 QuickPOSDebit:  'ASAICashAdvanceStep: RestClient - atmPostingURL: http://208.224.250.10/Journals/rest/dieboldTransactions'  
+___05:00:23 401011 QuickPOSDebit:  'ASAICashAdvanceStep: RestClient - atmPostingUser: admin'  
+___05:00:23 401011 QuickPOSDebit:  'ASAICashAdvanceStep: RestClient - atmPostingPwd: Passport_key'  
+___05:00:23 401010 POSTicketPurchase:  'ASAICashAdvanceStep: SetTransactions start'  
+___05:00:23 401011 QuickPOSDebit:  'Returning on POSTQUICKPOSDEBITCOMMAND -0-'  
+___05:00:23 401009 QuickCashAdvance 'ASAICashAdvanceStep: SetTransactions terminal: DFK00015'  
+___05:00:23 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions terminal: DFK00015'  
+___05:00:23 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions SeqNumber: 4778'  
+___05:00:23 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions CardData: 4274'  
+___05:00:23 401011 QuickPOSDebit:  'ASAICashAdvanceStep:ASAIATmStep: SetTransactions HostDate: 2025-11-02'  
+___05:00:23 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions HostTime: 05:00:23'  
+___05:00:23 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions requestedAmount: 60.00'  
+___05:00:23 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions DispensedAmount: 60.00'  
+___05:00:23 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions ErrorDetails: NORMAL TRANSACTION'  
+___05:00:23 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions AvailableBalance: '  
+___05:00:23 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions ledgerBalance: '  
+___05:00:23 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions fee: 3.83'  
+___05:00:23 401011 QuickPOSDebit:  'ASAICashAdvanceStep: CA Transaction TransactionType: 20'  
+___05:00:23 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions AccountFrom: CA-Debit'  
+___05:00:23 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions Transaction Type: 03'  
+___05:00:23 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions denomination: [{"denomination":20,"position":2,"numberOfNotes":3}]'  
+___05:00:23 401011 QuickPOSDebit:  'ASAICashAdvanceStep: SetTransactions TransactionID: 11022025050023DFK000157259242'  
+___05:00:23 401011 QuickPOSDebit:  'ASAICashAdvanceStep SendPost start'  
+___05:00:23 401011 QuickPOSDebit:  'ASAICashAdvanceStep - RestClient status: 200'  
+___05:00:23 401011 QuickPOSDebit:  'ASAICashAdvanceStep- RestClient Output from Server +  inputLine: {"status":"Approved","transactionId":"11022025050023DFK000157259242"}'  
+___05:26:46 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___05:26:46 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___05:26:46 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___05:26:46 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___05:26:46 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___05:26:46 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___05:26:46 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___07:13:55 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___07:13:55 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___07:13:55 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___07:13:55 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___07:13:55 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___07:13:55 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___07:13:55 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___07:21:04 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___07:21:04 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___07:21:04 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___07:21:04 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___07:21:04 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___07:21:04 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___07:21:04 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___07:37:24 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___07:37:24 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___07:37:24 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___07:37:24 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___07:37:24 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___07:37:24 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___07:37:24 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___07:55:25 401004 Parameters  'ASAICashAdvanceStep.Constructor.CAIsEnabled true'  
+___07:55:25 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___07:55:25 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T07:55:25.408-0500","event":"StartUp","action":"ASAIDispenser Constructor Start","module":"ASAIDispenserStep"}'   
+___07:55:25 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T07:55:25.440-0500","event":"StartUp","action":"JAR File Metadata","JarInfo":{"lastModified":"08/20/2025","size":37,"path":"C:\\ProFlex4\\Base\\java\\lib\\cctransactionfw-ASAIDispenserStep-steps.jar"},"module":"ASAIDispenserStep"}'   
+___07:55:25 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T07:55:25.455-0500","event":"StartUpError","action":"ruleDispense20sFirst100s","errorMessage":"Not a JSON Object: null","module":"ASAIDispenserStep"}'   
+___07:55:25 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T07:55:25.476-0500","event":"StartUp","action":"Checking if Rule Dispense With 20s First 100s is enabled","Dispense20sFirst100s":false,"module":"ASAIDispenserStep"}'   
+___07:55:25 401008 QuickCashAdvance Dispensing.     '{"timestamp":"2025-11-02T07:55:25.593-0500","event":"StartUp","action":"ASAIDispenser Constructor End","module":"ASAIDispenserStep"}'   
+___07:55:31 401004 Parameters  'Loading FW'  
+___08:40:48 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___08:40:48 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___08:40:48 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___08:40:48 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___08:40:48 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___08:40:48 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___08:40:48 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___09:06:14 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___09:06:14 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___09:06:14 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___09:06:14 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___09:06:14 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___09:06:14 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___09:06:14 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___09:11:41 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___09:11:41 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___09:11:41 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___09:11:41 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___09:11:41 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___09:11:41 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___09:11:41 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___09:30:00 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___09:30:00 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___09:30:00 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___09:30:00 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___09:30:00 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___09:30:00 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___09:30:00 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___09:39:06 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___09:39:06 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___09:39:06 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___09:39:06 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___09:39:06 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___09:39:06 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___09:39:06 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___09:52:55 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___09:52:55 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___09:52:55 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___09:52:55 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___09:52:55 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___09:52:55 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___09:52:55 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___09:55:53 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___09:55:53 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___09:55:53 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___09:55:53 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___09:55:53 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___09:55:53 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___09:55:53 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___09:58:47 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___09:58:47 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___09:58:47 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___09:58:47 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___09:58:47 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___09:58:47 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___09:58:47 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___10:46:15 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___10:46:15 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___10:46:15 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___10:46:15 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___10:46:15 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___10:46:15 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___10:46:15 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___10:55:52 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___10:55:52 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___10:55:52 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___10:55:52 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___10:55:52 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___10:55:52 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___10:55:52 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___11:06:57 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___11:06:57 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___11:06:57 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___11:06:57 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___11:06:57 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___11:06:57 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___11:06:57 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___11:09:14 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___11:09:14 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___11:09:14 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___11:09:14 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___11:09:14 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___11:09:14 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___11:09:14 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___11:16:58 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___11:16:58 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___11:16:58 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___11:16:58 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___11:16:58 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___11:16:58 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___11:16:58 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___11:44:35 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___11:44:35 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___11:44:35 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___11:44:35 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___11:44:35 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___11:44:35 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___11:44:35 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___11:46:16 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___11:46:16 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___11:46:16 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___11:46:16 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___11:46:16 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___11:46:16 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___11:46:16 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___11:54:24 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___11:54:24 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___11:54:24 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___11:54:24 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___11:54:24 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___11:54:24 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___11:54:24 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___12:15:12 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___12:15:12 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___12:15:12 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___12:15:12 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___12:15:12 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___12:15:12 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___12:15:12 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___12:43:22 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___12:43:22 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___12:43:22 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___12:43:22 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___12:43:22 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___12:43:22 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___12:43:22 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___12:47:53 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___12:47:53 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___12:47:53 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___12:47:53 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___12:47:53 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___12:47:53 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___12:47:53 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___12:49:07 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___12:49:07 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___12:49:07 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___12:49:07 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___12:49:07 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___12:49:07 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___12:49:07 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___12:50:07 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___12:50:07 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___12:50:07 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___12:50:07 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___12:50:07 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___12:50:07 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___12:50:07 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___12:51:27 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___12:51:27 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___12:51:27 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___12:51:27 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___12:51:27 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___12:51:27 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___12:51:27 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___12:56:45 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___12:56:45 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___12:56:45 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___12:56:45 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___12:56:45 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___12:56:45 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___12:56:45 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___13:00:28 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___13:00:28 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___13:00:28 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___13:00:28 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___13:00:28 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___13:00:28 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___13:00:28 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___13:24:10 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___13:24:10 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___13:24:10 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___13:24:10 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___13:24:10 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___13:24:10 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___13:24:10 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___13:37:09 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___13:37:09 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___13:37:09 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___13:37:09 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___13:37:09 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___13:37:09 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___13:37:09 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___14:17:09 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___14:17:09 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___14:17:09 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___14:17:09 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___14:17:09 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___14:17:09 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___14:17:09 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___14:31:45 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___14:31:45 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___14:31:45 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___14:31:45 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___14:31:45 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___14:31:45 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___14:31:45 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___14:39:05 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___14:39:05 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___14:39:05 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___14:39:05 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___14:39:05 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___14:39:05 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___14:39:05 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___14:40:19 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___14:40:19 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___14:40:19 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___14:40:19 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___14:40:19 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___14:40:19 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___14:40:19 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___14:42:11 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___14:42:11 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___14:42:11 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___14:42:11 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___14:42:11 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___14:42:11 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___14:42:11 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___14:43:02 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___14:43:02 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___14:43:02 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___14:43:02 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___14:43:02 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___14:43:02 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___14:43:02 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___14:46:14 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___14:46:14 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___14:46:14 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___14:46:14 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___14:46:14 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___14:46:14 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___14:46:14 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___15:33:55 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___15:33:55 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___15:33:55 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___15:33:55 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___15:33:55 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___15:33:55 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___15:33:55 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___15:42:13 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___15:42:13 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___15:42:13 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___15:42:13 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___15:42:13 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___15:42:13 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___15:42:13 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___15:45:41 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___15:45:41 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___15:45:41 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___15:45:41 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___15:45:41 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___15:45:41 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___15:45:41 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___15:50:31 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___15:50:31 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___15:50:31 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___15:50:31 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___15:50:31 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___15:50:31 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___15:50:31 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___16:13:35 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___16:13:35 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___16:13:35 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___16:13:35 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___16:13:35 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___16:13:35 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___16:13:35 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___16:32:48 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___16:32:48 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___16:32:48 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___16:32:48 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___16:32:48 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___16:32:48 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___16:32:48 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___16:35:48 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___16:35:48 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___16:35:48 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___16:35:48 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___16:35:48 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___16:35:48 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___16:35:48 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___16:43:12 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___16:43:12 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___16:43:12 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___16:43:12 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___16:43:12 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___16:43:12 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___16:43:12 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___16:54:26 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___16:54:26 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___16:54:26 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___16:54:26 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___16:54:26 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___16:54:26 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___16:54:26 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___17:00:13 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___17:00:13 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___17:00:13 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___17:00:13 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___17:00:13 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___17:00:13 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___17:00:13 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___17:16:15 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___17:16:15 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___17:16:15 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___17:16:15 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___17:16:15 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___17:16:15 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___17:16:15 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___17:17:28 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___17:17:28 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___17:17:28 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___17:17:28 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___17:17:28 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___17:17:28 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___17:17:28 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___17:20:18 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___17:20:18 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___17:20:18 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___17:20:18 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___17:20:18 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___17:20:18 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___17:20:18 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___17:22:05 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___17:22:05 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___17:22:05 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___17:22:05 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___17:22:05 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___17:22:05 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___17:22:05 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___17:23:29 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___17:23:29 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___17:23:29 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___17:23:29 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___17:23:29 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___17:23:29 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___17:23:29 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___17:40:26 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___17:40:26 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___17:40:26 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___17:40:26 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___17:40:26 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___17:40:26 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___17:40:26 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___17:45:49 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___17:45:49 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___17:45:49 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___17:45:49 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___17:45:49 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___17:45:49 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___17:45:49 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___17:48:46 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___17:48:46 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___17:48:46 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___17:48:46 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___17:48:46 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___17:48:46 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___17:48:46 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___18:05:02 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___18:05:02 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___18:05:02 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___18:05:02 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___18:05:02 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___18:05:02 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___18:05:02 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___18:10:36 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___18:10:36 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___18:10:36 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___18:10:37 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___18:10:37 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___18:10:37 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___18:10:37 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___18:15:46 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___18:15:46 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___18:15:46 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___18:15:46 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___18:15:46 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___18:15:46 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___18:15:46 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___18:16:56 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___18:16:57 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___18:16:57 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___18:16:57 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___18:16:57 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___18:16:57 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___18:16:57 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___18:19:45 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___18:19:45 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___18:19:45 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___18:19:45 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___18:19:45 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___18:19:45 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___18:19:45 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___18:25:39 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___18:25:39 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___18:25:39 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___18:25:39 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___18:25:39 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___18:25:39 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___18:25:39 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___18:27:35 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___18:27:35 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___18:27:35 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___18:27:35 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___18:27:35 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___18:27:35 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___18:27:35 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___18:30:39 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___18:30:39 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___18:30:39 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___18:30:39 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___18:30:39 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___18:30:39 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___18:30:39 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___18:38:01 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___18:38:01 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___18:38:01 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___18:38:01 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___18:38:01 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___18:38:01 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___18:38:01 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___18:43:27 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___18:43:27 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___18:43:27 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___18:43:27 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___18:43:27 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___18:43:27 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___18:43:27 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___18:55:42 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___18:55:42 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___18:55:42 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___18:55:42 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___18:55:42 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___18:55:42 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___18:55:42 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___18:59:37 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___18:59:37 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___18:59:37 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___18:59:37 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___18:59:37 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___18:59:37 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___18:59:37 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___19:04:28 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___19:04:28 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___19:04:28 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___19:04:28 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___19:04:28 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___19:04:28 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___19:04:28 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___19:05:54 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___19:05:54 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___19:05:54 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___19:05:54 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___19:05:54 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___19:05:54 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___19:05:54 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___19:06:21 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter INITIALIZECACREDITTRANSACTIONCOMMAND'  
+___19:06:21 401004 Parameters  '______InitializeCATransaction Method______'  
+___19:06:21 401005 OpenSession  'GetCardHolderName: SANDERS/CHAD'  
+___19:06:21 401005 OpenSession  'CardHolderName: SANDERS/CHAD'  
+___19:06:21 401004 Parameters  'GetFeeForAmount MAC ADDRESS:A4-1C-B4-02-D3-C5 FirstURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc SecondURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc'  
+___19:06:21 401004 Parameters  'TypeTrn Credit Track2 444796XXXXXX5236=2608201XXXXXXXX Amount $500.00'  
+___19:06:22 401004 Parameters  'GetFeeForAmount Response ErrorCode:0  ErrorDsc:  Fee:37.5 DynamicPricing:False EchoCommonId:'  
+___19:06:22 401005 OpenSession  'Regular Fee $37.50'  
+___19:06:22 401005 OpenSession  'InitializeCATransaction Response  Transaction {
+  "TrnType": 2,
+  "Total": 500.0,
+  "Fee": 37.5,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "1102202519062168",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX5236",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___19:06:22 401004 Parameters  'InitializeCACreditTransaction result:0'  
+___19:06:22 401009 QuickCashAdvance 'Returning on INITIALIZECACREDITTRANSACTIONCOMMAND -0-'  
+___19:06:22 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter GETCREDITFEECOMMAND'  
+___19:06:22 401004 Parameters  '______GetFeeInformation Method______'  
+___19:06:22 401004 Parameters  'GetFeeInformation: Transaction Limit:'  
+___19:06:22 401009 QuickCashAdvance 'Returning on GETCREDITFEECOMMAND -0-'  
+___19:06:27 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter GETAUTHORIZATIONCOMMAND'  
+___19:06:27 401004 Parameters  '_______GetAuthorization Method______'  
+___19:06:27 401004 Parameters  'Starting GetAuthorization Method______Transaction:{
+  "TrnType": 2,
+  "Total": 500.0,
+  "Fee": 37.5,
+  "ShortPay": 0.0,
+  "LocalSeqNumber": "1102202519062168",
+  "HostSeqNumber": null,
+  "PAN": "XXXXXXX5236",
+  "ErrorCode": 0,
+  "ErrorDescription": null,
+  "ApprovalCode": null,
+  "OrderId": null,
+  "ApplicationId": null,
+  "TerminalId": null,
+  "SessionId": 0,
+  "EchoCommonId": "",
+  "bills": null
+}'  
+___19:06:27 401005 OpenSession  'Language  en-US'  
+___19:06:27 401004 Parameters  'Track2:4447XXXX=XXXXXXXXXXX'  
+___19:06:27 401004 Parameters  'EMV Details  5F34 Value XX Index 0'  
+___19:06:27 401004 Parameters  'EMV Details  57 Value XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Index 1'  
+___19:06:27 401004 Parameters  'EMV Details  9F03 Value  Index 2'  
+___19:06:27 401004 Parameters  'EMV Details  84 Value XXXXXXXXXXXXXX Index 3'  
+___19:06:27 401004 Parameters  'EMV Details  9F09 Value XXXX Index 4'  
+___19:06:27 401004 Parameters  'EMV Details  9F34 Value XXXXXX Index 5'  
+___19:06:27 401004 Parameters  'EMV Details  9F1E Value XXXXXXXXXXXXXXXX Index 6'  
+___19:06:27 401004 Parameters  'EMV Details  9F33 Value XXXXXX Index 7'  
+___19:06:27 401004 Parameters  'EMV Details  9F35 Value XX Index 8'  
+___19:06:27 401004 Parameters  'EMV Details  9F41 Value  Index 9'  
+___19:06:27 401004 Parameters  'EMV Details  9F26 Value XXXXXXXXXXXXXXXX Index 10'  
+___19:06:27 401004 Parameters  'EMV Details  82 Value XXXX Index 11'  
+___19:06:27 401004 Parameters  'EMV Details  9F36 Value XXXX Index 12'  
+___19:06:27 401004 Parameters  'EMV Details  9F27 Value XX Index 13'  
+___19:06:27 401004 Parameters  'EMV Details  9F10 Value XXXXXXXXXXXXXX Index 14'  
+___19:06:27 401004 Parameters  'EMV Details  9F02 Value XXXXXXXXXXXX Index 15'  
+___19:06:27 401004 Parameters  'EMV Details  9F1A Value XXXX Index 16'  
+___19:06:27 401004 Parameters  'EMV Details  95 Value XXXXXXXXXX Index 17'  
+___19:06:27 401004 Parameters  'EMV Details  5F2A Value XXXX Index 18'  
+___19:06:27 401004 Parameters  'EMV Details  9A Value XXXXXX Index 19'  
+___19:06:27 401004 Parameters  'EMV Details  9F3C Value  Index 20'  
+___19:06:27 401004 Parameters  'EMV Details  9C Value XX Index 21'  
+___19:06:27 401004 Parameters  'EMV Details  9F37 Value XXXXXXXX Index 22'  
+___19:06:27 401004 Parameters  'EMV Details  9F07 Value XXXX Index 23'  
+___19:06:27 401004 Parameters  'EMV Details  8A Value XXXX Index 24'  
+___19:06:27 401004 Parameters  'EMV Details  9F06 Value XXXXXXXXXXXXXX Index 25'  
+___19:06:27 401004 Parameters  'EMV Details  91 Value  Index 26'  
+___19:06:27 401004 Parameters  'EMV Details  9F5B Value  Index 27'  
+___19:06:27 401004 Parameters  'EMV Details  SECONDARY PIN BLOCK Value  Index 28'  
+___19:06:27 401004 Parameters  'EMV Details  9F6E Value  Index 29'  
+___19:06:27 401004 Parameters  'EMV Details  9F7C Value  Index 30'  
+___19:06:27 401004 Parameters  'EMV Details  9F53 Value  Index 31'  
+___19:06:27 401004 Parameters  'EMV Details  5F24 Value XXXXXX Index 32'  
+___19:06:27 401004 Parameters  'EMV Details  FILER Value  Index 33'  
+___19:06:27 401000 ------------>Cash Advance Transaction Info. 'SmartChip: True Type: CA CREDIT Card Num: XXXXXXX5236 Amount: $500.00 Fee: $37.50'  
+___19:06:27 401003 Cryptogram Info.  'Cryptogram 29EE8FD7CB215169 '  
+___19:06:27 401004 Parameters  'Authorization MAC ADDRESS:A4-1C-B4-02-D3-C5 FirstURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc SecondURL:https://208.224.250.1/IDSCashAdvanceService/IDSCashAdvanceServiceReference.svc'  
+___19:06:27 401004 Parameters  'Requesto to CAS Authorizatoion: Card No:0 Amount:500.0'  
+___19:06:29 401001 Cash Advance Authorization Info.  'Card Num: XXXXXXX5236 Amount: $500.00 Fee: $37.50 Auth Code:  OrderId: 0411 HostSeqNumber :  ErrorCode:1 ErrorDsc:EXCEEDS AMOUNT61DisplayText:--'  
+___19:06:29 401001 Cash Advance Authorization Info.  'GetAuthorization returning:4'  
+___19:06:29 401004 Parameters  'GetAuthorization result:4'  
+___19:06:29 401004 Parameters  'Transaction is chained -- Dict:-4'  
+___19:06:29 401004 Parameters  'Is Chained Transaction:False'  
+___19:06:29 401004 Parameters  'Transaction is chained -- Dict:-4'  
+___19:06:43 401002 Cash Advance Posting Info.  'Card Num: XXXXXXX5236 Amount: $500.00 Fee: $37.50 Auth Id:  ErrorCode:1 ErrorDsc:EXCEEDS AMOUNT61'  
+___19:06:43 401002 Cash Advance Posting Info.  'Posting to LO:{
+  "type": "CashAdvance",
+  "accountType": "CREDITAC",
+  "seqNumber": "1102202519062168",
+  "Authorization": {
+    "AuthNumber": "",
+    "ErrorCode": "1",
+    "ErrorDescription": "EXCEEDS AMOUNT61",
+    "Fee": 37.5,
+    "OrderId": "0411",
+    "RegisterTime": "2025-11-02T19:06:29.0882953-05:00",
+    "TransactionNumber": 1102202519062168
+  },
+  "Operation": {
+    "Amount": 500.0,
+    "BillDespensed": 0.0,
+    "CardNumber": "5236",
+    "HostIP": "",
+    "OperationType": null,
+    "RegistrationDatetime": "2025-11-02T19:06:29.0882953-05:00",
+    "SequenceNumber": "1102202519062168",
+    "Status": "DENIED",
+    "Terminal": null,
+    "TicketData": null
+  },
+  "TransactionDetail": {
+    "RegistrationDatetime": "0001-01-01T00:00:00",
+    "Amount": 500.0,
+    "DispensedTotal": 0.0,
+    "BillDenom_01": 1,
+    "BillDenom_02": 5,
+    "BillDenom_03": 10,
+    "BillDenom_04": 20,
+    "BillDenom_05": 50,
+    "BillDenom_06": 100,
+    "CoinDenom_01": 1,
+    "CoinDenom_02": 5,
+    "CoinDenom_03": 0,
+    "CoinDenom_04": 25,
+    "CoinDenom_05": 0,
+    "CoinDenom_06": 0,
+    "BillCount_01": 0,
+    "BillCount_02": 0,
+    "BillCount_03": 0,
+    "BillCount_04": 0,
+    "BillCount_05": 0,
+    "BillCount_06": 0,
+    "CoinCount_01": 0,
+    "CoinCount_02": 0,
+    "CoinCount_03": 0,
+    "CoinCount_04": 0,
+    "CoinCount_05": 0,
+    "CoinCount_06": 0,
+    "ManualPay": 0.0,
+    "RequestContent": null,
+    "ResponseContent": null,
+    "Status": null,
+    "AccountType": null,
+    "TransactionNumber": null,
+    "TransactionType": "CREDITCATX"
+  }
+}'  
+___19:06:43 401009 QuickCashAdvance 'Returning on GETAUTHORIZATIONCOMMAND -4-'  
+___19:34:22 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___19:34:22 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___19:34:22 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___19:34:22 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___19:34:22 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___19:34:22 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___19:34:22 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___19:37:05 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___19:37:05 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___19:37:05 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___19:37:05 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___19:37:05 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___19:37:05 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___19:37:05 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___20:47:09 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___20:47:09 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___20:47:09 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___20:47:09 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___20:47:09 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___20:47:09 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___20:47:09 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___20:55:06 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___20:55:06 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___20:55:06 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___20:55:06 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___20:55:06 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___20:55:06 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___20:55:06 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___20:56:10 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___20:56:10 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___20:56:10 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___20:56:10 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___20:56:10 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___20:56:10 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___20:56:10 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___20:57:48 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___20:57:48 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___20:57:48 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___20:57:48 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___20:57:48 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___20:57:48 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___20:57:48 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___21:07:15 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___21:07:15 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___21:07:15 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___21:07:15 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___21:07:15 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___21:07:15 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___21:07:15 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___21:08:42 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___21:08:42 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___21:08:42 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___21:08:42 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___21:08:42 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___21:08:42 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___21:08:42 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___21:12:09 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___21:12:09 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___21:12:09 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___21:12:09 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___21:12:09 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___21:12:09 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___21:12:09 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___21:16:16 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___21:16:16 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___21:16:16 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___21:16:16 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___21:16:16 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___21:16:16 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___21:16:16 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___21:22:41 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___21:22:41 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___21:22:41 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___21:22:41 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___21:22:41 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___21:22:41 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___21:22:41 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___22:15:55 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___22:15:55 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___22:15:55 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___22:15:55 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___22:15:55 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___22:15:55 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___22:15:55 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___22:36:11 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___22:36:11 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___22:36:11 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___22:36:11 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___22:36:11 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___22:36:11 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___22:36:11 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___22:42:56 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___22:42:56 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___22:42:56 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___22:42:56 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___22:42:57 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___22:42:57 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___22:42:57 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___22:44:41 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___22:44:41 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___22:44:41 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___22:44:41 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___22:44:41 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___22:44:41 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___22:44:41 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___22:59:56 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___22:59:56 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___22:59:56 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___22:59:56 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___22:59:56 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___22:59:56 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___22:59:56 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___23:16:14 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___23:16:14 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___23:16:14 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___23:16:14 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___23:16:14 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___23:16:14 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___23:16:14 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___23:48:21 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___23:48:21 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___23:48:21 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___23:48:22 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___23:48:22 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___23:48:22 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___23:48:22 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___23:50:01 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___23:50:01 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___23:50:01 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___23:50:01 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___23:50:01 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___23:50:01 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___23:50:01 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
+___23:58:33 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter CAIsEnabled'  
+___23:58:33 401004 Parameters  'Hours to disable CashAdvance on SUNDAY is :'  
+___23:58:33 401009 QuickCashAdvance 'Returning on CAIsEnabled -0-'  
+___23:58:33 401009 QuickCashAdvance 'ASAICashAdvanceStep - process: StepParameter POSTICKETISENABLED'  
+___23:58:33 401010 POSTicketPurchase:  'POSTicketIsEnabled True'  
+___23:58:33 401010 POSTicketPurchase:  'POSTicket Limit  2500:0'  
+___23:58:33 401009 QuickCashAdvance 'Returning on POSTICKETISENABLED -1-'  
